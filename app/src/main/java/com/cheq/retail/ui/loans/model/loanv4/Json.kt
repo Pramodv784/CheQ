@@ -1,0 +1,46 @@
+package com.cheq.retail.ui.loans.model.loanv4
+
+import androidx.annotation.Keep
+
+@Keep
+data class Json(
+    val amountDetails: List<Any>,
+    val billerAdditionalInfoPayment: List<Any>,
+    val billerAliasName: String,
+    val billerDescription: String,
+    val billerEffctvFrom: String,
+    val billerEffctvTo: String,
+    val billerId: String,
+    val billerLogoURL: Any,
+    val billerMode: String,
+    val billerName: String,
+    val billerOwnerShp: String,
+    val billerResponseType: String,
+    val billerTempDeactivationEnd: Any,
+    val billerTempDeactivationStart: Any,
+    val billerTimeOut: Any,
+    val blrAdditionalInfo: List<BlrAdditionalInfo>,
+    val blrResponseParams: BlrResponseParamsX,
+    val category: String,
+    val customerParamGroups: Any,
+    val customerParams: List<CustomerParam>,
+    val fetchOption: String,
+    val flowType: String,
+    val interchangeFee: List<InterchangeFeeX>,
+    val interchangeFeeConf: List<InterchangeFeeConf>,
+    val isAdhoc: Boolean,
+    val parentBiller: Boolean,
+    val parentBillerId: Any,
+    val paymentAmountExactness: String,
+    val paymentChannelsAllowed: List<PaymentChannelsAllowedX>,
+    val paymentModesAllowed: List<PaymentModesAllowedX>,
+    val planAdditionalInfo: List<Any>,
+    val planMdmRequirement: String,
+    val region: String,
+    val regionCode: String,
+    val state: String,
+    val status: String,
+    val supportBillValidation: String,
+    val supportDeemed: Boolean,
+    val supportPendingStatus: Boolean
+)

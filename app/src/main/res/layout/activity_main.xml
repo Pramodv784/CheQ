@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/main_nav_host"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_graph" />
+
+
+
+        <FrameLayout
+            android:id="@+id/flPayTogether"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_54sdp"
+
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPayTogether"
+                style="@style/GlobalButtonStyle"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/button_color_primary"
+                android:text="PAY NOW"
+                android:textAllCaps="true"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="61dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_alert_new" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvErrorText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:text="@string/please_select_at_least_one_product_nto_continue_to_pay"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_12sdp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </FrameLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            card_view:cardElevation="@dimen/_32sdp"
+            android:outlineSpotShadowColor="@color/divider_line_color"
+            android:outlineAmbientShadowColor="@color/divider_line_color"
+             >
+
+            <LinearLayout
+                android:id="@+id/llBottomBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+
+              >
+
+                <LinearLayout
+                    android:id="@+id/llPay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/iv_home"
+                        android:layout_width="@dimen/_20sdp"
+                        app:lottie_autoPlay="true"
+
+                        android:layout_height="@dimen/_20sdp"
+                        app:lottie_rawRes="@raw/home_active"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_home"
+                        android:fontFamily="@font/basiercircle_semibold"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:text="@string/home"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llProduct"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/iv_product"
+                        android:layout_width="@dimen/_20sdp"
+                        app:lottie_autoPlay="true"
+
+                        app:lottie_rawRes="@raw/product_deactive"
+                        android:layout_height="@dimen/_20sdp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_product"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:text="@string/pay"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_rewards"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/iv_rewards"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        app:lottie_autoPlay="true"
+
+                        app:lottie_rawRes="@raw/reward_deactive" />
+
+                    <TextView
+                        android:id="@+id/tv_rewards"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:text="@string/rewards"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSettings"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/ivSettings"
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:src="@drawable/ic_setting" />
+
+                    <TextView
+                        android:id="@+id/tvSettings"
+                        style="@style/Font500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:text="Setting"
+                        android:textSize="@dimen/_10sdp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btmNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:menu="@menu/bottom_menu" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.cheq.profile.presentation.viewmodels.PersonalDetailsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_26dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/dimen_26dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="@string/personal_details"
+            android:textColor="@color/greyscale_p9"
+            android:textSize="@dimen/dimen_22sp"
+            app:layout_constraintStart_toStartOf="@id/iv_back"
+            app:layout_constraintTop_toBottomOf="@id/iv_back" />
+
+<!--        todo: remove this constraint layout-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_initials"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/name_initials_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/iv_initials"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basiercircle_regular"
+                android:gravity="center"
+                android:tag="iv_initials"
+                android:textColor="@color/primary_p5"
+                android:textSize="@dimen/_19sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                app:fontFamily="@font/basiercircle_semibold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:setData="@{viewmodel.personalDetailsLive}"
+                tools:text="FL" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/dimen_26dp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/label_view_personal_info"
+            android:textColor="@color/greyscale_p6"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/tv_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:layout_marginRight="@dimen/dimen_26dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_label_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/label_full_name"
+            android:textAllCaps="true"
+            android:textColor="@color/greyscale_p7"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_fullname"
+            android:tag="tv_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/rounded_rect"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="center_vertical"
+            android:lineHeight="@dimen/_20sdp"
+            android:paddingStart="@dimen/_11sdp"
+            android:textColor="@color/greyscale_p7"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_fullname"
+            app:setData="@{viewmodel.personalDetailsLive}"
+            tools:text="@string/label_full_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_label_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/label_mobile_number"
+            android:textAllCaps="true"
+            android:textColor="@color/greyscale_p7"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fullname" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_mobile"
+            android:tag="tv_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/rounded_rect"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="center_vertical"
+            android:lineHeight="@dimen/_20sdp"
+            android:paddingStart="@dimen/_11sdp"
+            android:textColor="@color/greyscale_p7"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_mobile"
+            app:setData="@{viewmodel.personalDetailsLive}"
+            tools:text="@string/label_mobile_number" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_label_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/label_email"
+            android:textAllCaps="true"
+            android:textColor="@color/greyscale_p7"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_9sdp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobile" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_email"
+            android:tag="tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/rounded_rect"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="center_vertical"
+            android:lineHeight="@dimen/_20sdp"
+            android:paddingStart="@dimen/_11sdp"
+            android:textColor="@color/greyscale_p7"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_email"
+            app:setData="@{viewmodel.personalDetailsLive}"
+            tools:text="@string/label_email" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

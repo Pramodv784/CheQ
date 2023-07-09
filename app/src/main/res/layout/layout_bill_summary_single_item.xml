@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="infoClicked"
+            type="Boolean" />
+    </data>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_service_fees"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_13sdp"
+        android:layout_marginBottom="@dimen/_9sdp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="center_vertical"
+            android:textColor="@color/greyscale_p6"
+            android:textSize="@dimen/_10sdp"
+            tools:text="@string/service_fees" />
+
+        <FrameLayout
+            android:id="@+id/fl_info_bg"
+            android:layout_width="@dimen/_24dp"
+            android:layout_height="@dimen/_24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@{infoClicked == true? @drawable/ic_info_bg : null}">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:bindInfoIcon="@{infoClicked}"
+                app:srcCompat="@drawable/ic_info_grey" />
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="end"
+            android:textColor="@color/greyscale_p6"
+            android:textSize="@dimen/_10ssp"
+            tools:text="+ ₹25" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_additional_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"
+            android:text="₹0" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

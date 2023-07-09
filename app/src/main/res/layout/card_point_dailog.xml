@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet_google_signin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:elevation="15dp"
+        android:layout_margin="@dimen/_17sdp"
+        app:cardBackgroundColor="#F4F3DA"
+        app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:scaleType="centerCrop"
+        android:src="@drawable/close" />
+
+        <TextView
+            android:id="@+id/tvName"
+            style="@style/FontExtraBoldDarkBlue24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/setup_auto_pay_for_your_hdfc_millennia"
+            android:textColorHint="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:background="@drawable/bg_white_cards"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/FontExtraBoldBlue14"
+                android:layout_marginVertical="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/points" />
+
+
+            <TextView
+                android:id="@+id/tvPoint"
+                style="@style/FontExtraBoldDarkBlue24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="65"
+                android:textColorHint="@color/colorAccent" />
+            <LinearLayout
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:id="@+id/ll_order_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                style="@style/FontExtraBoldBlue14"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="@string/hdfc_millennia" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_group_59" />
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                style="@style/FontSemiBoldBlack16"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_marginStart="15dp"
+                android:gravity="center|start"
+                android:text="@string/_5318" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_mastercard" />
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_marginBottom="@dimen/_10sdp"
+            style="@style/GlobalButtonStyle"
+            android:backgroundTint="@color/grey"
+            android:text="@string/done" />
+
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

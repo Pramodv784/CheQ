@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.login.GetPanCardActivity" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_19sdp"
+        tools:context=".ui.confirmDetails.GetPanCardActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_41sdp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLetStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="@string/just_one_more_step"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="24sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="We need a few more details…"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_19sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="@string/pan"
+                    android:textColor="@color/colorTextGreyNew"
+                    android:textSize="10sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+                    <EditText
+                        android:id="@+id/etPan"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/textview_round_grey"
+                        android:backgroundTint="@color/colorUnFocused"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:gravity="center|start"
+                        android:hint="@string/bbspr8120d"
+                        android:importantForAutofill="no"
+
+                        android:inputType="textPersonName|textCapCharacters"
+                        android:maxLength="10"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colornaturals"
+                        android:textColorHint="@color/colorTextGrey"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold"
+                        app:addTextChangedListener="@{activity.validatePanNumber()}" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llBtmOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/et_btm_bg_un_focused" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_warning"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:text="Please enter valid PAN"
+                    android:textColor="#F46E6E"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="@string/date_of_birth"
+                    android:textColor="@color/colorTextGreyNew"
+                    android:textSize="10sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp">
+
+                    <TextView
+                        android:id="@+id/tvDob"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/textview_round_grey"
+                        android:backgroundTint="@color/colorUnFocused"
+                        android:gravity="center|start"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:hint="@string/i_e_12_november_1993"
+                        android:onClick="@{()->activity.onDatePick()}"
+                        android:paddingHorizontal="@dimen/_15sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colornaturals"
+                        android:textColorHint="@color/colorTextGrey"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:textSize="@dimen/_14sdp"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llBtmTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_7sdp"
+                        android:layout_gravity="bottom"
+                        android:background="@drawable/et_btm_bg_un_focused" />
+
+                </FrameLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                style="@style/GlobalButtonStyle"
+
+                android:background="@{activity.isAllFieldValid ? @drawable/button_color_primary :  @drawable/button_color_primary_disabled}"
+                android:enabled="@{activity.isAllFieldValid ?  true: false }"
+                android:onClick="@{()-> activity.onContinue()}"
+                android:text="@string/done"
+                android:textAllCaps="true"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/flLottieIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_btn_bg"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/generi_loader_white" />
+
+            </FrameLayout>
+        </FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

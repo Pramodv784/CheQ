@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvConvertToCash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:paddingVertical="@dimen/_7sdp"
+            android:text="@string/explore_vouchers"
+            android:textAllCaps="true"
+            android:textColor="@color/convert_to_cash_color"
+            android:textSize="10sp"
+            android:textFontWeight="600"
+            app:layout_constraintEnd_toStartOf="@+id/ivCheqRewardCoin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCheqRewardCoin"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/tvCoinCount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cheq_reward_coin" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCoinCount"
+            style="@style/Font500"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="1 = ₹0.25"
+            android:textColor="@color/colorCaption"
+            android:textSize="@dimen/_10sdp"
+            android:textFontWeight="400"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheqRewardCoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExploreVoucher"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvConvertToCash"
+            app:spanCount="4"
+            tools:itemCount="4"
+            android:layout_marginStart="@dimen/_16sdp"
+            tools:listitem="@layout/explore_vouchers_item_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

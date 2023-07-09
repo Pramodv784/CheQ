@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+
+        <ScrollView
+            android:id="@+id/llHOme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp"
+                android:visibility="visible">
+
+                <include
+                    android:id="@+id/layoutTotalDue"
+                    layout="@layout/layout_dashboard_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSmallOffersForYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:letterSpacing=".1"
+                    tools:text="@string/offers_for_you"
+                    android:textAllCaps="true"
+                    android:textColor="@color/ref_grey_light"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/home_placeholder_small_banner"
+                        android:layout_width="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/homeSmallBanner"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_height="@dimen/_60sdp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSmallOfferWidgets"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </FrameLayout>
+
+
+                <include
+                    android:id="@+id/layoutCreditHealth"
+                    layout="@layout/layout_credit_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvOffersForYou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:letterSpacing=".1"
+                    tools:text="@string/offers_for_you"
+                    android:textColor="@color/ref_grey_light"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/home_placeholder_small_banner"
+                        android:layout_width="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:id="@+id/offerForYouBanner"
+                        android:layout_height="@dimen/_70sdp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvOffersForYou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+
+                        android:clipToPadding="false"
+
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/_20sdp"
+                        android:paddingEnd="@dimen/_20sdp"
+
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </FrameLayout>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvActionRecommended"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:letterSpacing=".1"
+                    android:text="@string/action_recommended"
+                    android:textAllCaps="true"
+                    android:textColor="#6E7170"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+                <com.cheq.retail.ui.dashboard.view.customview.pendingchiptimeline.view.PendingChipTimelineView
+                    android:id="@+id/pendingChipTimelineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/grey_border" />
+
+                <include
+                    android:id="@+id/cheqSafeLayout"
+
+                    layout="@layout/cheq_safe_widget_item_layout" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:letterSpacing=".1"
+                    android:text="@string/do_more_on_cheq"
+                    android:textAllCaps="true"
+                    android:textColor="#6E7170"
+                    android:textFontWeight="600"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold" />
+
+               <FrameLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <include layout="@layout/home_placeholder_big_banner"
+                       android:layout_width="match_parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       android:id="@+id/Homerefer"
+                       android:layout_marginTop="@dimen/_8sdp"
+                       android:layout_marginHorizontal="@dimen/_16sdp"
+                       android:layout_height="@dimen/_150sdp" />
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:id="@+id/iv_refer"
+                       android:layout_width="match_parent"
+
+                       android:layout_height="@dimen/_170sdp"
+                       android:layout_marginHorizontal="@dimen/_20sdp"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:scaleType="fitXY" />
+               </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/home_placeholder_big_banner"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:id="@+id/HomeVoucher"
+                        android:layout_height="@dimen/_150sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_voucher"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_170sdp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:scaleType="fitXY" />
+                </FrameLayout>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/toDO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:background="#F9FAFF"
+
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/rlToDO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:paddingVertical="@dimen/_4sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvToDO"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_18sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:fontFamily="@font/basiercircle_semibold"
+                            android:text="@string/to_do"
+                            android:textColor="#6E7170"
+                            android:textSize="@dimen/_8sdp" />
+
+                        <com.cheq.retail.ui.dashboard.view.customview.custom_indicator.SliderIndicator
+
+                            android:id="@+id/slide_indicator"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_160sdp"
+                            android:background="#F9FAFF"
+                            app:isAnimation="true"
+                            app:isShadow="false"
+                            app:selectedIndicatorColor="@color/colorPrimary"
+                            app:selectedWidthDimension="32dp"
+                            app:spaceDimension="5dp"
+                            app:unselectedIndicatorColor="#D3F9F0"
+                            app:unselectedWidthDimension="32dp" />
+
+                        <TextView
+                            android:id="@+id/indicator_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginEnd="@dimen/_18sdp"
+                            android:layout_marginBottom="@dimen/_2sdp"
+                            android:layout_toStartOf="@+id/slide_indicator"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:text="@string/_1_3"
+                            android:textColor="#131414"
+                            android:textSize="@dimen/_8sdp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vpToDO"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_188sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rlToDO" />
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llDots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_17sdp"
+                        android:layout_marginTop="@dimen/_9sdp"
+                        android:layout_marginEnd="@dimen/_17sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/vpToDO" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/creditdashBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/creditComparison"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:fontFamily="@font/basiercircle_semibold"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/your_credit_comparison"
+                            android:textColor="@color/grey_naturals"
+                            android:textSize="@dimen/_8sdp"
+                            app:textAllCaps="true" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginVertical="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/ivCompareOne"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_alignParentStart="true"
+                                android:layout_gravity="center"
+
+
+                                android:src="@drawable/iv_flag_back" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCompareNational"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toEndOf="@+id/ivCompareOne"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:text="@string/you_re_among_top_5_in_india"
+                                android:textColor="#131414"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/ivCompareNational"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+
+                                android:layout_gravity="center"
+                                android:src="@drawable/iv_thumps_back"
+                                tools:ignore="ImageContrastCheck" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginVertical="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/ivComparetwo"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_alignParentStart="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/iv_location_back" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCompareArea"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:layout_toEndOf="@+id/ivComparetwo"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:paddingEnd="@dimen/_8sdp"
+                                android:text="@string/you_are_in_top_15_of_people_in_your_area"
+                                android:textColor="#131414"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/ivCompArea"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center"
+
+                                android:contentDescription="@string/add"
+                                android:src="@drawable/iv_thumps_back"
+                                tools:ignore="ImageContrastCheck" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginVertical="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/ivComparethree"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_alignParentStart="true"
+                                android:layout_gravity="center"
+
+
+                                android:src="@drawable/iv_profile_back" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCompAge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toEndOf="@+id/ivComparethree"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:paddingEnd="@dimen/_8sdp"
+                                android:text="@string/you_re_among_67_in_people_like_you"
+                                android:textColor="#131414"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/ivCompAge"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/iv_thumps_down" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_20sdp"
+                            android:layout_marginVertical="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/ivComparefour"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:layout_alignParentStart="true"
+                                android:layout_gravity="center"
+
+
+                                android:src="@drawable/iv_credit_health_back" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCompCredit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_toEndOf="@+id/ivComparefour"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:paddingEnd="@dimen/_8sdp"
+                                android:text="@string/your_credit_is_855"
+                                android:textColor="#131414"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <ImageView
+                                android:id="@+id/ivCompCredit"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_gravity="center"
+
+                                android:src="@drawable/iv_thumps_back"
+                                tools:ignore="ImageContrastCheck" />
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="173dp"
+                        android:layout_marginTop="@dimen/_18sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:scaleType="centerCrop"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/home_footer" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/home_animation" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/cheqSafeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

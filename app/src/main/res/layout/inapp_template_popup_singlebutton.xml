@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_sheet_new"
+        android:paddingTop="14dp"
+        android:paddingBottom="50dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:contentDescription="@string/cancel"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_title_drawable"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_inapp_thumb" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_popup_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="54dp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_cancel"
+            app:layout_constraintStart_toEndOf="@+id/img_title_drawable"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/label_inapp_rate_us_title" />
+
+        <include
+            android:id="@+id/inapp_lottie_container"
+            layout="@layout/inapp_lottie_container"
+            android:layout_width="167dp"
+            android:layout_height="123dp"
+            android:layout_marginVertical="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_popup_title" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/btn_primary"
+            style="@style/ProximaPrimaryButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inapp_lottie_container">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_title_drawable"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_inapp_playstore_mono" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btn_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:fontFamily="@font/basiercircle_semibold"
+                tools:text="@string/btn_label_rate_us" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

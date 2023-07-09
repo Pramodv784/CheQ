@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.billPayments.PaymentMethodsActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottomsheet"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:contentDescription="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_64sdp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:background="@drawable/new_card">
+            <FrameLayout
+                android:id="@+id/llPayTogether"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_57sdp"
+                android:background="@drawable/combine_bill_payment_common_bg"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:background="@drawable/ic_shadow" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/combine_bill_payment_white_bg">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/llCardBackGround"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/combine_bill_payment_stroke_green_bg"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_1sdp"
+                                android:background="@drawable/ic_shadow" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="@dimen/_15sdp">
+
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvPayTogetherProductCount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/basiercircle_semibold"
+                                        android:gravity="center|start"
+                                        android:textAllCaps="true"
+                                        android:textColor="#858989"
+                                        android:textSize="@dimen/_8sdp"
+                                        tools:text="3 Products via" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginEnd="@dimen/_2sdp"
+                                            android:fontFamily="@font/basiercircle_medium"
+                                            android:text="@string/pay_together"
+                                            android:textColor="@color/colorTextTitle"
+                                            android:textSize="@dimen/_9sdp" />
+
+                                        <FrameLayout
+                                            android:id="@+id/flTotalProductList"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:visibility="visible">
+
+                                            <androidx.appcompat.widget.LinearLayoutCompat
+                                                android:id="@+id/llBankLogoOne"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/ic_circle"
+                                                android:gravity="center">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivBankLogoOne"
+                                                    android:layout_width="@dimen/_15sdp"
+                                                    android:layout_height="@dimen/_15sdp"
+                                                    android:layout_gravity="center"
+                                                    android:padding="@dimen/_2sdp"
+                                                    app:srcCompat="@drawable/sbi_logo" />
+                                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                            <androidx.appcompat.widget.LinearLayoutCompat
+                                                android:id="@+id/llBankLogoTwo"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/_10sdp"
+                                                android:background="@drawable/ic_circle"
+
+                                                android:gravity="center">
+
+                                                <androidx.appcompat.widget.AppCompatImageView
+                                                    android:id="@+id/ivBankLogoTwo"
+                                                    android:layout_width="@dimen/_15sdp"
+                                                    android:layout_height="@dimen/_15sdp"
+                                                    android:layout_gravity="center"
+                                                    android:padding="@dimen/_2sdp"
+                                                    app:srcCompat="@drawable/sbi_logo" />
+                                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                            <androidx.appcompat.widget.LinearLayoutCompat
+                                                android:id="@+id/llCardCount"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/_20sdp"
+                                                android:background="@drawable/ic_circle"
+                                                android:gravity="center">
+
+                                                <androidx.appcompat.widget.AppCompatTextView
+                                                    android:id="@+id/tvCardCount"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:fontFamily="@font/basiercircle_medium"
+                                                    android:textColor="@color/colorTextTitle"
+                                                    android:textSize="@dimen/_9sdp"
+                                                    tools:text="+1" />
+                                            </androidx.appcompat.widget.LinearLayoutCompat>
+                                        </FrameLayout>
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/basiercircle_semibold"
+                                        android:text="Payable Amount"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorText"
+                                        android:textSize="@dimen/_8sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvPayableAmount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_4sdp"
+                                        android:fontFamily="@font/basiercircle_medium"
+                                        android:textColor="@color/colorTextTitle"
+                                        android:textSize="@dimen/_13sdp"
+                                        tools:ignore="HardcodedText"
+                                        tools:text="₹12000" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/llSingleCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_57sdp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@drawable/combine_bill_payment_stroke_bg">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:background="@drawable/ic_shadow" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llCardStrokeBackGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_1sdp"
+                    tools:background="@drawable/combine_bill_payment_gradient_bg">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/llCardSolidBackGround"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:orientation="horizontal">
+
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvBankNameSingle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:fontFamily="@font/basiercircle_medium"
+                                        android:gravity="center|start"
+                                        android:text="HDFC Regalia"
+                                        android:textColor="@color/colorTextBlack"
+                                        android:textSize="@dimen/_10sdp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/ivCardTypeSingle"
+                                            android:layout_width="@dimen/_16sdp"
+                                            android:layout_height="@dimen/_16sdp"
+                                            android:layout_gravity="center_vertical"
+                                            tools:srcCompat="@drawable/ic_mastercard" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCardNumberSingle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_4sdp"
+                                            android:fontFamily="@font/basiercircle_medium"
+                                            android:text="··· 5425"
+                                            android:layout_gravity="center_vertical"
+                                            android:textColor="@color/colorTextGreyNew"
+                                            android:textSize="@dimen/_9sdp" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/iv_bank_image"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:scaleType="fitEnd"
+                                        android:src="@drawable/bank_icon" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvAmountSingle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_4sdp"
+                                        android:fontFamily="@font/basiercircle_medium"
+                                        android:textColor="@color/colorTextTitle"
+                                        android:textSize="@dimen/_13sdp"
+                                        tools:ignore="HardcodedText"
+                                        android:visibility="gone"
+                                        tools:text="₹12000" />
+
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/llSingleLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <include
+                    android:id="@+id/loanCard"
+                    layout="@layout/layout_loan_card"
+                    android:visibility="visible" />
+
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/amount_to_pay"
+                    android:textColor="#858989"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRewardAmountToPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_13sdp"
+                    tools:ignore="HardcodedText"
+                    tools:text="₹ 12000" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAmountToPay"
+                    style="@style/FontBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_13sdp"
+                    tools:ignore="HardcodedText"
+                    tools:text="₹ 12000" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/payment_method"
+                    android:textColor="#858989"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llCheqRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        app:srcCompat="@drawable/cheq_reward_coin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:singleLine="true"
+                        android:text="CheQ Chips"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/_10sdp"
+                        tools:ignore="HardcodedText" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llBankDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivPaymentTypeLogo"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        app:srcCompat="@drawable/bank_logo_placeholder" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPaymentModeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:singleLine="true"
+                        android:maxEms="6"
+                        android:textColor="@color/colornaturals"
+                        android:textSize="@dimen/_11sdp"
+                        tools:ignore="HardcodedText"
+                        tools:text="AXIS BANK CARD" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPaymentModeName1"
+                        style="@style/FontBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:maxEms="6"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/colornaturals"
+                        android:textSize="@dimen/_8sdp"
+                        android:visibility="gone"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        app:srcCompat="@drawable/ic_edit" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llRewards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:layout_marginBottom="@dimen/_9sdp"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:background="@drawable/ic_earn_reward_module"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:src="@drawable/coin_earn" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRewards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="@id/ivMore"
+                            app:layout_constraintEnd_toStartOf="@id/ivMore"
+                            app:layout_constraintStart_toStartOf="@id/btnOkay"
+                            app:layout_constraintTop_toTopOf="@id/ivMore"
+                            tools:text="You will earn 100 CheQ Chips" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvAtTheRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:text="@string/str_at_the_rate"
+                            android:textColor="@color/colorText"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRewardPercentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:textColor="@color/colorTextTitle"
+                            android:textSize="@dimen/_10sdp"
+                            tools:text="1.0%" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvRewardEarned"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        tools:text="4000/4000 chips have been earned this month!"
+                        android:textSize="@dimen/_9sdp"
+                        android:textColor="#858989"
+                        android:visibility="gone"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:fontFamily="@font/basiercircle_regular"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@id/btnOkay"
+                    app:layout_constraintEnd_toEndOf="@id/btnOkay"
+                    app:srcCompat="@drawable/ic_info" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOkay"
+            style="@style/GlobalButtonStyle"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:text="@string/pay_now"
+            android:visibility="@{activity.progress ?View.GONE :View.VISIBLE}" />
+
+        <FrameLayout
+            android:id="@+id/flLottieIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/ic_btn_bg"
+            android:visibility="@{activity.progress ?View.VISIBLE :View.GONE}">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_50sdp"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/generi_loader_white" />
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

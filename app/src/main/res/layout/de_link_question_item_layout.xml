@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/grey_border"
+        android:padding="@dimen/_14sdp"
+        android:layout_marginVertical="@dimen/_8sdp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEmailType"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/gmail"
+            app:srcCompat="@drawable/ic_gmail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/etEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:cursorVisible="true"
+            app:fontFamily="@font/basiercircle_medium"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:focusable="false"
+            android:gravity="center|start"
+            android:hint="@string/email_hint"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/gery_dark"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:fontFamily="@font/basiercircle_regular"
+            android:textSize="12sp"
+            android:id="@+id/tvCheqSafeStatus"
+            android:textColor="@color/golden_color"
+            android:text="@string/linking"/>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCheqSafeStatus"
+            android:visibility="gone"
+            android:layout_width="@dimen/_13sdp"
+            android:layout_height="@dimen/_13sdp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/check_icon_email_linking"
+            app:srcCompat="@drawable/cheq_safe_check" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

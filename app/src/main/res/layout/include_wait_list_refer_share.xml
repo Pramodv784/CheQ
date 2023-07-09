@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="13dp"
+    android:paddingBottom="13dp">
+
+    <LinearLayout
+        android:id="@+id/positionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/positionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/wait_list_your_position"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/positionCountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/basiercircle_semibold"
+            tools:text="15"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dividerV"
+        android:layout_width="0dp"
+        android:layout_height="0.7dp"
+        android:layout_margin="15dp"
+        android:background="#E6EAE9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/positionLayout" />
+
+
+    <TextView
+        android:id="@+id/referTitleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/basiercircle_semibold"
+        android:gravity="center"
+        android:textColor="@color/colorTextTitle"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dividerV"
+        android:text="You are moments away from getting Early Access" />
+        <!--tools:text="@string/wait_list_invite_more_friend_and_get_early_access_to_cheq" />-->
+
+    <View
+        android:id="@+id/referView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_color_primary"
+        android:text="@string/refer_a_friend"
+        app:layout_constraintBottom_toBottomOf="@id/btnSubText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/referTitleTV" />
+
+    <TextView
+        android:id="@+id/btnText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basiercircle_medium"
+        android:paddingTop="7dp"
+        android:text="@string/wait_list_refer_now"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/referView" />
+
+    <TextView
+        android:id="@+id/btnSubText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basiercircle_regular"
+        android:gravity="center"
+        android:paddingBottom="7dp"
+        tools:text="@string/wait_list_earn_chips_for_each_referral"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnText" />
+
+    <TextView
+        android:id="@+id/unlockedTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/waitlist_unlocked_after_first_payment_of_more_than_100"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/referView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="12dp"
+        app:fontFamily="@font/basiercircle_regular"
+        app:drawableStartCompat="@drawable/wait_list_cheq_coin" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buttonGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="referView,btnText,btnSubText"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

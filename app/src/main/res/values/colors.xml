@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00C197</color>
+    <color name="colorAccent">#193A4A</color>
+    <color name="colorOnPrimary">@color/white</color>
+    <color name="black">#FF000000</color>
+    <color name="dark">#FF000000</color>
+    <color name="enable_bg">#CACACA</color>
+    <color name="color_view">#E7E7DE</color>
+    <color name="colornaturals">#202948</color>
+    <color name="colorTextLight">#6A7381</color>
+    <color name="colorGreyBlack">#1F2329</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="background">#F5F4DB</color>
+    <color name="text_grey">#A2A0A8</color>
+    <color name="light_grey">#A2A0A8</color>
+    <color name="cream">#F5F3BB</color>
+    <color name="red">#F5466A</color>
+    <color name="yellow">#ECB15A</color>
+    <color name="grey">#E3E3E3</color>
+    <color name="grey_light">#E6EAE9</color>
+    <color name="bg_grey">#F8F8F8</color>
+    <color name="textColorV4">#0C0E17</color>
+
+    <!--Referral color codes-->
+    <color name="color_green">#00C197</color>
+    <color name="ref_txt_color">#131414</color>
+    <color name="ref_grey_light">#6E7170</color>
+    <color name="vert_line_color">#A1A7A6</color>
+    <color name="ref_earned_bg">#EAFFFA</color>
+    <color name="divider_line_color">#CACFCF</color>
+    <color name="history_divider_line">#E6EAE9</color>
+    <color name="share_link_bg">#E6EAE9</color>
+    <color name="default_box_bg">#D9D9D9</color>
+    <color name="toast_box_bg">#2F3131</color>
+    <color name="ref_limit">#ADB3B2</color>
+    <color name="ref_arrow">#858989</color>
+
+    <!--Account setting colors-->
+    <color name="amount_red">#F5466A</color>
+    <color name="trans_history_border">#F2F2F2</color>
+    <color name="home_place_holder_background_color">#F2F2F2</color>
+
+    <color name="colorPrimaryGreen">#299D90</color>
+    <color name="colorIndicatorGreen">#4D299D90</color>
+    <color name="colorGradientGreen">#F0FCFB</color>
+    <color name="colorBackground">#E5E5E5</color>
+    <color name="colorGreenLight">#00E0C6</color>
+    <color name="colorGreenDark">#016171</color>
+    <color name="colorTextGrey">#A8B1BD</color>
+    <color name="colorGrey">#E4E8EE</color>
+    <color name="colorUnFocused">#EEF0F4</color>
+    <color name="colorCaption">#49505A</color>
+    <color name="colorGreyText">#6E7170</color>
+    <color name="colorCaption80">#E049505A</color>
+    <color name="colorTextBlackNew">#1A1A1A</color>
+    <color name="mint_green">#EEF0F4</color>
+    <color name="grey_naturals">#6A7381</color>
+    <color name="background_grey_box">#F5F5F7</color>
+    <color name="text_color_black">#2C2C2C</color>
+    <color name="borderBg">#E4E9F1</color>
+    <color name="textColorExpired">#848C96</color>
+
+    <!--  Rewards Section Color-->
+
+    <color name="colorLightGreenGradient">#EAFCFA</color>
+    <color name="colorDarkGreenBorder">#54B9AE</color>
+    <color name="colorBubbleGumGreenGradient">#ABF1E9</color>
+    <color name="colorDarkGreen">#5BBEA1</color>
+    <color name="colorTextDisabled">#A8B1BD</color>
+    <color name="homeDashBoardBlack">#131414</color>
+
+    <color name="help_color">#00C197</color>
+    <color name="loan_due_date">#858989</color>
+    <color name="gery_dark">#6E7170</color>
+    <color name="gery">#E6EAE9</color>
+    <color name="refer_gery">#B3B3B3</color>
+
+
+
+    <!-- combine bill payment -->
+    <color name="colorText">#858989</color>
+    <color name="colorTextBlack">#2F3131</color>
+    <color name="colorTextGreyNew">#6E7170</color>
+    <color name="colorDivider">#CACFCF</color>
+    <color name="colorHeaderBg">#FAF8F8</color>
+    <color name="colorTextTitle">#131414</color>
+    <color name="colorTextTitleBlack">#000000</color>
+    <color name="colorTextRed">#FF3049</color>
+    <color name="colorLightOrange">#FEF8F1</color>
+    <color name="colorGradientBg">#EFFFFB</color>
+
+    <color name="grey_text">#ADB2B2</color>
+    <color name="grey_text_continue">#828282</color>
+    <color name="golden_color">#F6AD0B</color>
+
+
+    <color name="demo">#FFDF8E</color>
+    <color name="demo2">#88E1B6</color>
+    <color name="demo3">#88E1B6</color>
+    <color name="demo4">#15CCB8</color>
+    <color name="demo5">#15CCB8</color>
+    <color name="demo6">#88E1B6</color>
+    <color name="demo7">#EAFFFA</color>
+    <color name="convert_to_cash_color">#6E7170</color>
+    <color name="shimmer_highlight_color">#BEFAEC</color>
+
+    <!--Proxima color palette-->
+    <color name="color_green_P0">#EAFFFA</color>
+    <color name="color_green_P5">#00C197</color>
+    <color name="color_green_P7">#039574</color>
+    <color name="color_green_P9">#015643</color>
+    <color name="color_grey_2">#F2F2F2</color>
+    <color name="color_grey_4">#CACFCF</color>
+    <color name="color_grey_5">#ADB2B2</color>
+    <color name="color_grey_6">#858989</color>
+    <color name="color_grey_9">#131414</color>
+
+</resources>

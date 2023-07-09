@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="referral"
+            type="com.cheq.retail.ui.main.model.ReferralHistory" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.loans.SetLoansProviderActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="match_parent"
+                android:onClick="onBackPress"
+                android:padding="@dimen/_12sdp"
+                android:src="@drawable/backarrow" />
+
+
+            <TextView
+                android:id="@+id/selectLoanProviderHelpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:visibility="gone"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/help"
+                android:textColor="@color/color_green"
+                android:textSize="@dimen/_9sdp" />
+
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/Font700"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_18sdp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:lineSpacingExtra="@dimen/_1sdp"
+            android:text="@string/friends_referred"
+            android:textColor="@color/ref_txt_color"
+            android:textSize="@dimen/_16sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@color/history_divider_line"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginHorizontal="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

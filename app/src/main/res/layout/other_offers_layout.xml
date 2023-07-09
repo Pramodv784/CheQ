@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#E3FFFC">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTopFeatured"
+            style="@style/Font400"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="center_vertical"
+            android:text="@string/other_offers"
+            android:textColor="@color/colorCaption"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOtherOffers"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_218sdp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_20sdp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTopFeatured" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rvOtherOffers" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

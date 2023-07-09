@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="21dp"
+        android:layout_marginVertical="@dimen/_6sdp"
+        android:background="@drawable/landing_back">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bankLogoIV"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/card_rounded_bg"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@id/bankLogoIV"
+                app:layout_constraintTop_toTopOf="@id/bankLogoIV"
+                tools:text="abc" />
+
+            <TextView
+                android:id="@+id/creditCardTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/bankLogoIV"
+                app:layout_constraintStart_toEndOf="@id/bankLogoIV"
+                app:layout_constraintTop_toBottomOf="@id/bankName"
+                tools:text="Credit Card" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

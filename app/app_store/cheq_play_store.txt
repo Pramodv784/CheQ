@@ -1,0 +1,14 @@
+Cheq Play store credentials 
+
+keystore path -  C:\Users\user\StudioProjects\CheqOneAndroid\app\app_store\cheq.jks
+password - CDPLBKIN2022
+Alias - cheq_digital
+password - CDPLBKIN2022
+First and last name - Akash Kedia
+Orgnaization Unit - Technology
+Orgnaization - Cheq Digital Private Limited
+City - Bengaluru
+State - Karnataka
+Country Code - In 
+
+

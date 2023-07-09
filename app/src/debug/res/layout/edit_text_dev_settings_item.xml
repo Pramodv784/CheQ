@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="item" type="com.cheq.retail.ui.item.EditTextSettingsItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/helper_text_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.helpText}"
+            android:textSize="@dimen/_11ssp"
+            app:fontFamily="@font/basiercircle_regular"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textColor="@color/greyscale_p9"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <FrameLayout
+            android:id="@+id/edit_text_fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/helper_text_tv"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:singleLine="true"
+                android:text="@{item.editTextValue}"
+                app:fontFamily="@font/basiercircle_regular"
+                android:textSize="@dimen/_13ssp"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/textview_round_grey"
+                android:hint="app.cheq.one"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llBtm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_7sdp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/et_btm_bg_un_focused" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/greyscale_p2"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/edit_text_fl"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

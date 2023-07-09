@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.activateCard.PaymentSuccessfulActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_product_bg"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.activateCard.PaymentSuccessfulActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            android:background="@drawable/ic_product_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/constraintLayout3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+
+                style="@style/FontBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:gravity="center"
+                android:text="Congratulations your card is successfully activated"
+                android:textColor="@color/colorPrimaryGreen"
+                android:textSize="@dimen/_18sdp"
+                tools:ignore="HardcodedText" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ScrollView
+            android:id="@+id/svMainContent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:layout_marginTop="@dimen/_60sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/btnOk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/circle_bg"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:visibility="gone" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="@dimen/_128sdp"
+                    android:layout_height="@dimen/_128sdp"
+                    android:layout_marginHorizontal="@dimen/_minus25sdp"
+                    android:layout_marginTop="@dimen/_minus28sdp"
+                    android:layout_marginBottom="@dimen/_minus40sdp"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/success_loader" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalProductType"
+                    style="@style/FontBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:text="Congratulations your card is successfully activated"
+                    android:textColor="@color/colorPrimaryGreen"
+                    android:textSize="@dimen/_18sdp"
+                    tools:ignore="HardcodedText" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    android:orientation="vertical">
+                    <include
+                        android:id="@+id/llCreditCard"
+                        layout="@layout/layout_credit_card_common_extended" />
+                    <include layout="@layout/layout_reward_earned_common" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/FontMedium14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/now_you_can_do"
+                    android:visibility="invisible"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:id="@+id/btnActivationNudge1"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:background="@drawable/ic_offer_btm_bg"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            app:srcCompat="@drawable/ic_cash_back_new" />
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/FontBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/refer_and_earn"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Font500"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:text="Optional subtext will be visible here"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/_10sdp"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:contentDescription="right_icon"
+                        app:srcCompat="@drawable/ic_right_new_arrow_small"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:id="@+id/btnActivationNudge2"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/ic_offer_btm_bg"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivIcon"
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            app:srcCompat="@drawable/ic_cash_back_new" />
+                    </RelativeLayout>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/FontBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/refer_and_earn"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Font500"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:text="Optional subtext will be visible here"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/_10sdp"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:contentDescription="right_icon"
+                        app:srcCompat="@drawable/ic_right_new_arrow_small"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOk"
+            style="@style/GlobalButtonStyleNew"
+            android:layout_gravity="bottom"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@drawable/ic_btn_outlined"
+            android:onClick="@{()-> activity.onButtonClick()}"
+            android:text="@string/ok_"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

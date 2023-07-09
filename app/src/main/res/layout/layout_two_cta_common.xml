@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_paying"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/ic_grey_rectangle_border"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/btn_pay"
+            app:layout_constraintEnd_toStartOf="@id/btn_pay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_pay"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_paying_via"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/basiercircle_semibold"
+                android:paddingEnd="@dimen/_30sdp"
+                android:textColor="@color/colorTextGreyNew"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/paying_via" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_paying_logo"
+                android:layout_width="@dimen/_11sdp"
+                android:layout_height="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="@id/tv_paying_via"
+                app:layout_constraintTop_toBottomOf="@id/tv_paying_via"
+                app:srcCompat="@drawable/sbi" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_paying_via_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/basiercircle_medium"
+                android:maxLines="1"
+                android:textColor="@color/colorTextTitle"
+                app:layout_constraintBottom_toBottomOf="@id/iv_paying_logo"
+                app:layout_constraintEnd_toStartOf="@id/iv_edit"
+                app:layout_constraintStart_toEndOf="@id/iv_paying_logo"
+                app:layout_constraintTop_toTopOf="@id/iv_paying_logo"
+                tools:text="Phone Pe" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_edit"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginEnd="@dimen/_9sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_paying_via_name"
+                app:srcCompat="@drawable/ic_edit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_pay"
+            style="@style/GlobalButtonStyle"
+            android:background="@drawable/cta_green_button_new"
+            android:layout_width="0dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/basiercircle_medium"
+            app:layout_constraintStart_toEndOf="@id/cl_paying"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="PAY ₹10,000" />
+
+        <FrameLayout
+            android:id="@+id/flLottieIndicator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/ic_btn_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cl_paying"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/_50sdp"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/generi_loader_white" />
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_go_back"
+            style="@style/GlobalButtonStyleNew"
+            android:layout_gravity="bottom"
+            android:background="@drawable/ic_btn_outlined"
+            android:text="@string/go_back"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

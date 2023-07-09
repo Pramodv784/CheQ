@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llCreditHealth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_20sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/appCompatTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:fontFamily="@font/basiercircle_semibold"
+        android:letterSpacing=".1"
+        android:text="@string/your_credit_score"
+        android:textAllCaps="true"
+        android:textColor="@color/colorGreyText"
+        android:textFontWeight="@string/font_weight_600"
+        android:textSize="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/relativeLayout"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:background="@drawable/ic_credit_outline"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatTextView2" />
+
+
+    <ImageView
+        android:id="@+id/ivCreditImage"
+        android:layout_width="@dimen/_29sdp"
+        android:layout_height="@dimen/_19sdp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:src="@drawable/credit_health_green"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbl_powered_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_2sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/basiercircle_semibold"
+        android:letterSpacing=".1"
+        android:text="@string/powered_by"
+        android:textAllCaps="true"
+        android:textColor="@color/colorDivider"
+        android:textSize="@dimen/_7sdp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/img_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/ivCreditImage"
+        app:layout_constraintTop_toTopOf="@id/ivCreditImage"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="@dimen/_43sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:src="@drawable/ic_experian_new"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/ivCreditImage"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/ivCreditImage"
+        app:layout_constraintTop_toBottomOf="@id/lbl_powered_by" />
+
+    <ImageView
+        android:id="@+id/iv_credit_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:src="@drawable/ic_right_arrow_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout"
+        app:tint="@color/grey_text" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_max_cred_limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:fontFamily="@font/basiercircle_semibold"
+        android:text="@string/max_credit_limit"
+        android:textColor="@color/colorDivider"
+        android:textSize="@dimen/_19sdp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toTopOf="@id/creditScoreText"
+        app:layout_constraintEnd_toStartOf="@id/iv_credit_arrow"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/iv_credit_arrow"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:textAllCaps="true" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCreditScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basiercircle_semibold"
+        android:textColor="@color/colorTextTitle"
+        android:textSize="@dimen/_19sdp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_max_cred_limit"
+        app:layout_constraintBottom_toTopOf="@id/creditScoreText"
+        app:layout_constraintEnd_toStartOf="@id/txt_max_cred_limit"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toTopOf="@id/iv_credit_arrow"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/creditScoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:fontFamily="@font/basiercircle_semibold"
+        android:letterSpacing=".1"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textFontWeight="@string/font_weight_700"
+        android:textSize="@dimen/_7sdp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/iv_credit_arrow"
+        app:layout_constraintEnd_toStartOf="@id/iv_credit_arrow"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/txt_max_cred_limit"
+        tools:text="Excellent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

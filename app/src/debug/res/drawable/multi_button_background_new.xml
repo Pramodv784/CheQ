@@ -1,0 +1,8 @@
+        <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/cta_green_button_new" />
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/ic_btn_bg_disabled" />
+</selector>

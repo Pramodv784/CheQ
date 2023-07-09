@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_8sdp"
+    android:layout_height="match_parent">
+    <TextView
+        style="@style/FontMediumGrey14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account number"
+        android:textColor="@color/grey_naturals"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/bs_tv_ac_no"
+        style="@style/FontBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:textColor="@color/colornaturals"
+        android:textSize="@dimen/_10sdp" />
+</LinearLayout>

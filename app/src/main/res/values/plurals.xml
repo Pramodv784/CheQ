@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="identified_products_count">
+        <item quantity="one">WE\'VE IDENTIFIED 1 CREDIT PRODUCT</item>
+        <item quantity="other">WE\'VE IDENTIFIED %d CREDIT PRODUCTS</item>
+    </plurals>
+
+</resources>

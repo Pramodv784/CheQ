@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_ref_history_bg"
+            android:padding="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTransaction"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_bill_payment" />
+        </FrameLayout>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12722646">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="20000"
+            android:textColor="@color/ref_txt_color"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintStart_toEndOf="@id/frameLayout"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            app:layout_constraintTop_toTopOf="@id/frameLayout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPaidTogether"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="\u00b7  Paid Together"
+            android:textColor="@color/ref_arrow"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@id/tvAmount"
+            app:layout_constraintStart_toEndOf="@id/tvAmount"
+            app:layout_constraintTop_toTopOf="@id/tvAmount" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="20 nov 2018"
+            android:textColor="@color/ref_arrow"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tvAmount"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+            app:layout_constraintEnd_toStartOf="@+id/tvDate"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/tvAmount">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/basiercircle_regular"
+            android:lines="1"
+            android:layout_toStartOf="@+id/imgArrow"
+            android:textColor="@color/ref_grey_light"
+            android:textSize="@dimen/_8sdp"
+             />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="@dimen/_5sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:srcCompat="@drawable/ic_arrow_" />
+        </RelativeLayout>
+
+    <View
+        android:id="@+id/viewVertical"
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@drawable/dotted_bg"
+        app:layout_constraintEnd_toEndOf="@id/frameLayout"
+        app:layout_constraintStart_toStartOf="@id/frameLayout"
+        app:layout_constraintTop_toBottomOf="@id/frameLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout></layout>

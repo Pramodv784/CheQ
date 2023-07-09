@@ -1,0 +1,24 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="pageMargin">20dp</dimen>
+    <dimen name="selectedPadding">20dp</dimen>
+    <dimen name="selectedMargin">24dp</dimen>
+    <dimen name="unSelectedPadding">10dp</dimen>
+    <dimen name="pageMarginAndOffset">24dp</dimen>
+    <dimen name="commonPadding">8dp</dimen>
+    <dimen name="commonPadding2">2dp</dimen>
+    <dimen name="minus_ten">-10dp</dimen>
+    <dimen name="minus_five">-5dp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="tabMargin">32dp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_24dp">24dp</dimen>
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="minus_ffour">-44dp</dimen>
+    <dimen name="minus_teight">-38dp</dimen>
+    <dimen name="font_weight_700">700</dimen>
+    <dimen name="font_weight_600">600</dimen>
+
+</resources>

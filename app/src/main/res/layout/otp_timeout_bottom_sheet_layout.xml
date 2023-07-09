@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.verifyOtp.VerifyOtpActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:text="@string/otp_timeout"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOTPDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            tools:text="If you did not receive the OTP for +91 8474692432"
+            android:textColor="@color/colorText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTimeOut"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeOut"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/viewOne"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:src="@drawable/ic_sim_otp"
+            app:layout_constraintStart_toStartOf="@id/tvOTPDesc"
+            app:layout_constraintTop_toBottomOf="@id/tvOTPDesc" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeOutTextOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="Your SIM may be placed incorrectly"
+            android:textColor="@color/colornaturals"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/viewOne"
+            app:layout_constraintTop_toBottomOf="@id/viewOne"
+            tools:ignore="HardcodedText"
+            tools:targetApi="p" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/viewTwo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:src="@drawable/ic_network_coverage_area"
+            app:layout_constraintStart_toStartOf="@id/tvTimeOutTextOne"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeOutTextOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeOutTextTwo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="You may be in a low network area"
+            android:textColor="@color/colornaturals"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/viewTwo"
+            app:layout_constraintTop_toBottomOf="@id/viewTwo"
+            tools:ignore="HardcodedText"
+            tools:targetApi="p" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/viewThree"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:src="@drawable/ic_sms_permission"
+            app:layout_constraintStart_toStartOf="@id/tvTimeOutTextTwo"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeOutTextTwo" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTimeOutTextThree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:drawablePadding="@dimen/_4sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="SMS may be disabled by your service provider"
+            android:textColor="@color/colornaturals"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/viewThree"
+            app:layout_constraintTop_toBottomOf="@id/viewThree"
+            tools:ignore="HardcodedText"
+            tools:targetApi="p" />
+
+        <View
+            android:id="@+id/dummyView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/_16sdp"
+            app:layout_constraintBottom_toTopOf="@id/btnRetry"
+            app:layout_constraintEnd_toEndOf="@id/btnRetry"
+            app:layout_constraintStart_toStartOf="@id/btnRetry"
+            app:layout_constraintTop_toBottomOf="@id/tvTimeOutTextThree" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRetry"
+            style="@style/GlobalButtonStyle"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="@string/otp_time_out_try_again"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

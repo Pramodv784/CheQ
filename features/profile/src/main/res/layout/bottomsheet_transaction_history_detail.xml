@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_13sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/close_iv"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/dimen_13dp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:tint="@color/greyscale_p9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_close" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/title_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="-7dp"
+                        android:text="@string/transaction_history"
+                        android:textColor="@color/greyscale_p9"
+                        android:textSize="@dimen/_17ssp"
+                        app:fontFamily="@font/basiercircle_medium"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/close_iv" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/bbps_logo_iv"
+                        android:layout_width="@dimen/_44sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_18sdp"
+                        android:layout_marginRight="@dimen/_18sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/title_tv"
+                        app:srcCompat="@drawable/ic_bbps" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/txn_history_rounded_background"
+                        android:clipChildren="true"
+                        android:paddingBottom="@dimen/_25sdp"
+                        app:layout_constraintTop_toBottomOf="@id/bbps_logo_iv"
+                        tools:layout_editor_absoluteX="24dp">
+
+                        <FrameLayout
+                            android:id="@+id/card_fl"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_64sdp"
+                            android:background="@drawable/new_card"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <include
+                                android:id="@+id/loan_layout"
+                                layout="@layout/layout_new_loan_card"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone" />
+
+
+                            <FrameLayout
+                                android:id="@+id/credit_card_fl"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_57sdp">
+
+                                <FrameLayout
+                                    android:id="@+id/stroke_fl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/combine_bill_payment_stroke_bg"
+                                    android:visibility="visible" />
+
+                                <FrameLayout
+                                    android:id="@+id/shadow_fl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/_1sdp"
+                                    android:background="@drawable/ic_shadow"
+                                    android:visibility="visible" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/card_solid_background_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginVertical="@dimen/_1sdp"
+                                    android:layout_marginStart="@dimen/_1sdp"
+                                    android:layout_marginLeft="@dimen/_1sdp"
+                                    android:background="@drawable/combine_bill_payment_gradient_bg">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/card_background_ll"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical"
+                                        android:paddingHorizontal="@dimen/_15sdp">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_12sdp"
+                                            android:orientation="horizontal">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/cc_bank_name_tv"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_weight="1"
+                                                android:gravity="center|start"
+                                                android:text=""
+                                                android:textColor="@color/greyscale_p9"
+                                                android:textSize="@dimen/_10ssp"
+                                                app:fontFamily="@font/basiercircle_medium"
+                                                />
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:id="@+id/bank_image_cardview_iv"
+                                                android:layout_width="@dimen/_80sdp"
+                                                android:layout_height="@dimen/_16sdp"
+                                                android:layout_gravity="center"
+                                                android:scaleType="fitEnd"
+                                                android:src="@drawable/bank_icon" />
+
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:layout_marginBottom="@dimen/_6sdp"
+                                            android:orientation="horizontal">
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:id="@+id/cc_card_type_iv"
+                                                android:layout_width="@dimen/_13sdp"
+                                                android:layout_height="@dimen/_12sdp"
+                                                android:layout_marginTop="@dimen/_1sdp" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/cc_card_number_tv"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginStart="@dimen/_4sdp"
+                                                android:layout_marginLeft="@dimen/_4sdp"
+                                                android:textColor="@color/greyscale_p7"
+                                                android:textSize="@dimen/_9ssp"
+                                                app:fontFamily="@font/basiercircle_medium" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/card_fl"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            >
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/bill_amount_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:fontFamily="@font/basiercircle_medium"
+                                android:text=""
+                                android:textColor="@color/greyscale_p9"
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:textSize="@dimen/_17ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/bill_status_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_4sdp"
+                                android:layout_marginLeft="@dimen/_4sdp"
+                                app:fontFamily="@font/basiercircle_medium"
+                                android:text="@string/paid"
+                                android:textColor="@color/greyscale_p6"
+                                android:textSize="@dimen/_17ssp"
+                                app:layout_constraintBottom_toBottomOf="@+id/bill_amount_tv"
+                                app:layout_constraintStart_toEndOf="@id/bill_amount_tv"
+                                app:layout_constraintTop_toTopOf="@+id/bill_amount_tv" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/share_iv"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                android:tint="@color/primary_p5"
+                                app:layout_constraintBottom_toBottomOf="@+id/bill_status_tv"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/bill_status_tv"
+                                app:srcCompat="@drawable/ic_share_rewards"
+                                android:layout_marginRight="@dimen/_6sdp" />
+
+
+                            <RelativeLayout
+                                android:id="@+id/payment_timeline_rl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                app:layout_constraintTop_toBottomOf="@id/bill_amount_tv"
+                                >
+                                <RelativeLayout
+                                    android:id="@+id/paid_success_rl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/completed_iv"
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:layout_marginEnd="@dimen/_6sdp"
+                                        app:srcCompat="@drawable/ic_check_right"
+                                        android:layout_marginRight="@dimen/_6sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/completed_on_label_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@+id/completed_iv"
+                                        android:ellipsize="end"
+                                        app:fontFamily="@font/basiercircle_regular"
+                                        android:lines="1"
+                                        android:text="@string/payment_received_on"
+                                        android:textColor="@color/greyscale_p9"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_toRightOf="@+id/completed_iv" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/completed_on_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@+id/completed_on_label_tv"
+                                        android:ellipsize="end"
+                                        app:fontFamily="@font/basiercircle_semibold"
+                                        android:lines="1"
+                                        android:textColor="@color/greyscale_p9"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_toRightOf="@+id/completed_on_label_tv" />
+
+                                    <View
+                                        android:id="@+id/vertical_view"
+                                        android:layout_width="@dimen/_1sdp"
+                                        android:layout_height="@dimen/_12sdp"
+                                        android:layout_below="@+id/completed_iv"
+                                        android:layout_marginStart="@dimen/_6sdp"
+                                        android:background="@drawable/dotted_bg"
+                                        android:backgroundTint="@color/primary_p5"
+                                        android:layout_marginLeft="@dimen/_6sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/credited_iv"
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:layout_below="@+id/vertical_view"
+                                        android:layout_marginEnd="@dimen/_6sdp"
+                                        app:srcCompat="@drawable/ic_pay_time_green"
+                                        android:layout_marginRight="@dimen/_6sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/credited_in_label_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/vertical_view"
+                                        android:layout_toEndOf="@+id/credited_iv"
+                                        android:ellipsize="end"
+                                        app:fontFamily="@font/basiercircle_regular"
+                                        android:lines="1"
+                                        android:text="@string/transferred_to_bank_acnt"
+                                        android:textColor="@color/greyscale_p9"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_toRightOf="@+id/credited_iv" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/credited_in_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/vertical_view"
+                                        android:layout_toEndOf="@+id/credited_in_label_tv"
+                                        android:ellipsize="end"
+                                        android:layout_marginStart="@dimen/_2sdp"
+                                        android:text=""
+                                        app:fontFamily="@font/basiercircle_semibold"
+                                        android:lines="1"
+                                        android:textColor="@color/greyscale_p9"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_toRightOf="@+id/credited_in_label_tv"
+                                        android:layout_marginLeft="@dimen/_3sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/may_take_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/credited_iv"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        android:layout_toEndOf="@+id/credited_iv"
+                                        app:fontFamily="@font/basiercircle_regular"
+                                        android:text="@string/may_take_upto"
+                                        android:textColor="@color/greyscale_p6"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_toRightOf="@+id/credited_iv" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/earned_iv"
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:layout_below="@+id/may_take_tv"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:layout_marginEnd="@dimen/_6sdp"
+                                        app:srcCompat="@drawable/ic_chip_gold"
+                                        android:layout_marginRight="@dimen/_6sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/earned_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/may_take_tv"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:layout_toEndOf="@+id/credited_iv"
+                                        android:ellipsize="end"
+                                        app:fontFamily="@font/basiercircle_medium"
+                                        android:lines="1"
+                                        android:text=""
+                                        android:textColor="@color/greyscale_p9"
+                                        android:textSize="@dimen/_10ssp"
+                                        android:layout_toRightOf="@+id/credited_iv" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/paid_failed_rl"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/failed_iv"
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:layout_marginEnd="@dimen/_6sdp"
+                                        app:srcCompat="@drawable/ic_payment_failed"
+                                        android:layout_marginRight="@dimen/_6sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/failed_reason_tv"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@+id/failed_iv"
+                                        android:fontFamily="@font/basiercircle_regular"
+                                        android:text="@string/money_debited_will_be_refunded"
+                                        android:textColor="@color/negative_p5"
+                                        android:textSize="@dimen/_10sdp"
+                                        android:layout_toRightOf="@+id/failed_iv" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/amount_summary_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:layout_constraintTop_toBottomOf="@id/payment_timeline_rl"
+                                tools:layout_editor_absoluteX="16dp">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ivCredited"
+                                        android:ellipsize="end"
+                                        android:lines="1"
+                                        android:text="@string/amount_paid"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:textColor="@color/greyscale_p6"
+                                        android:textSize="@dimen/_9ssp"
+                                        app:fontFamily="@font/basiercircle_regular" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/bill_chip_amount_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ivCredited"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:ellipsize="end"
+                                        android:lines="1"
+                                        android:text=""
+                                        android:textColor="@color/greyscale_p9"
+                                        android:textSize="@dimen/_11ssp"
+                                        app:fontFamily="@font/basiercircle_medium" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/bill_cash_amount_tv"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/ivCredited"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:ellipsize="end"
+                                        android:lines="1"
+                                        android:text=""
+                                        android:textColor="@color/greyscale_p9"
+                                        android:textSize="@dimen/_11ssp"
+                                        app:fontFamily="@font/basiercircle_medium" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_12sdp"
+                                        android:ellipsize="end"
+                                        android:lines="1"
+                                        android:text="@string/payment_method"
+                                        android:textColor="@color/greyscale_p6"
+                                        android:textSize="@dimen/_9ssp"
+                                        app:fontFamily="@font/basiercircle_regular" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/cheq_chips_ll"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_14sdp"
+                                            android:layout_height="@dimen/_14sdp"
+                                            app:srcCompat="@drawable/ic_chip_gold" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/cheq_chips_tv"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_4sdp"
+                                            android:layout_marginLeft="@dimen/_4sdp"
+                                            android:text="@string/ref_cheq_chips"
+                                            android:textColor="@color/greyscale_p9"
+                                            android:textSize="@dimen/_9ssp"
+                                            app:fontFamily="@font/basiercircle_medium" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/bank_amount_ll"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/payment_type_logo_iv"
+                                            android:layout_width="@dimen/_16sdp"
+                                            android:layout_height="@dimen/_16sdp"
+                                            app:srcCompat="@drawable/ic_generic_logo" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/bill_pay_method_tv"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/_4sdp"
+                                            android:layout_marginLeft="@dimen/_4sdp"
+                                            android:text=""
+                                            android:textColor="@color/greyscale_p9"
+                                            android:textSize="@dimen/_9ssp"
+                                            app:fontFamily="@font/basiercircle_medium" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtProcessingFees"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/amount_summary_ll"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:lines="1"
+                                android:textColor="@color/greyscale_p6"
+                                android:textSize="10sp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/amount_summary_ll"
+                                tools:text="No Processing Fee added" />
+
+                            <RelativeLayout
+                                android:id="@+id/adjusted_rl"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                app:layout_constraintTop_toBottomOf="@+id/txtProcessingFees"
+                                android:background="@drawable/button_color_green_outlined"
+                                android:backgroundTint="@color/primary_p0"
+                                android:padding="@dimen/_10sdp">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/info_iv"
+                                    android:layout_width="@dimen/_18sdp"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    app:srcCompat="@drawable/ic_information_new"
+                                    android:layout_marginRight="@dimen/_6sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/adjust_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/info_iv"
+                                    android:ellipsize="end"
+                                    app:fontFamily="@font/basiercircle_medium"
+                                    android:lines="1"
+                                    android:textColor="@color/greyscale_p9"
+                                    android:textSize="@dimen/_8ssp"
+                                    android:layout_toEndOf="@+id/info_iv" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/border"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                app:layout_constraintTop_toBottomOf="@id/adjusted_rl"
+                                android:background="@color/greyscale_p2"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/transaction_id_label_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/transactional_id"
+                                android:textColor="@color/greyscale_p6"
+                                android:textSize="@dimen/_11ssp"
+                                app:fontFamily="@font/basiercircle_regular"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/border" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/transaction_id_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text=""
+                                android:gravity="end"
+                                android:textColor="@color/greyscale_p9"
+                                android:textSize="@dimen/_11ssp"
+                                app:fontFamily="@font/basiercircle_medium"
+                                app:layout_constraintBottom_toBottomOf="@+id/transaction_id_label_tv"
+                                app:layout_constraintEnd_toStartOf="@+id/ivCopyTxnId"
+                                app:layout_constraintStart_toEndOf="@+id/transaction_id_label_tv"
+                                app:layout_constraintTop_toTopOf="@+id/transaction_id_label_tv" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCopyTxnId"
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                app:layout_constraintBottom_toBottomOf="@+id/transaction_id_tv"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/transaction_id_tv"
+                                app:srcCompat="@drawable/ic_copy_clipboard" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/rnn_id_label_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_15sdp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/rrn"
+                                android:textColor="@color/greyscale_p6"
+                                android:textSize="@dimen/_11ssp"
+                                android:visibility="gone"
+                                app:fontFamily="@font/basiercircle_regular"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/transaction_id_label_tv" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/rnn_tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text=""
+                                android:gravity="end"
+                                android:visibility="gone"
+                                android:textColor="@color/greyscale_p9"
+                                android:textSize="@dimen/_11ssp"
+                                app:fontFamily="@font/basiercircle_medium"
+                                app:layout_constraintBottom_toBottomOf="@+id/rnn_id_label_tv"
+                                app:layout_constraintEnd_toStartOf="@+id/ivCopyTxnId"
+                                app:layout_constraintStart_toEndOf="@+id/transaction_id_label_tv"
+                                app:layout_constraintTop_toTopOf="@+id/rnn_id_label_tv" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCopyRnnId"
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/rnn_tv"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/rnn_tv"
+                                app:srcCompat="@drawable/ic_copy_clipboard" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

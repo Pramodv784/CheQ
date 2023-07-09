@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.fetchProducts.FetchProductsActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_product_bg"
+        android:fitsSystemWindows="true"
+        android:paddingHorizontal="@dimen/_10sdp"
+        tools:context=".ui.product.ProductListActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_41sdp"
+            android:paddingHorizontal="@dimen/_6sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHurray"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:contentDescription="@string/hurray"
+                android:scaleType="fitXY"
+                android:src="@drawable/fetch_product_logo"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/_24sdp"
+                android:text="Congrats! You have 5 cards, 6 pay laters, and 6 loans "
+                android:textColor="@color/colorPrimaryGreen"
+                android:textFontWeight="500"
+                android:textSize="@dimen/_16sdp"
+                tools:ignore="HardcodedText" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/flBtm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_title">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llCards"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_28sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCards"
+                        style="@style/FontMediumBlack12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:text="Cards"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="HardcodedText" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llCardOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginHorizontal="@dimen/_6sdp"
+                            android:background="@drawable/cf_gb_withoud_shadow"
+                            android:elevation="@dimen/_4sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_9sdp">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivCardOne"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_4sdp"
+                                    android:src="@drawable/ic_hdfc" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvBankNameOne"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:maxLines="1"
+                                    android:text="HDFC Regalia"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp"
+                                    tools:ignore="HardcodedText" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCardNumberOne"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:text="XXXX 3446"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivCardTypeOne"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/ic_mastercard"
+                                    tools:visibility="gone" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llCardTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_53sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:background="@drawable/ll_bg"
+                            android:elevation="@dimen/_4sdp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivCardTwo"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_4sdp"
+                                    app:srcCompat="@drawable/ic_hdfc" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvBankNameTwo"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:maxLines="1"
+                                    android:text="HDFC Regalia"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp"
+                                    tools:ignore="HardcodedText" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCardNumberTwo"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="start"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:singleLine="true"
+                                    android:text="XXXX 3446"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp"
+                                    tools:ignore="HardcodedText" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivCardTypeTwo"
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:src="@drawable/ic_mastercard"
+                                    tools:visibility="gone" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginHorizontal="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/flCardLogos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:visibility="gone"
+
+                            >
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivCardNextOne"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:background="@drawable/ic_bg_circle"
+                                android:padding="@dimen/_2sdp"
+                                app:civ_border_color="@color/white"
+                                app:civ_border_width="2dp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivCardNextTwo"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginStart="@dimen/_9sdp"
+                                android:background="@drawable/ic_bg_circle"
+                                android:padding="@dimen/_2sdp"
+                                android:visibility="gone" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/ivCardNextThree"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginStart="@dimen/_18sdp"
+                                android:background="@drawable/ic_bg_circle"
+                                android:padding="@dimen/_2sdp"
+                                android:visibility="gone" />
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCardCount"
+                            style="@style/FontMedium14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_11sdp"
+                            tools:text="+3more cards" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="@dimen/_60sdp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_6sdp"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/there_is_more_on_cheq"
+                        android:textColor="@color/colornaturals"
+                        android:textSize="@dimen/_17sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontMedium14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:text="@string/add_from_over_50_credit_products_to_track_and_pay"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_145sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="-8dp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        app:srcCompat="@drawable/ic_bank_logo_collection" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llPayLater"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_28sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPayLater"
+                        style="@style/FontMediumBlack12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:text="PayLater"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="HardcodedText" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llPayLaterOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginHorizontal="@dimen/_6sdp"
+                            android:background="@drawable/cf_gb_withoud_shadow"
+                            android:elevation="@dimen/_4sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingBottom="@dimen/_7sdp">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    android:src="@drawable/ic_hdfc" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPayLaterBankNameOne"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="HDFC Regalia"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_12sdp"
+                                    tools:ignore="HardcodedText" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPayLaterCardNumberOne"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:text="XXXX 3446"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_12sdp" />
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llPayLaterTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_53sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:background="@drawable/ll_bg"
+                            android:elevation="@dimen/_4sdp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    app:srcCompat="@drawable/ic_hdfc" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPayLaterBankNameTwo"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:text="HDFC Regalia"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_12sdp"
+                                    tools:ignore="HardcodedText" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPayLaterCardNumberTwo"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:text="XXXX 3446"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_12sdp" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPayLaterCardCount"
+                        style="@style/FontMedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:textColor="@color/colornaturals"
+                        android:textSize="@dimen/_12sdp"
+                        tools:text="+3more cards" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llLoans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_28sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLoans"
+                        style="@style/FontMediumBlack12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:text="Loans"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="HardcodedText" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llLoansOne"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginHorizontal="@dimen/_6sdp"
+                            android:background="@drawable/cf_gb_withoud_shadow"
+                            android:elevation="@dimen/_4sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingBottom="@dimen/_7sdp">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    android:src="@drawable/ic_hdfc" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLoanBankNameOne"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:maxLines="1"
+                                    android:text="HDFC Regalia"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp"
+                                    tools:ignore="HardcodedText" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLoanNumberOne"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:text="XXXX 3446"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp" />
+
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llLoanTwo"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_53sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:background="@drawable/ll_bg"
+                            android:elevation="@dimen/_4sdp"
+                            android:gravity="bottom"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingBottom="@dimen/_12sdp"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    app:srcCompat="@drawable/ic_hdfc" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLoanBankNameTwo"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:maxLines="1"
+                                    android:text="HDFC Regalia"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp"
+                                    tools:ignore="HardcodedText" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLoanNumberTwo"
+                                    style="@style/FontMediumBlack12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:fontFamily="@font/basiercircle_regular"
+                                    android:text="XXXX 3446"
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_11sdp" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLoansCount"
+                        style="@style/FontMedium14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:textColor="@color/colornaturals"
+                        android:textSize="@dimen/_12sdp"
+                        tools:text="+3more cards" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/flBtm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/ic_offer_btm_bg"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_flat_icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/Font700"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    android:text="@string/activate_to_win_flat_200_coins"
+                    android:textColor="@color/colornaturals"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivIcon"
+                    app:layout_constraintStart_toEndOf="@id/ivIcon"
+                    app:layout_constraintTop_toTopOf="@id/ivIcon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnActivate"
+                style="@style/GlobalButtonStyle"
+                android:layout_gravity="bottom"
+                android:onClick="@{()-> activity.navigateToNextScreen()}"
+                android:text="@string/Continue"
+                app:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </FrameLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationConefetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/confetti_on_prouduct_found_screen" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

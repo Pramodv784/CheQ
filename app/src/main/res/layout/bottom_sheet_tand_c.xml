@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_500sdp"
+        android:background="@drawable/round_bottom_sheet"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:contentDescription="@string/cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/_5sdp"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/ic_close" />
+
+         <androidx.appcompat.widget.LinearLayoutCompat
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginHorizontal="@dimen/_20sdp"
+             android:orientation="horizontal">
+
+             <View
+
+                 android:layout_width="@dimen/_28sdp"
+                 android:layout_height="@dimen/_28sdp"
+                 android:background="@drawable/ic_t_and_c_icon"
+                />
+
+             <androidx.appcompat.widget.AppCompatTextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_vertical"
+                 android:layout_marginStart="@dimen/_10sdp"
+                 android:fontFamily="@font/basiercircle_medium"
+                 android:text="@string/terms_conditions"
+                 android:textColor="@color/colornaturals"
+                 android:textSize="@dimen/_17sdp" />
+         </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/progressLayout"
+           android:visibility="gone"
+            layout="@layout/dialog_progress" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

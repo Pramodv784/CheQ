@@ -1,0 +1,97 @@
+<resources>
+    <string name="need_help">Need Help</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="refer_earn">Refer &amp; Earn</string>
+    <string name="manage_cheq_safe">Manage CheQ Safe</string>
+    <string name="no_emails_linked">No Email Linked</string>
+    <string name="email_linked">1 Email Linked</string>
+    <string name="emails_linked">%1$s Emails Linked</string>
+    <string name="view_all_your_bill_payments_at_a_single_place">View &amp; track all your credit bills payments</string>
+    <string name="no_transactions_yet">No transactions yet?</string>
+    <string name="no_transaction_details"><![CDATA[Start managing your bills & earn 1% CheQ Chips on every payment!]]></string>
+    <string name="rupee_symbol">\u20B9</string>
+    <string name="payment_received_on">Payment Received On&#160;</string>
+    <string name="transferred_to_bank_acnt">Transferred to Bank within</string>
+    <string name="may_take_upto">It may take upto 2 business days to reflect in your bank account</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="ref_cheq_chips">CheQ Chips</string>
+    <string name="transactional_id">Transaction ID</string>
+    <string name="utr">UTR</string>
+    <string name="rrn">RRN</string>
+    <string name="convenience_fee_zero">Customer Convenience Fee of \u20B90</string>
+    <string name="money_debited_will_be_refunded">If your money was debited, it will be refunded back in 5–7 working days.</string>
+    <string name="you_earned_cheq_chips">You earned %1$s CheQ Chips</string>
+    <string name="payment_completed_on">%1$s at %2$s</string>
+    <string name="bbps_transaction_id">BBPS Transaction ID</string>
+    <string name="paid_together">Paid Together</string>
+    <string name="paid">Paid</string>
+    <string name="adjusted_text">Adjusted from \u20B9%1$s Paid Together on %2$s</string>
+    <string name="money_debited_has_been_refunded">Money debited from your account has been refunded back to source</string>
+    <string name="refunded">Refunded</string>
+    <string name="attempting_to_get_latest_status">We are attempting to get the latest status for your payment. We will update you soon.</string>
+    <string name="pending">Pending</string>
+    <string name="failed">Failed</string>
+    <string name="no_app_available">No App Available</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="try_again">Try again</string>
+    <string name="install_the_app">To begin with, please install the app</string>
+    <string name="transaction_share_message">"Wohoo! I just paid \u20B9%1$s on CheQ and earned %2$s CheQ Chips. Join CheQ now and earn CheQ Chips</string>
+    <string name="friend_gets">Friend gets</string>
+
+    <string name="label_view_personal_info">View your personal information</string>
+    <string name="label_full_name">FULL NAME</string>
+    <string name="label_mobile_number">MOBILE NUMBER</string>
+    <string name="label_email">E-MAIL ID</string>
+    <string name="help">Help</string>
+    <string name="rewards_earned">Rewards Earned</string>
+    <string name="frnds_referred">Friends Referred</string>
+    <string name="how_it_works">How it works?</string>
+    <string name="invite_your_friends">Invite your friends</string>
+    <string name="invite_your_friend">Invite your friend</string>
+    <string name="refer_n_earn"><![CDATA[Refer & Earn]]></string>
+    <string name="refer_your_friends">Refer your friends</string>
+    <string name="download_register">Download and register on CheQ app</string>
+    <string name="frnd_complete_first_pay">Friend completes their first payment of amount more than 100</string>
+
+    <string name="af_og_title">Cheq: Pay all your Credit Bills</string>
+    <string name="af_og_description">Earn Cash &amp; Vouchers from Amazon, Myntra, Swiggy &amp; 30+ other Brands by paying all your credit bills</string>
+    <string name="link_copied">Link has been successfully copied</string>
+    <string name="referral_faq">refrels-faq.html</string>
+
+    <string name="hey_this_your_referral">Hey! This is your referral to the awesome CheQ app, where you can earn 1% back on all your credit bill payments. Join using the link below and we both can get INR 100 in rewards instantly.</string>
+    <string name="terms_and_policies"><![CDATA[Terms & Policies]]></string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="logout">Logout</string>
+
+    <string name="cheq_safe_dialog_enable_cheq_safe_amp_get_bill_reminders_on_time"><![CDATA[Enable CheQ Safe & get bill reminders on time]]></string>
+    <string name="benefits">Benefits</string>
+    <string name="we_fetch_payment_due_information_and_tell_you_before_ntime_when_a_bill_is_due">Never pay any interest, or late payment fees</string>
+    <string name="e_generate_insights_on_your_card_statement_transactionse_ngenerate_insights">Pay your bills on time and earn 1% CheQ Chips</string>
+    <string name="link_your_email_registered_with_bill_providers">Link your email registered with bill providers</string>
+    <string name="login_with_google">Login With Google</string>
+    <string name="our_privacy_policy_is_in_line_with_google_api_services_user_data_policy">Our <font color="#1A73E8">Privacy Policy </font>is in line with Google <font color="#1A73E8">API Services User Data Policy</font></string>
+    <string name="security_our_responsibility">Your security is our responsibility :)</string>
+
+    <string name="cheq_safe_email_linking_failed">CheQ Safe email linking failed</string>
+    <string name="please_try_linking_your_email_id_again">Please try linking your email id again.</string>
+    <string name="manage_your_cheq_safe">Manage Your CheQ Safe</string>
+    <string name="link_your_e_mail_for_better_card_insights_with_cheq_safe">Link your email-id for personalised credit insights</string>
+    <string name="linked_email_ids">Your linked E-mail IDs</string>
+    <string name="link_new_e_email">LINK NEW EMAIL-ID</string>
+    <string name="linking">Linking...</string>
+    <string name="check_icon_email_linking">Check Icon for email linking success</string>
+    <string name="linking_in_process">Linking your email address…</string>
+    <string name="please_wait_until_payment_is_processing">This may take a few minutes</string>
+    <string name="dont_go_back">Please don’t go back or close the app</string>
+    <string name="successfully_linked_title">The linking of your email address has been initiated</string>
+    <string name="successfully_linked_subtitle">We will update the bills in the pay section once we have found your bill statements.</string>
+    <string name="back_to_home">BACK TO HOME</string>
+    <string name="success">Success</string>
+
+    <string name="are_you_sure_logout">Are you sure you want to logout?</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="cancel">CANCEL</string>
+</resources>

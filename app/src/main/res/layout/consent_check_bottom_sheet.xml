@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="termsAccepted"
+            type="androidx.databinding.ObservableBoolean" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMandatory"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@drawable/textview_bg_six"
+            android:backgroundTint="#1F2329"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="center"
+            android:lineSpacingExtra="2sp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:text="@string/mandatory"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/tvDescOne"
+            app:layout_constraintStart_toStartOf="@id/tvDescOne"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbOne"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/custom_checkbox"
+            android:button="@color/white"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMandatory" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescOne"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/consent_desc_one"
+            android:textColor="@color/colorTextBlackNew"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cbOne"
+            app:layout_constraintTop_toTopOf="@id/cbOne" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOptional"
+            style="@style/FontMediumBlack14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/textview_bg_six"
+            android:backgroundTint="@color/colorGrey"
+            android:checked="true"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_2sdp"
+            android:text="@string/optional"
+            android:textAllCaps="true"
+            android:textColor="@color/colorGreyBlack"
+            android:textSize="@dimen/_8sdp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/ivWhatsApp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescOne" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbTwo"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/custom_checkbox"
+            android:button="@color/white"
+            android:checked="true"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOptional" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivWhatsApp"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@id/cbTwo"
+            app:layout_constraintStart_toEndOf="@id/cbTwo"
+            app:layout_constraintTop_toTopOf="@id/cbTwo"
+            app:srcCompat="@drawable/ic_whatsapp_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/basiercircle_regular"
+            android:maxLines="2"
+            android:text="@string/consent_desc_two"
+            android:textColor="@color/colorTextBlackNew"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivWhatsApp"
+            app:layout_constraintTop_toTopOf="@id/cbTwo"
+            app:layout_goneMarginStart="@dimen/_8sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmit"
+            style="@style/GlobalButtonStyle"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@{termsAccepted ? @drawable/button_color_primary :  @drawable/button_color_primary_disabled}"
+            android:enabled="@{termsAccepted ?  true: false }"
+            android:text="@string/submit"
+            android:textColor="@{termsAccepted ?  @color/white: @color/white }"
+            android:visibility="visible"
+            app:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbTwo"
+
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

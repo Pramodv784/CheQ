@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.activateCard.CardDetailsActivityNew" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:paddingTop="@dimen/_10sdp">
+
+        <ScrollView
+            android:id="@+id/nested_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="@dimen/_18sdp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginVertical="@dimen/_12sdp"
+                    android:gravity="end"
+                    android:padding="@dimen/_8sdp"
+                    android:cropToPadding="true"
+                    android:layout_marginStart="@dimen/minus_ten"
+                    android:onClick="@{()-> activity.closeScreen()}"
+                    android:src="@drawable/back_new_icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLetStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="@string/enter_your_card_number"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_widget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/ic_bg_stroke_card_detail"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:src="@drawable/ic_speaker" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:text="@string/this_will_be_asked_once"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/this_will_help_us_identify_the_card"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="@dimen/_11sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvLetStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvLetStart" />
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_165sdp"
+
+                        android:background="@drawable/white_shadow_box">
+
+                        <FrameLayout
+                            android:id="@+id/llCardDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_147sdp"
+                            android:background="@drawable/card_bg_new"
+                            android:visibility="visible">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_1sdp"
+                                android:background="@drawable/ic_shadow" />
+
+                            <LinearLayout
+                                android:id="@+id/llCardBackGround"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/_1sdp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_13sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tv_bank_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:fontFamily="@font/basiercircle_medium"
+                                            android:gravity="center|start"
+                                            android:text="Card Name"
+                                            android:textColor="#858989"
+                                            android:textSize="@dimen/_10sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_last_cardNumber"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:fontFamily="@font/basiercircle_medium"
+                                            android:gravity="center|start"
+                                            android:text=""
+                                            android:textColor="#6E7170"
+                                            android:textSize="@dimen/_10sdp"
+                                            android:visibility="invisible"
+                                            tools:text="...222" />
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="right|end"
+                                        android:layout_weight="1"
+                                        android:gravity="end">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:id="@+id/iv_logo"
+                                            android:layout_width="@dimen/_80sdp"
+                                            android:layout_height="@dimen/_18sdp"
+
+                                            android:scaleType="fitEnd"
+                                            android:src="@drawable/ic_bank_logo_extended" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivChip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/_18sdp"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="@dimen/_13sdp"
+                                    android:layout_marginTop="@dimen/_25sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:contentDescription="@string/blank"
+                                    android:src="@drawable/ic_chip" />
+
+
+                                <FrameLayout
+                                    android:id="@+id/ll_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_13sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/textview_round_grey"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/_8sdp">
+
+                                        <com.cheq.retail.utils.creditCardEditText.CreditCardEditText
+                                            android:id="@+id/etCardView"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="@dimen/_4sdp"
+                                            android:background="@null"
+                                            android:fontFamily="@font/azeretmono_medium"
+                                            android:hint="0000000000000000"
+                                            android:inputType="phone"
+                                            android:letterSpacing=".04"
+                                            android:textColor="@color/black"
+                                            android:textColorHint="#CACFCF"
+                                            android:textSize="@dimen/_14sdp"
+                                            app:keep_hint="true"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            mask:allowed_chars="1234567890"
+                                            mask:char_representation="0"
+                                            mask:mask="0000 0000 0000 0000" />
+
+                                        <TextView
+                                            android:id="@+id/tv_cardfour"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_gravity="end|center"
+                                            android:layout_toStartOf="@+id/iv_card_type"
+                                            android:layout_toEndOf="@+id/etCardView"
+                                            android:fontFamily="@font/azeretmono_medium"
+
+
+                                            android:letterSpacing=".04"
+                                            android:text="1234"
+
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_13sdp"
+                                            android:visibility="gone"
+                                            app:layout_constraintStart_toEndOf="@+id/etCardView"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <ImageView
+                                            android:id="@+id/iv_card_type"
+                                            android:layout_width="@dimen/_20sdp"
+                                            android:layout_height="@dimen/_13sdp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginTop="@dimen/_4sdp"
+                                            android:layout_marginEnd="@dimen/_5sdp"
+                                            android:background="@drawable/transparent_bg"
+                                            android:src="@drawable/card_image2" />
+                                    </RelativeLayout>
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:id="@+id/llBtm"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_7sdp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@drawable/et_btm_bg_un_focused" />
+                                </FrameLayout>
+
+
+                            </LinearLayout>
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/llCardBackDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:background="@drawable/combine_bill_payment_stroke_bg">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_1sdp"
+                            android:background="@drawable/ic_shadow" />
+
+                        <LinearLayout
+                            android:id="@+id/llCardBackDetailsSolid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_1sdp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_16sdp"
+                            tools:background="@drawable/combine_bill_payment_gradient_bg"
+
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_bank_name2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:gravity="center|start"
+                                    android:text="Card Name"
+                                    android:textColor="@color/colorTextTitle"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right|end"
+                                    android:layout_weight="1"
+                                    android:gravity="end|center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/iv_logo2"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="fitEnd"
+                                        android:src="@drawable/bank_icon" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="@dimen/_23sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:src="@drawable/ic_chip" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCardNumberNew"
+                                    style="@style/FontMediumBlackBold16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:letterSpacing="0.20"
+
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_12sdp"
+                                    tools:text="5384 2357 2477 2373" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/iv_card_type_2"
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    app:srcCompat="@drawable/ic_mastercard" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_6sdp">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llCarHolderName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCardHolderName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:letterSpacing="0.18"
+                                        android:lineHeight="@dimen/_20sdp"
+                                        android:lineSpacingExtra="1sp"
+                                        android:maxLines="1"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textFontWeight="500"
+                                        android:textSize="@dimen/_12sdp"
+                                        tools:ignore="HardcodedText"
+                                        tools:text="Nirmal singh " />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivEditName"
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:onClick="@{()->activity.setVisibility()}"
+                                        app:srcCompat="@drawable/ic_edit" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llCardHolderNameInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_6sdp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/FontMedium14"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineHeight="@dimen/_20sdp"
+                                        android:text="@string/cardholader_name"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorCaption"
+                                        android:textFontWeight="500"
+                                        android:textSize="@dimen/_8sdp"
+                                        tools:ignore="UnusedAttribute" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:background="@drawable/textview_round_grey"
+                                        android:backgroundTint="@color/white"
+                                        app:layout_constraintEnd_toEndOf="@id/tvLoginDesc"
+                                        app:layout_constraintStart_toStartOf="@id/tvLoginDesc"
+                                        app:layout_constraintTop_toBottomOf="@id/tvLoginDesc">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginHorizontal="@dimen/_16sdp"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal">
+
+
+                                            <EditText
+                                                android:id="@+id/etName"
+                                                style="@style/FontBold"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="@dimen/_2sdp"
+                                                android:background="@drawable/textview_round_grey"
+                                                android:backgroundTint="@color/white"
+                                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                                android:gravity="center|start"
+                                                android:hint="@string/hint_name"
+                                                android:importantForAutofill="no"
+                                                android:inputType="textPersonName|textCapWords"
+                                                android:maxLength="16"
+                                                android:singleLine="true"
+                                                android:textColor="@color/colornaturals"
+                                                android:textColorHint="@color/text_grey"
+                                                android:textSize="@dimen/_14sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_7sdp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@drawable/et_btm_bg_un_focused"
+                                            android:backgroundTint="@{activity.isEditNameFocused() ? @color/colorPrimary : @color/colorTextGrey}" />
+                                    </FrameLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </FrameLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_14sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/FontMedium14"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="valid upto"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorTextGreyNew"
+                                        android:textSize="@dimen/_8sdp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:background="@drawable/textview_round_grey"
+                                        android:backgroundTint="@color/white"
+                                        app:layout_constraintEnd_toEndOf="@id/tvLoginDesc"
+                                        app:layout_constraintStart_toStartOf="@id/tvLoginDesc"
+                                        app:layout_constraintTop_toBottomOf="@id/tvLoginDesc">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginHorizontal="@dimen/_16sdp"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal">
+
+
+                                            <EditText
+                                                android:id="@+id/etCardExpiry"
+                                                style="@style/FontBold"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="@dimen/_2sdp"
+                                                android:background="@drawable/textview_round_grey"
+                                                android:backgroundTint="@color/white"
+                                                android:digits="0123456789/"
+                                                android:focusableInTouchMode="true"
+                                                android:gravity="center|start"
+                                                android:hint="MM/YY"
+                                                android:importantForAutofill="no"
+                                                android:inputType="number"
+                                                android:maxLength="5"
+                                                android:singleLine="true"
+                                                android:textColor="@color/colornaturals"
+                                                android:textColorHint="@color/text_grey"
+                                                android:textSize="@dimen/_13sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <ImageView
+                                            android:id="@+id/llBtmCardDetails"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_7sdp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@drawable/ic_card_expiry"
+                                            android:backgroundTint="@{activity.isCardDetailsFocused() ? @color/colorPrimary : @color/colorTextGrey}" />
+                                    </FrameLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="@dimen/_65sdp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/basiercircle_semibold"
+                                        android:text="CVV"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorTextGreyNew"
+                                        android:textSize="@dimen/_8sdp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <FrameLayout
+                                        android:layout_width="@dimen/_64sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:background="@drawable/textview_round_grey"
+                                        android:backgroundTint="@color/white"
+                                        app:layout_constraintEnd_toEndOf="@id/tvLoginDesc"
+                                        app:layout_constraintStart_toStartOf="@id/tvLoginDesc"
+                                        app:layout_constraintTop_toBottomOf="@id/tvLoginDesc">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginHorizontal="@dimen/_16sdp"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal">
+
+
+                                            <EditText
+                                                android:id="@+id/etCvv"
+                                                style="@style/FontBold"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="@dimen/_2sdp"
+                                                android:background="@drawable/textview_round_grey"
+                                                android:backgroundTint="@color/white"
+                                                android:digits="0123456789"
+                                                android:gravity="center|start"
+                                                android:hint="***"
+                                                android:importantForAutofill="no"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="4"
+                                                android:singleLine="true"
+                                                android:textColor="@color/colornaturals"
+                                                android:textColorHint="@color/text_grey"
+                                                android:textSize="@dimen/_10sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <ImageView
+                                            android:id="@+id/btnCvv"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_7sdp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@drawable/ic_cvv_btm_un_focused"
+                                            android:backgroundTint="@{activity.isCVVFocused() ? @color/colorPrimary : @color/colorTextGrey}" />
+                                    </FrameLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </LinearLayout>
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableStart="@drawable/ic_alert_new"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:text="Invalid card number"
+                    android:textColor="#F46E6E"
+                    android:textFontWeight="500"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llCVVKnowMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_info_circle" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:text="@string/why_do_we_ask_for_cvv_and_card_expiry"
+                        android:textColor="@color/colorTextTitleBlack"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_right_arrow_grey" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <LinearLayout
+                    android:id="@+id/llRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/rectangle_2826"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/_23sdp"
+                        android:layout_height="@dimen/_23sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        android:src="@drawable/ic_coin_new" />
+
+                    <TextView
+                        android:id="@+id/tvRewardsNudge"
+                        style="@style/FontBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:lineSpacingExtra="1sp"
+                        android:maxLines="2"
+                        android:textColor="@color/colorPrimaryGreen"
+                        android:textSize="@dimen/_11sdp"
+                        tools:text="Flat 200 rewards to secure your card" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                </View>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/next_button"
+                style="@style/GlobalButtonStyle"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:enabled="@{activity.isCardValid() ? true : false}"
+                android:onClick="@{()->activity.checkActionAndExecute()}"
+                android:text="@string/next"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llSecureButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_100sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/view_with_shadow"
+                    android:visibility="@{activity.isDetailsFilled() ? View.VISIBLE : View.GONE}" />
+
+                <!-- <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginHorizontal="@dimen/_20sdp"
+                     android:layout_marginTop="16dp"
+                     android:orientation="horizontal"
+                     android:visibility="@{activity.isDetailsFilled() ? View.VISIBLE : View.GONE}">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:contentDescription="Shield"
+                         app:srcCompat="@drawable/ic_shield"
+                         tools:ignore="HardcodedText" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         style="@style/FontBold"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginHorizontal="@dimen/_8sdp"
+                         android:text="We will secure your card by debiting ₹2 from your account as per RBI guidelines"
+                         android:textColor="@color/colornaturals" />
+
+                 </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSecureCard"
+                    style="@style/GlobalButtonStyle"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:enabled="@{activity.isDetailsFilled() ? true : false}"
+                    android:onClick="@{()->activity.checkCardProcess()}"
+                    android:text="@string/next"
+                    android:visibility="@{activity.progress ?View.GONE :View.VISIBLE}" />
+
+                <FrameLayout
+                    android:id="@+id/flLottieIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/ic_btn_bg"
+                    android:visibility="@{activity.progress ?View.VISIBLE :View.GONE}">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/_50sdp"
+                        android:scaleType="centerCrop"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/generi_loader_white" />
+
+                </FrameLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBackGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/earn_more_demo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:padding="1px"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_29sdp"
+                        android:layout_marginEnd="@dimen/_9sdp"
+                        android:maxWidth="@dimen/_68sdp"
+                        android:scaleType="fitEnd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTitle"
+                        style="@style/Font600"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_19sdp"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:layout_marginEnd="@dimen/_80sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:maxLines="2"
+                        android:textSize="@dimen/_15sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Earn Up to 200 Cheq Coins" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCaption"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                        app:layout_constraintStart_toStartOf="@id/tvTitle"
+                        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                        tools:text="On activation of your card" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivIllustration"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/tvTAndC"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_activate_card_illustration" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTAndC"
+                        style="@style/Font400"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:text="@string/t_c_apply"
+                        android:textColor="@color/colorCaption"
+                        android:textSize="@dimen/_6sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAccountNumber"
+                        style="@style/Font400"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:text="XXXX 7290"
+                        android:textColor="@color/colorCaption"
+                        android:textSize="@dimen/_9sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@id/btnActivate"
+                        app:layout_constraintEnd_toEndOf="@+id/tvCaption"
+                        app:layout_constraintStart_toStartOf="@id/btnActivate"
+                        app:layout_constraintTop_toBottomOf="@+id/tvCaption"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnActivate"
+                        style="@style/Font500"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_9sdp"
+                        android:background="@drawable/btn_activate_bg"
+                        android:drawableEnd="@drawable/ic_right_arrow_white"
+                        android:drawablePadding="@dimen/_11sdp"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:paddingStart="@dimen/_13sdp"
+                        android:paddingEnd="@dimen/_13sdp"
+                        android:text="@string/activate"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTAndC"
+                        app:layout_constraintStart_toStartOf="@id/tvTitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

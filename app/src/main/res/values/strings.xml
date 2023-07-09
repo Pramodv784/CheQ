@@ -1,0 +1,1131 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">NEXT</string>
+    <string name="previous">Previous</string>
+    <string name="dont_have_account">Don’t have account?</string>
+    <string name="hello_first_fragment"> Hellofirst fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="an_authentication_code_has_been_sent_to_n_91_987347xxx">An authentication code has been sent to</string>
+    <string name="to_n_91_987347xxx"><font color='#193A4A'>(+91) 987347XXX</font></string>
+    <string name="resend_otp_in">Resend OTP </string>
+    <string name="timer"> <font color='#C31D53'><annotation font='bold'> (60)</annotation></font></string>
+    <string name="forgot_password_resend_in">Resend in</string>
+    <string name="forgot_password_resend">Resend</string>
+    <string name="didn_t_receive_otp_resend">Didn\'t receive OTP?</string>
+    <string name="_2_in_non_lorem_efficitur_convallis_lorem_eget_placerat" tools:ignore="DuplicateDefinition">2.In non lorem efficitur, convallis lorem eget, placerat</string>
+    <string name="add_credit_cards_bnpl"><![CDATA[Add Credit Cards & BNPL]]></string>
+    <string name="dd_mm_yy">DD/MM/YY</string>
+    <string name="this_is_necessary_to_calculate_your_n_eligibility_score">This is necessary to calculate your\neligibility score</string>
+    <string name="product_education_nscreens">Product Education\nScreens</string>
+    <string name="cheq_is_a_financial_platform_to_manage_nyour_credit_payments">CheQ is a financial platform to manage\nyour credit payments.</string>
+    <string name="we_have_found_the_following">We Have Found The Following</string>
+    <string name="disable_inactive_not_in_use_cards_amp_bnpl"><![CDATA[Disable inactive/not in use cards & BNPL]]></string>
+    <string name="cards">Cards</string>
+    <string name="bnpls">BNPLS</string>
+    <string name="Continue">Continue</string>
+    <string name="your_data_is_100_safe_and_secure" tools:ignore="DuplicateDefinition">Your Data is 100% Safe and Secure</string>
+    <string name="confirm_your_details">Confirm Your Details</string>
+    <string name="please_verify_your_pan_amp_dob_n_they_should_be_same_as_that_on_your_pan_n_card"><![CDATA[Please verify your PAN & DOB. They should be same as that on your PAN Card.]]></string>
+    <string name="bbspr8120d">ABCDE1234F</string>
+    <string name="_11_may_1991">11 MAY 1991</string>
+    <string name="activate_to_win_flat_200_coins">Activate to Win! Flat 200 coins.</string>
+    <string name="almost_done_well_done">Almost done! Well done!</string>
+    <string name="i_ll_permit_this">I’ll Permit This</string>
+    <string name="okay_let_me_try_this_again">Okay, let me try this again</string>
+    <string name="cheq_would_like_access_nfollowing_permissions">“Cheq” would like to access\nfollowing permissions</string>
+    <string name="make_amp_recevie_call"><![CDATA[Make & Receive call]]></string>
+    <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_quisque">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque</string>
+    <string name="read_sms">Read SMS</string>
+    <string name="allow_permissions">ALLOW</string>
+    <string name="getting_started">Getting Started</string>
+    <string name="hii">Hi, Welcome</string>
+    <string name="sign_in">Sign in to your account.</string>
+    <string name="we_need_your_mobile_number_linked_to_nyour_credit_cards_and_pay_later_products">We need your mobile number linked to\nyour credit cards and Pay Later Products</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="i_approve_cheq_to_check_my_credit_information_from_rbi_approved_credit_bureaus_nthis_action_will_not_impact_your_credit_nscore">I approve CheQ to check my Credit information from RBI approved credit bureaus\nThis action will not impact your credit\nscore.</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">LOGIN</string>
+    <string name="enter_your_details">Enter Your Details</string>
+    <string name="first_name">First Name</string>
+    <string name="hint_first_name">John</string>
+    <string name="last_name">Last Name</string>
+    <string name="hint_last_name">Doe</string>
+    <string name="email_id">Email</string>
+    <string name="note_we_do_not_send_promotional_nemails">Note: We do not send promotional\nemails</string>
+    <string name="cheq_is_a_financial_platform_to_manage_your_ncredit_payments">CheQ is a financial platform to manage\nyour credit payments.</string>
+    <string name="otp_authentication">OTP Authentication</string>
+    <string name="or">Or</string>
+    <string name="request_a_call">Request a call</string>
+    <string name="your_date_of_birth">Your Date of Birth</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="my_profile">My Profile</string>
+    <string name="activate">ACTIVATE</string>
+
+
+    <string name="logout">Logout</string>
+    <string name="enable_cheq_protect">Enable CheQ protect</string>
+    <string name="total_due">Total Due</string>
+    <string name="_2_00_000">₹2,00,000</string>
+    <string name="_60_000">₹60,000</string>
+    <string name="min">Min</string>
+    <string name="pay">Pay</string>
+    <string name="help_center">Help Center</string>
+    <string name="privacy_and_security">Privacy and Security</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="data_security_policy">Data Security Policy</string>
+    <string name="tnc_s">TnC’s</string>
+    <string name="raise_an_issue">Raise an Issue</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="name">name</string>
+    <string name="hint_name">Enter Your Name</string>
+    <string name="hdfc_millennia">HDFC Millennia</string>
+    <string name="_5318">5318</string>
+    <string name="due_date_fri_dec_10">due Date Fri, Dec 10</string>
+    <string name="_15_000">₹15,000</string>
+    <string name="_12_25">__/__</string>
+    <string name="naman_rampal">NAMAN RAMPAL</string>
+    <string name="your_pan_card_number">Your Pan Card Number</string>
+    <string name="pan_card_number">Pan Card Number</string>
+    <string name="profile_details">Profile details</string>
+    <string name="payment_method">Payment Method</string>
+
+    <string name="tanner_buchanan">Tanner Buchanan</string>
+    <string name="_0812_345_6789">0812 345 6789</string>
+    <string name="shana_gmail_com">Shana@gmail.com</string>
+    <string name="bbspr100293">BBSPR100293</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="rewards">Rewards</string>
+    <string name="_22_000">₹22,000</string>
+    <string name="extra_rs_150_on_flipkart_end_of_nseason_sale">Extra Rs.150 on Flipkart End of\nSeason Sale</string>
+    <string name="valid_till_25_jan_2022">Valid till: 25 Jan 2022</string>
+    <string name="min_order_899">₹ Min Order: 899</string>
+    <string name="how_to_redeem">How To Redeem</string>
+    <string name="_1_integer_eget_nunc_imperdiet_fermentum_erat_ac">1. Integer eget nunc imperdiet, fermentum erat ac</string>
+    <string name="_3_sed_ut_nisl_eu_velit_maximus_ullamcorper_ac_eget_metu">3. Sed ut nisl eu velit maximus ullamcorper ac eget metu</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="terms_and_policies"><![CDATA[Terms & Policies]]></string>
+    <string name="_2_integer_eget_nunc_imperdiet_fermentum_erat_ac">2. Integer eget nunc imperdiet, fermentum erat ac</string>
+    <string name="_3_in_non_lorem_efficitur_convallis_lorem_eget_placerat">3.In non lorem efficitur, convallis lorem eget, placerat</string>
+    <string name="_4_sed_ut_nisl_eu_velit_maximus_ullamcorper_ac_eget_metu">4. Sed ut nisl eu velit maximus ullamcorper ac eget metu</string>
+    <string name="avail_for_200_points">Avail For 200 Points</string>
+    <string name="extra_rs_150_on_flipkart_nend_of_season_sale">Extra Rs.150 on Flipkart\nEnd of Season Sale</string>
+    <string name="unable_to_find_details">Unable To Find Details</string>
+    <string name="unable_to_find_a_bureau_record_with_the_ninformation_provided_by_you">Unable to find a bureau record with the\ninformation provided by you.</string>
+    <string name="profile_dob_cancel">Cancel</string>
+    <string name="profile_dob_sure">Sure</string>
+    <string name="full">Full</string>
+    <string name="DOB">DOB</string>
+    <string name="coming_from">COMING_FROM</string>
+    <string name="pancard_activity">"PAN_CARD_ACTIVITY"</string>
+
+
+    <string name="you_will_earn_cheq_rewards"><font color='#A2A0A8'>You will earn /n</font> <font color='#193A4A'>CheQ Rewards</font></string>
+
+    <string name="cancel">CANCEL</string>
+    <string name="Yes">YES</string>
+    <string name="exit">Exit App</string>
+    <string name="application"> application?</string>
+    <string name="are_you_sure_logout">Are you sure you want to logout?</string>
+    <string name="click_yes">Click on Yes to continue</string>
+    <string name="max">MAX</string>
+    <string name="due_date">Due Date</string>
+    <string name="min_capital">MIN</string>
+    <string name="skip_now">Skip Now</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="_0">₹0</string>
+    <string name="__0">0</string>
+    <string name="card_npoint">CARD \nPOINTS</string>
+    <string name="spend_nanalyzer">SPEND \nANALYZER</string>
+    <string name="set_nautopay">SET \nAUTOPAY</string>
+    <string name="resend">Resend</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="logout1">Logout ?</string>
+    <string name="products">Products</string>
+    <string name="saved_cards">Saved Cards</string>
+    <string name="paytm">Paytm</string>
+    <string name="remove">Remove</string>
+    <string name="month">Month</string>
+    <string name="Amount">Amount</string>
+    <string name="setup_auto_pay_for_your_hdfc_millennia">Setup auto pay for your HDFC Millennia</string>
+    <string name="please_setup_emandate_first_for_autopay">Please setup eMandate first for autopay.</string>
+    <string name="one_time_setup_to_automate_your_bill_payment">One-time setup to automate your bill\npayment</string>
+    <string name="amount_due_will_be_auto_debited_from_your_bank_account">Amount due will be auto-debited\nfrom your bank account</string>
+    <string name="we_will_notify_you_before_your_due_date_so_you_keep_funds_in_the_account">We will notify you before your due\ndate so you keep funds in the\naccount</string>
+    <string name="ach_e_mandate_registration">ACH E- MANDATE REGISTRATION</string>
+    <string name="authentication_for_e_mandate_requires_an_active_net_banking_log_in_some_banks_do_provide_it_through_your_debit_card_too">Authentication for E-Mandate requires an Active Net banking log-in. Some banks do provide it through your Debit Card too.</string>
+    <string name="the_maximum_amount_for_an_e_mandate_is_rs_10_lac_for_an_amount_above_rs_10_lac_you_will_have_to_issue_a_paper_mandate">The maximum amount for an E-Mandate is Rs.10 Lac. For an amount above Rs.10 lac, you will have to issue a paper mandate.</string>
+    <string name="ach_registration_process_may_take_a_maximum_of_24_hours">ACH Registration Process may take a maximum of 24 hours.</string>
+    <string name="enter_bank_account_details">Enter bank account\ndetails</string>
+    <string name="automatic_bill_payment_will_be_setup_from_this_bank_account_for_your_future_bill">Automatic bill payment will be setup from this bank account for your future bill</string>
+    <string name="registration_successful">Registration Successful</string>
+    <string name="your_payment_was_successful_you_can_now_continue_using_cheq">Your payment was successful! You can now continue using CheQ</string>
+    <string name="please_activate_your_ncredit_card">Activate your card</string>
+    <string name="please_enter_your_card_number">Card number will be used to complete payment</string>
+    <string name="pay_small_case">Pay</string>
+
+    <string name="error_hw_unavailable">The hardware is unavailable. Try again later.</string>
+    <string name="error_unable_to_process">The sensor was unable to process the current image.</string>
+    <string name="error_time_out">The current operation has been running too long and has timed out.</string>
+    <string name="error_no_space">The operation can\'t be completed because there is not enough device storage remaining.</string>
+    <string name="error_canceled">The operation was canceled by the user or because the biometric sensor is unavailable.</string>
+    <string name="error_lockout">The operation was canceled because the biometrics is locked out due to too many attempts. This occurs after 5 failed attempts, and lasts for 30 seconds.</string>
+    <string name="error_vendor">The operation failed due to a vendor-specific error.</string>
+    <string name="error_lockout_permanent">Wrong biometrics too many times. Use device credential to unlock.</string>
+    <string name="error_user_canceled">The user canceled the operation.</string>
+    <string name="error_no_biometrics">The Device does not have any biometrics enrolled.</string>
+    <string name="error_hw_not_present">The device does not have the required authentication hardware.</string>
+    <string name="error_no_device_credentials">The device does not have pin, pattern, or password set up.</string>
+    <string name="error_security_update_required">A security vulnerability has been discovered with one or more hardware sensors. The affected sensor(s) are unavailable until a security update has addressed the issue.</string>
+    <string name="error_unknown">Unknown error.</string>
+    <string name="message_user_app_authentication">Denied for Biometrics</string>
+    <string name="text_unlock">Unlock</string>
+    <string name="message_set_up_pattern">Set up PIN/Pattern/Password.</string>
+    <string name="title_device_lock">Device Lock</string>
+    <string name="title_set_up_device_lock">Set up Device lock.</string>
+
+    <string name="detect_hidden_charges">Detect hidden charges.</string>
+    <string name="get_payment_due_reminders">Get payment due reminders.</string>
+    <string name="insights_on_your_spends">Insights on your spends.</string>
+    <string name="sync_your_credit_card_bill_from_email_and_make_it_smarter">Sync your credit card bill from email and make it smarter</string>
+    <string name="credit_card_details">Credit card details</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="cardholder_s_name">Cardholder’s name</string>
+    <string name="expiration_date">Expiration date</string>
+    <string name="mm_yyyy">MM / YYYY</string>
+    <string name="cvv">CVV</string>
+    <string name="points">Points</string>
+    <string name="na">NA</string>
+    <string name="cheq">CheQ</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="skip">Skip</string>
+    <string name="grant_permission">Permit to Simplify Credit</string>
+
+
+    <string name="data_secured_by">Data Secured by</string>
+    <string name="chat">chat</string>
+    <string name="sms_permission">SMS Permission</string>
+    <string name="sms_perssion_desc">Just to know when your credit payments are due.</string>
+    <string name="text_phone_permission_desc">We just need to verify your mobile to know it’s you. </string>
+    <string name="phone" />
+    <string name="phone_state_permission">Phone-state permission</string>
+    <string name="please_allow_the_permissions_to_proceed">Please allow this access to proceed</string>
+    <string name="let_s_start">LET\'S START</string>
+    <string name="login_text_desc">Enter your mobile number</string>
+    <!--    <string name="login_text_desc">Just enter the mobile number linked to your credit products.</string>-->
+    <string name="_91">+91</string>
+    <string name="_9876543210"> 9999999999</string>
+    <string name="get_otp">GET OTP</string>
+    <string name="t_and_c_2">By continuing, you agree to CheQ’s <font color="#299D90">terms-of-service</font> and  <font color="#299D90">privacy policy</font>  </string>
+    <string name="t_and_c">By authorizing CheQ, I can view my full loan account details, bill and credit information sourced from RBI-approved <font color="#00C197">bureaus</font> and lenders.</string>
+    <string name="select_your_number">Select your number</string>
+    <string name="sim_1">Sim 1</string>
+    <string name="__9876543210">- 9876543210</string>
+    <string name="sim_2">Sim 2</string>
+    <string name="enter_number_manually">Enter number manually</string>
+    <string name="verify_otp">Verify Your Phone Number</string>
+    <string name="otp_sent_text">We’ve sent an OTP to</string>
+    <!--    <string name="otp_sent_text">An authentication code has been sent to</string>-->
+
+    <string name="otp_timeout">Did not receive the OTP?</string>
+    <string name="retry">RETRY</string>
+    <string name="tell_us_more">Tell us more</string>
+    <string name="profile_desc">Enter your <font color="#2F3131">name as per your PAN</font></string>
+    <!--    <string name="profile_desc">To simplify credit payments, please enter the name as per your PAN.</string>-->
+    <!--    <string name="profile_desc">Please <font color="#333333">enter name as per the PAN</font> so that we can serve you better</string>-->
+    <string name="final_step">Final Step</string>
+    <string name="submit">Submit</string>
+    <string name="mandatory">Mandatory</string>
+    <string name="optional">Optional</string>
+    <string name="consent_desc_one">I allow CheQ access to your credit information from RBI approved credit bureaus and other loan providers</string>
+    <string name="consent_desc_two">I’m okay to get reminders for bill payments on WhatsApp. </string>
+    <string name="pan">PAN</string>
+    <string name="date_of_birth">DATE OF BIRTH</string>
+    <string name="done">DONE</string>
+    <string name="flag">flag</string>
+    <string name="i_e_12_november_1993">12 November 1993</string>
+    <string name="we_need_little_more">We need little more</string>
+    <string name="please_share_few_more_details_as_we_are_unable_to_fetch">Please share few more details as we are unable to fetch</string>
+    <string name="last_name_">LAST NAME</string>
+    <string name="first_name_">FIRST NAME</string>
+    <string name="please_enter_valid_number">Please enter valid number</string>
+    <string name="otp_incorrect_please_try_again">Invalid OTP, please try again</string>
+    <!--    <string name="otp_incorrect_please_try_again">OTP incorrect, please try again</string>-->
+    <string name="hurray">hurray</string>
+    <string name="flat_200_rewards_on_activation">Flat 200 rewards on activation</string>
+    <string name="how_do_cheq_rewards_work">How do CheQ Rewards work?</string>
+    <string name="payment">payment</string>
+    <string name="pay_earn_500_cheq_rewards"><![CDATA[Pay & earn 500 CheQ rewards]]></string>
+    <string name="okay">OKAY</string>
+    <string name="you_have_to_pay">You will be paying</string>
+    <string name="_50000">50000</string>
+    <string name="add_debit_card">Add Your Debit Card</string>
+    <string name="secure_as_per_rbi_guidelines">Secure my card as per RBI guidelines</string>
+    <string name="pay_now">PAY NOW</string>
+    <string name="cardholader_name">Cardholder name</string>
+    <string name="bank_logo">Bank Logo</string>
+    <string name="blank">blank</string>
+    <string name="now_you_can_do">Now you can do!</string>
+    <string name="refer_and_earn">Refer and Earn</string>
+    <string name="ok_">Ok</string>
+    <string name="add_product_manually_and_start_paying_biils">Choose from over 50+ credit products to\ntrack &amp; manage them expertly</string>
+    <string name="add">Add</string>
+    <string name="enable">ENABLE</string>
+    <string name="transactional_details">Transaction details</string>
+    <string name="executed_by_autopay">Executed by <b> Autopay</b></string>
+    <string name="back">back</string>
+    <string name="amount_to_pay">Amount to pay</string>
+    <string name="powered_by">powered by</string>
+    <string name="use_rewards_to_pay">Use Rewards to pay</string>
+    <string name="save_upto_rs_x_on_the_bill">Save upto Rs X on the bill</string>
+    <string name="see_all">See all</string>
+    <string name="preferred_method">Preferred method</string>
+    <string name="upi">UPI</string>
+    <string name="net_banking">Net banking</string>
+    <string name="debit_card">Debit card</string>
+    <string name="bank_name">Bank Name</string>
+    <string name="transactional_id">Transaction ID</string>
+    <string name="details">Details</string>
+    <string name="via_net_banking_login_and_bank_otp">Via net banking login and bank OTP</string>
+    <string name="enter_debit_card_details_and_otp">Enter debit card details and OTP</string>
+    <string name="card_name">Card Name</string>
+    <string name="there_is_more_on_cheq">There is more on CheQ</string>
+    <string name="add_from_over_50_credit_products_to_track_and_pay">Add from over 50+ credit products to track\nand pay</string>
+    <string name="_200_coins_reward_on_activation">200 coins reward on activation</string>
+    <string name="select_bank">Select Bank</string>
+    <string name="search_bank">Search bank</string>
+    <string name="minimum_due">Minimum Due</string>
+    <string name="you_earn">You earn <font style="bold">200</font> Coins</string>
+    <string name="track_your_debts_in_a_single_app">Track all your debt in a single app</string>
+    <string name="get_exciting_rewards_on_your_payment">Get real rewards on all bill payments</string>
+    <string name="pay_bills_with_single_payment">Pay all credit bills in a single payment</string>
+    <string name="on_boarding_caption_one">One stop destination for all payments Now Enjoy hassle-free experience</string>
+    <string name="on_boarding_caption_two"><![CDATA[Coupons, Cash & much more]]></string>
+    <string name="on_boarding_caption_three">Credit Cards, Loans, PayLater</string>
+    <string name="consent_to_terms_of_service_for_autopay">consent to <font color="#299D90">terms-of-service</font> for Autopay</string>
+    <string name="enable_cheq_safe_amp_get_nstatements_in_minutes"><![CDATA[Enable CheQ Safe & Never Miss a Payment]]></string>
+    <string name="benefits">Benefits</string>
+    <string name="we_fetch_payment_due_information_and_tell_you_before_ntime_when_a_bill_is_due">Never pay any interest, or late payment fees</string>
+    <string name="e_generate_insights_on_your_card_statement_transactionse_ngenerate_insights">Pay your bills on time and earn 1% CheQ Chips</string>
+    <string name="_256_bit_encryption"> <font style="bold">256</font> Bit Encryption</string>
+    <string name="link_email">Link Email now</string>
+    <string name="gmail">Gmail</string>
+    <string name="outlook">Outlook</string>
+    <string name="live">Live</string>
+    <string name="hotmail">Hotmail</string>
+    <string name="select_your_email">Select your Email</string>
+    <string name="email_hint">abcd@gmail.com</string>
+    <string name="use_email_where_you_receive_your_credit_statements">"Use email where you receive your credit Statements "</string>
+    <string name="select_your_email_client">Select Your Email Client</string>
+    <string name="select_email_for_approval">Select Email For approval</string>
+    <string name="please_wait_until_payment_is_processing">This may take a few minutes</string>
+    <string name="linking_in_process">Linking your email address…</string>
+    <string name="link_failed">Thank you for requesting to link your email address</string>
+    <string name="try_with_different_payment_method">We have taken note and will get back soon</string>
+    <string name="please_select_following_option_to_resolve">Please select following option to resolve</string>
+    <string name="send_statement_to_linked_email">Send Statement to linked Email</string>
+    <string name="link">Link</string>
+    <string name="you_earn_200_coins">You earn  <b>200</b> Coins</string>
+    <string name="link_different_email_id">Link different Email ID</string>
+    <string name="id_with_credit_statement_recivence">ID with credit statement recivence</string>
+    <string name="we_are_unable_to_fetch_your_credit_statement">We are unable to fetch your credit statement</string>
+    <string name="let_s_roll">Let’s roll</string>
+    <string name="you_will_earn_60_reward_points">You will earn 60 reward points</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="view_your_personal_information">View your personal information</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="e_mail_id">E-mail ID</string>
+    <string name="pan_details">PAN Details</string>
+    <string name="manage_cheq_safe">Manage CheQ Safe</string>
+    <string name="link_your_e_mail_for_better_card_insights_with_cheq_safe">Link your email-id for personalised credit insights</string>
+    <string name="link_new_e_email">LINK NEW EMAIL-ID</string>
+    <string name="are_you_sure_to_delink_your_email_id">Are you sure to delink your email-id?</string>
+    <string name="delink_caption">Delinking email-id will restrict us from keeping your bank statements up-to-date.This will take 24 hours time.</string>
+    <string name="delink">DE-LINK</string>
+    <string name="why_do_you_want_to_delink_your_email_id">Why do you want to delink your email-id?</string>
+    <string name="i_want_to_link_another_e_mail_id">I want to link another e-mail ID</string>
+    <string name="others">Others</string>
+    <string name="i_linked_e_mail_by_mistake_earlier">I linked e-mail by mistake earlier</string>
+    <string name="privacy_concerns">Privacy concerns</string>
+    <string name="i_don_t_see_any_value_in_this">I don’t see any value in this</string>
+    <string name="delinking_email_id_will_restrict_us_from_keeping_your_bank_statements_up_to_date_this_will_take_24_hours_time">Delinking email-id will restrict us from keeping your bank statements up-to-date.This will take 24 hours time.</string>
+    <string name="valid_until">Valid Until</string>
+    <string name="account_number">Account Number</string>
+    <string name="policies">Policies</string>
+    <string name="activated_e_mandate">Activated E-mandate</string>
+    <string name="find_your_all_activated_e_mandate">Find your all activated e-mandate</string>
+    <string name="setting">Settings</string>
+    <string name="help">Help</string>
+    <string name="hello">Hello,</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="view_all_your_bill_payments_at_a_single_place">View &amp; track all your credit bills payments</string>
+    <string name="get_detail">Get Detail</string>
+    <string name="it_s_simple">It’s simple</string>
+    <string name="enter_details">Enter Details</string>
+    <string name="so_we_can_fetch_your_outstanding_bill">So we can fetch your oustanding bill</string>
+    <string name="paying_loan_confirmation">Paying this bill allows CheQ to fetch future EMIs on this loan</string>
+    <string name="go_to_home">GO TO HOME</string>
+
+    <string name="buy_vouchers_and_nconvert_to_cash">Get Vouchers &amp; Cash</string>
+    <string name="voucher_and_cash">Vouchers &amp; Cash</string>
+    <string name="coin_balance">Chips Balance</string>
+    <string name="my_vouchers">Your Vouchers</string>
+
+    <string name="convert_to_cash">CONVERT TO CASH</string>
+    <string name="get_cash_in_2_mins">Get Cash Instantly!</string>
+    <string name="earn_up_to">Earn Up to</string>
+    <string name="get_cash">Get Cash Now</string>
+    <string name="t_c_apply"><![CDATA[*T&C Apply]]></string>
+    <string name="earn_more">Earn More</string>
+    <string name="explore_vouchers">Explore Vouchers</string>
+    <string name="top_featured_deal">Featured Deals</string>
+    <string name="other_featured_deal_">Other Featured Deals</string>
+    <string name="other_offers">Other Offers</string>
+    <string name="how_does_it_work">How it works</string>
+    <string name="claim_now">Claim Now</string>
+    <string name="all_categories">All Categories</string>
+    <string name="all_vouchers_valid_till_180_days_post_purchase">All Vouchers valid till 180 days post purchase</string>
+    <string name="how_to_avail">How it works</string>
+    <string name="t_c"><![CDATA[T&C]]></string>
+    <string name="t_c_banner"><![CDATA[T&C Apply]]></string>
+    <string name="select_voucher">Select Voucher</string>
+    <string name="coupon_code">Coupon code</string>
+    <string name="rewards_amp_coins_history"><![CDATA[Rewards &\nCoins History]]></string>
+    <string name="your_credit_health">Your Credit Health</string>
+    <string name="_5_44_456">5,44,456</string>
+    <integer-array name="tab_image">
+        <item>@drawable/ic_my_voucher</item>
+        <item>@drawable/ic_coin_history</item>
+    </integer-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="total_vouchers_redeemed">Total value of vouchers</string>
+    <string name="vouchers">Vouchers</string>
+    <string name="select_credit_naccount">Select Account</string>
+    <string name="you_will_get">You will get</string>
+    <string name="enter_your_upi_id">Enter your UPI ID</string>
+    <string name="verify">Verify</string>
+    <string name="credited_to">Credited to</string>
+    <string name="large_text">Figma currently supports only one direction at a time, horizontal or vertical. To build designs that use both directions, you will need to combine or nest auto layout frames.\n\nIn the example below, we\'ve nested a horizontal auto layout frame within a vertical auto layout frame to create a card with a title, description, and showtimes.\n\nFigma currently supports only one direction at a time, horizontal or vertical. To build designs that use both directions, you will need to combine or nest auto layout frames.\n\nIn the example below, we\'ve nested a horizontal auto layout frame within a vertical auto layout frame to create a card with a title, description, and showtimes.\n\nFigma currently supports only one direction at a time, horizontal or vertical. To build designs that use both directions, you will need to combine or nest auto layout frames.\n\nIn the example below, we\'ve nested a horizontal auto layout frame within a vertical auto layout frame to create a card with a title, description, and showtimes.</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="available_coins">Available coins</string>
+    <string name="used_coins">Used coins</string>
+    <string name="chips_used">Chips used</string>
+    <string name="withdraw_amount">Withdraw</string>
+    <string name="redeem_now">Redeem Now</string>
+    <string name="pin">PIN</string>
+    <string name="apply">APPLY</string>
+    <string name="inr_2_will_be_debited_to_secure_your_card_and_refunded_back_immediately_know_more">We will deduct ₹2 &amp; refund it after successful verification <font color="#299D90">Know More</font> </string>
+    <string name="you_will_risk_your_card_payments_and_lose_more_benefits">You will risk your card payments and lose more benefits</string>
+    <string name="select_product_group">Select product group</string>
+    <string name="secure_your_card_as_per_rbi_nguidelines">Secure your card as per RBI\nguidelines</string>
+    <string name="enter_your_card_number">Enter Credit Card Number</string>
+    <string name="please_do_not_press_back_or_close_the_app">This may take a moment. Don’t go back or close the app</string>
+    <string name="pay_your_bill_now">Pay your bill now</string>
+    <string name="abc_xyz_com">abc@xyz.com</string>
+    <string name="login_email_hint">john@example.com</string>
+    <string name="title_activity_universal_web_view">UniversalWebViewActivity</string>
+    <string name="secure_my_card">VERIFY MY CARD</string>
+    <string name="opt_out_and_risk_my_card">OPT-OUT AND RISK MY CARD</string>
+    <string name="yes_opt_out">YES, OPT OUT</string>
+    <string name="no_secure_card">NO,SECURE CARD</string>
+    <string name="proceed_to_pay">PROCEED TO PAY</string>
+    <string name="register">REGISTER</string>
+    <string name="pay_together">Pay Together</string>
+    <string name="back_to_home">BACK TO HOME</string>
+    <string name="refer_earn_200_rewards"><![CDATA[Refer & earn\n200 rewards]]></string>
+    <string name="manage_card">Manage Card</string>
+    <string name="mark_as_paid">Mark as Paid?</string>
+    <string name="payment_history">Payment History</string>
+    <string name="view_all_your_previous_bill_payments">View all your previous bill payments</string>
+    <string name="remove_card">Remove card</string>
+    <string name="do_you_really_want_to_remove_nyour_card">Do you really want to remove\nyour card?</string>
+    <string name="select_your_credit_provider_below">Select your credit provider below</string>
+    <string name="select_product">Select Product</string>
+    <string name="credit_card">CREDIT CARDS</string>
+    <string name="credit_card_small">Credit Card</string>
+    <string name="add_new">Add New</string>
+    <string name="loans">LOANS</string>
+    <string name="earn_200_chips">Earn 200 Chips</string>
+    <string name="please_select_at_least_one_product_nto_continue_to_pay">Please select at least one product to continue</string>
+
+    <string name="refer_and_earn_chips"><![CDATA[Refer & Earn \n100 CheQ Chips]]></string>
+    <string name="refer_n_earn"><![CDATA[Refer & Earn]]></string>
+    <!--<string name="refer_your_friends"><![CDATA[Refer your \nFriends]]></string>
+    <string name="cheq_chips">CheQ Chips</string>-->
+    <string name="rupee_symbol">\u20B9</string>
+    <string name="freshchatDisableFrame">239dc74c72c6dd15edd94c0cc52ee3</string>
+    <string name="rupee_symbol_test">\u20B92000</string>
+    <string name="how_it_works">How it works?</string>
+    <string name="invite_your_friend">Invite your friend</string>
+    <string name="invite_your_friends">Invite your friends</string>
+    <string name="friend_gets">Friend gets</string>
+    <string name="you_get">You get</string>
+    <string name="download_register">Download and register on CheQ app</string>
+    <string name="frnd_complete_first_pay">Friend completes their first payment of amount more than 100</string>
+    <string name="payment_success_txt_pay_together">Your payment of ₹%s for %s bills is successful</string>
+    <string name="success_txt">Your bill payment of ₹%s is successful</string>
+    <string name="rewards_earned">Rewards Earned</string>
+    <string name="frnds_referred">Friends Referred</string>
+    <string name="hey_this_your_referral">Hey! This is your referral to the awesome CheQ app, where you can earn 1% back on all your credit bill payments. Join using the link below and we both can get INR 100 in rewards instantly.</string>
+    <string name="link_copied">Link has been successfully copied</string>
+    <string name="read_terms_condition"> <![CDATA[<font color=#6A7381>Read<font color=#00C197> Terms & Conditions]]> </string>
+    <string name="acnt_created">Account created</string>
+    <string name="first_payment">First Payment</string>
+    <string name="friends_referred">Friends Referred</string>
+    <string name="axis_card">Axis</string>
+    <string name="hdfc_card">HDFC</string>
+    <string name="icici_card">ICICI</string>
+    <string name="sbi_card">SBI</string>
+    <string name="chola">Chola</string>
+    <string name="by_securing_you_can_enjoy_following_benefits">By securing, you can enjoy following benefits</string>
+
+
+    <!--Attachments-->
+    <!--    -->
+    <string name="refer_your_friends">Refer your friends</string>
+    <!--    <string name="freshchat_attachment_okay_button">Okay</string>-->
+    <!--    <string name="freshchat_attachment_download_button">Download</string>-->
+    <!--    <string name="freshchat_attachment_cancel_button">Cancel</string>-->
+    <!--    <string name="freshchat_file_not_supported_message">Attachments format is not supported</string>-->
+    <!--    <string name="freshchat_unable_to_attach">Unable to attach</string>-->
+    <!--    <string name="freshchat_file_status_scan_pending_alert_msg">File is no yet scanned, it may harm your device. So download at your discretion</string>-->
+    <!--    <string name="freshchat_file_status_scan_malware_found_alert_msg">Malware found in this file. Downloading is blocked</string>-->
+    <!--    <string name="freshchat_error_file_pending_status">Pending malware scan</string>-->
+    <!--    <string name="freshchat_bot_file_attachment">Upload a file/image</string>-->
+    <!--    <string name="freshchat_bot_only_image_attachment">Upload an image</string>-->
+    <!--    <string name="freshchat_kb">KB</string>-->
+    <!--    <string name="freshchat_mb">MB</string>-->
+    <!--    <string name="freshchat_less_than_1" translatable="false">&lt;1</string>-->
+    <!--    <string name="freshchat_file_size_exceeded_message">Attachments should be smaller than 20 MB</string>-->
+    <!--    <string name="freshchat_spinner_text">Please wait...</string>-->
+
+
+    // freshchat string
+
+    <string name="tools_label_duration">Duration</string>
+
+    <!--    <string name="freshchat_default_agent_name">Support</string>-->
+
+    <!--    <string name="freshchat_view_text">View</string>-->
+
+    <!--    <string name="freshchat_chat_deeplink">@string/freshchat_view_text</string>-->
+    <!--    <string name="freshchat_chat_deeplink_faq">View FAQ</string>-->
+    <!--    <string name="freshchat_chat_message_composer_hint">Type a message</string>-->
+    <!--    <string name="freshchat_chat_capture_from_camera">Take a picture</string>-->
+    <!--    <string name="freshchat_chat_select_from_gallery">Upload image from gallery</string>-->
+    <!--    <string name="freshchat_chat_select_file">Select a file (&lt;20 MB)</string>-->
+
+    <!--    <string name="freshchat_channel_list_empty">Oops, no message channels here!</string>-->
+    <!--    <string name="freshchat_channel_disabled">Oops, this chat is no longer available</string>-->
+
+    <!--    <string name="freshchat_faqs_reload_and_redirect">FAQs updated. Redirecting...</string>-->
+    <!--    <string name="freshchat_faq_list_empty">Sorry! There are no FAQs available</string>-->
+    <!--    <string name="freshchat_faq_vote_successful">Thanks for your feedback!</string>-->
+    <!--    <string name="freshchat_faq_voting_prompt">Was this FAQ helpful?</string>-->
+    <!--    <string name="freshchat_faq_upvote">@string/freshchat_yes</string>-->
+    <!--    <string name="freshchat_faq_downvote">@string/freshchat_no</string>-->
+    <!--    <string name="freshchat_faq_video_loading">Loading video...  </string>-->
+    <!--    <string name="freshchat_faq_search_query_hint">Search FAQs</string>-->
+    <!--    <string name="freshchat_faq_failed_to_load">This FAQ is no longer available</string>-->
+    <!--    <string name="freshchat_faq_rich_media_content_cannot_be_displayed">Connect to internet to view the rich media content</string>-->
+
+    <!--    <string name="freshchat_yes">Yes</string>-->
+    <!--    <string name="freshchat_no">No</string>-->
+
+    <!--General-->
+    <!--    <string name="freshchat_loading">Loading</string>-->
+    <!--    <string name="freshchat_no_connection">No Connection</string>-->
+    <!--    <string name="freshchat_check_internet_connection">Please check your internet connection</string>-->
+    <!--    <string name="freshchat_retry">@string/freshchat_calendar_timeslots_retry</string>-->
+    <!--    <string name="freshchat_error_was_encountered">An error was encountered</string>-->
+
+    <!-- Hint for Input Fields -->
+
+
+    <!--    &lt;!&ndash; Content descriptions for accessibility &ndash;&gt;-->
+    <!--    <string name="freshchat_content_description_send_message">Send message</string>-->
+    <!--    <string name="freshchat_content_description_attach_picture">Attach a picture</string>-->
+    <!--    <string name="freshchat_content_description_attach_file_image">Attach a file or an image</string>-->
+    <!--    <string name="freshchat_content_description_send_voice_message">Record a voice message</string>-->
+    <!--    <string name="freshchat_content_description_upload_status">Message upload Status</string>-->
+    <!--    <string name="freshchat_content_description_show_original_content">Show Original</string>-->
+    <!--    <string name="freshchat_content_description_hide_original_content">Hide Original</string>-->
+
+    <!--    &lt;!&ndash; Error messages &ndash;&gt;-->
+    <!--    <string name="freshchat_error_send_message_when_no_internet">Oops, no internet connection! Message will be sent when you reconnect.</string>-->
+    <!--    <string name="freshchat_error_message_not_connected_to_internet">No internet connection!</string>-->
+    <!--    <string name="freshchat_error_message_faq_section_not_enabled">Uh-uh! FAQ section is unavailable</string>-->
+    <!--    <string name="freshchat_error_message_inbox_section_not_enabled">Uh-uh! Chat section is unavailable. </string>-->
+    <!--    <string name="freshchat_error_message_account_not_active">This section is no longer available</string>-->
+    <!--    <string name="freshchat_error_message_init_not_completed">Freshchat SDK not initialized. Please invoke Freshchat.init() first and invoke {{method_name}} again!</string>-->
+    <!--    <string name="freshchat_error_message_init_not_completed_method_name_placeholder">{{method_name}}</string>-->
+    <!--    <string name="freshchat_error_message_failed_to_launch_support_section">Oops! Failed to launch</string>-->
+    <!--    <string name="freshchat_error_message_token_failed">Oops! Something went wrong. Please relaunch the screen.</string>-->
+
+    <!--    &lt;!&ndash; Permission prompts and rationale &ndash;&gt;-->
+    <!--    <string name="freshchat_chat_camera_permissions_granted">Permission to access camera granted</string>-->
+    <!--    <string name="freshchat_chat_camera_permissions_not_granted">Permission to access camera denied</string>-->
+    <!--    <string name="freshchat_chat_camera_permissions_rationale">Camera permission is required to take pictures</string>-->
+
+    <!--    <string name="freshchat_chat_voice_messaging_permissions_granted">The permissions necessary for voice messaging have been granted</string>-->
+    <!--    <string name="freshchat_chat_voice_messaging_permissions_not_granted">The permissions necessary for voice messaging have not been granted</string>-->
+    <!--    <string name="freshchat_chat_voice_messaging_permissions_rationale">Audio Recording permission and Write External Storage permission is required to capture and send voice messages</string>-->
+    <!--    <string name="freshchat_chat_voice_messaging_audio_recording_permission_rationale">Audio Recording permission is required to capture and send voice messages</string>-->
+    <!--    <string name="freshchat_chat_voice_messaging_write_storage_permission_rationale">Write External Storage permission is required to capture and send voice messages</string>-->
+
+    <!--    <string name="freshchat_voice_message_preview">[Voice ({{duration}})]</string>-->
+    <!--    <string name="freshchat_voice_message_preview_duration_tag">{{duration}}</string>-->
+    <!--    <string name="freshchat_speaker_phone_on">Audio will play through your ear piece</string>-->
+    <!--    <string name="freshchat_speaker_phone_off">"Audio will play through your phone's speaker"</string>-->
+    <!--    <string name="freshchat_voice_message_too_short">The message you are trying to send spans less than a second. Are you sure you want to send it ?</string>-->
+    <!--    <string name="freshchat_voice_message_too_long">Reached voice message max duration limit, please release to send the message, otherwise message will get discarded soon</string>-->
+
+    <!--    <string name="freshchat_contact_us">Message Us</string>-->
+    <!--    <string name="freshchat_faq_not_helpful_contact_us">Still looking for help? Talk to us</string>-->
+    <!--    <string name="freshchat_message_sending_failed">Message not sent. We\'ll try again</string>-->
+    <!--    <string name="freshchat_message_content_copied_to_clipboard">Message copied</string>-->
+    <!--    <string name="freshchat_chat_unknown_content_type">Message content not supported on this version. Please update the app</string>-->
+    <!--    <string name="freshchat_original_message_title">Original</string>-->
+
+    <!--    <string name="freshchat_error_no_matching_faq_categories_found">No matching FAQ categories found !</string>-->
+    <!--    <string name="freshchat_error_no_matching_faqs_found">No matching FAQs found !</string>-->
+
+    <!--    <string name="freshchat_unknown_message_fragment">Unable to show message. Please contact support.</string>-->
+
+    <!--    &lt;!&ndash; Activity Title &ndash;&gt;-->
+    <!--    <string name="freshchat_activity_title_category_list">FAQs</string>-->
+    <!--    <string name="freshchat_activity_title_article_list">FAQs</string>-->
+    <!--    <string name="freshchat_activity_title_article_detail">FAQ</string>-->
+    <!--    <string name="freshchat_activity_title_channel_list">Conversations</string>-->
+
+    <!--    &lt;!&ndash; Menu title &ndash;&gt;-->
+    <!--    <string name="freshchat_menu_item_search_faqs">Search</string>-->
+    <!--    <string name="freshchat_menu_item_contact_us">Message Us</string>-->
+    <!--    <string name="freshchat_menu_item_toggle_speaker">Toggle speakerphone</string>-->
+    <!--    <string name="freshchat_menu_item_quick_actions">Quick Actions</string>-->
+
+    <!--    &lt;!&ndash; Strings for Customer Satisfaction related UI Elements &ndash;&gt;-->
+    <!--    <string name="freshchat_chat_resolution_survey_question"></string>-->
+    <!--    <string name="freshchat_chat_resolution_confirmation_prompt">Did we address your concerns?</string>-->
+    <!--    <string name="freshchat_chat_resolution_confirmation_prompt_positive">@string/freshchat_yes</string>-->
+    <!--    <string name="freshchat_chat_resolution_confirmation_prompt_negative">@string/freshchat_no</string>-->
+    <!--    <string name="freshchat_chat_resolution_suggestions_prompt">How could we have helped you better?</string>-->
+    <!--    <string name="freshchat_chat_resolution_user_comments_hint">Tell us</string>-->
+    <!--    <string name="freshchat_chat_rating_submit">Send</string>-->
+
+    <!--Strings for Typically Replies in-->
+    <!--    <string name="freshchat_typically_replies_within_a_minute">Typically replies within a minute</string>-->
+    <!--    <string name="freshchat_typically_replies_within_x_minutes">Typically replies within {{minutes}} minutes</string>-->
+    <!--    <string name="freshchat_typically_replies_within_an_hour">Typically replies within an hour</string>-->
+    <!--    <string name="freshchat_typically_replies_within_2_hours">Typically replies within 2 hours</string>-->
+    <!--    <string name="freshchat_typically_replies_within_few_hours">Typically replies within few hours</string>-->
+    <!--    <string name="freshchat_currently_replying_in_a_minute">Currently replying in a minute</string>-->
+    <!--    <string name="freshchat_currently_replying_in_x_minutes">Currently replying in {{minutes}} minutes</string>-->
+    <!--    <string name="freshchat_currently_replying_in_an_hour">Currently replying in an hour</string>-->
+    <!--    <string name="freshchat_currently_replying_in_2_hours">Currently replying in 2 hours</string>-->
+    <!--    <string name="freshchat_currently_replying_in_few_hours">Currently replying in few hours</string>-->
+    <!--    <string name="freshchat_placeholder_minutes">{{minutes}}</string>-->
+
+    <!--Strings for notifications-->
+    <!--    <string name="freshchat_conversation_notification_channel_name">Conversation messages</string>-->
+    <!--    <string name="freshchat_campaign_notification_channel_name">Campaign messages</string>-->
+    <!--    <string name="freshchat_support_message_notification_title">{{app_name}}</string>-->
+    <!--    <string name="freshchat_promotional_message_notification_title">{{app_name}}</string>-->
+    <!--    <string name="freshchat_placeholder_app_name">{{app_name}}</string>-->
+
+    <!--Strings for Auto start prompt displayed to users on xiaomi devices -->
+    <!--    <string name="freshchat_xiaomi_auto_start_prompt_message">Please enable Autostart to receive notifications when the app is in the background</string>-->
+    <!--    <string name="freshchat_xiaomi_auto_start_prompt_positive">@android:string/ok</string>-->
+    <!--    <string name="freshchat_xiaomi_auto_start_prompt_negative">@android:string/cancel</string>-->
+
+    <!-- File Provider Authority Name of the form your_app_package_name.provider Eg: com.example.myapp.provider -->
+
+    <!--    &lt;!&ndash; Allow customization of date formatter used for displaying date and time for messages &ndash;&gt;-->
+    <!--    <string name="freshchat_chat_message_time_today">"hh:mm a"</string>-->
+    <!--    <string name="freshchat_chat_message_time_this_year_short">"MMM dd"</string>-->
+    <!--    <string name="freshchat_chat_message_time_this_year_long">"MMM dd',' hh:mm a"</string>-->
+    <!--    <string name="freshchat_chat_message_time_other_year">"MMM yyyy"</string>-->
+    <!--    <string name="freshchat_chat_calendar_date_format">"EEEE',' dd MMM yyyy"</string>-->
+    <!--    <string name="freshchat_chat_calendar_timeslot_format">"hh:mm a"</string>-->
+
+    <!--    &lt;!&ndash;Strings for Business hour offline response&ndash;&gt;-->
+    <!--    <string name="freshchat_all_members_away_message">We are away now</string>-->
+
+    <!--    &lt;!&ndash;Strings for Drop down messages&ndash;&gt;-->
+    <!--    <string name="freshchat_drop_down_hint_text">Click here to select</string>-->
+
+    <!--    &lt;!&ndash;Strings for Carousel &ndash;&gt;-->
+    <!--    <string name="freshchat_carousel_default_preview_text">Choose an option</string>-->
+
+    <!--Strings for Carousel Card default-->
+    <!--    <string name="freshchat_carousel_card_default_callback_btn_text">Select</string>-->
+    <!--    <string name="freshchat_carousel_card_default_view_btn_text">@string/freshchat_view_text</string>-->
+    <!--    <string name="freshchat_carousel_card_selected_text">Selected</string>-->
+
+    <!--    &lt;!&ndash; Strings used for Calendar integration &ndash;&gt;-->
+    <!--    <string name="freshchat_calendar_find_slot">Find a slot</string>-->
+    <!--    <string name="freshchat_calendar_not_interested">Not interested</string>-->
+    <!--    <string name="freshchat_calendar_cancel_invite_message">Cancelled the invite</string>-->
+    <!--    <string name="freshchat_calendar_title">Schedule a meeting</string>-->
+    <!--    <string name="freshchat_calendar_duration">{{duration}} mins</string>-->
+    <!--    <string name="freshchat_calendar_duration_place_holder">{{duration}}</string>-->
+    <!--    <string name="freshchat_calendar_email_request_desc">Kindly provide us your email address to schedule a meeting with our team</string>-->
+    <!--    <string name="freshchat_calendar_email_hint">Enter your email address</string>-->
+    <!--    <string name="freshchat_calendar_next">Next</string>-->
+    <!--    <string name="freshchat_calendar_cancel_booking_prompt_message">Are you sure you want to cancel this booking?</string>-->
+    <!--    <string name="freshchat_calendar_cancel_booking_prompt_continue">Continue</string>-->
+    <!--    <string name="freshchat_calendar_cancel_booking_prompt_cancel">Cancel Booking</string>-->
+    <!--    <string name="freshchat_calendar_show_more_time_slots">Show more</string>-->
+    <!--    <string name="freshchat_calendar_no_timeslots_found">No slots available</string>-->
+    <!--    <string name="freshchat_calendar_error_encountered">An error was encountered</string>-->
+    <!--    <string name="freshchat_calendar_timeslots_retry">Retry</string>-->
+    <!--    <string name="freshchat_calendar_cancel_invite">Cancel</string>-->
+    <!--    <string name="freshchat_calendar_today">Today</string>-->
+    <!--    <string name="freshchat_calendar_tomorrow">Tomorrow</string>-->
+    <!--    <string name="freshchat_calendar_part_of_day_morning">Morning</string>-->
+    <!--    <string name="freshchat_calendar_part_of_day_afternoon">Afternoon</string>-->
+    <!--    <string name="freshchat_calendar_part_of_day_evening">Evening</string>-->
+    <!--    <string name="freshchat_calendar_part_of_day_night">Night</string>-->
+    <!--    <string name="freshchat_calendar_confirm">Confirm</string>-->
+    <!--    <string name="freshchat_calendar_change_slot">Change Slot</string>-->
+    <!--    <string name="freshchat_calendar_meeting_with_our_team">Meeting with our team</string>-->
+    <!--    <string name="freshchat_calendar_meeting_state_scheduled">Scheduled</string>-->
+    <!--    <string name="freshchat_calendar_meeting_state_failed">Failed</string>-->
+    <!--    <string name="freshchat_calendar_meeting_state_pending">Awaiting Confirmation</string>-->
+    <!--    <string name="freshchat_calendar_invite_awaiting_confirmation">Awaiting time slot confirmation</string>-->
+    <!--    <string name="freshchat_calendar_meeting_banner_view_btn">@string/freshchat_view_text</string>-->
+
+    <!--Omni KBASE-->
+
+    <!--    <string name="freshchat_no_faq_categories">No FAQs to display</string>-->
+    <!--    <string name="freshchat_faq_name_placeholder">{{faq_name}}</string>-->
+    <!--    <string name="freshchat_no_faqs">No articles found for &lt;b&gt;\'%1$s\'&lt;/b&gt;</string>-->
+    <!--    <string name="freshchat_no_articles_found">No articles found</string>-->
+    <!--    <string name="freshchat_no_faq_found">No FAQ found</string>-->
+    <!--    <string name="freshchat_minimum_search_criteria">Enter 3 or more characters to search</string>-->
+    <!--    <string name="freshchat_pagination_error_with_retry">Failed to load. Tap to retry.</string>-->
+    <!--    <string name="freshchat_pagination_no_internet_with_retry">No internet connection. Tap to retry.</string>-->
+
+    <!--Bots-->
+    <!--    <string name="freshchat_bot_faq_feedback_title">Was this answer useful?</string>-->
+    <!--    <string name="freshchat_bot_faq_feedback_success">Thank you for your Feedback!</string>-->
+    <!--    <string name="freshchat_input_invalid_email">Enter valid email</string>-->
+    <!--    <string name="freshchat_input_invalid_phone_number">Enter valid phone number</string>-->
+    <!--    <string name="freshchat_input_invalid_number">Enter valid number</string>-->
+    <!--    <string name="freshchat_input_email_hint">Enter email</string>-->
+    <!--    <string name="freshchat_input_phone_number_hint">Enter phone number</string>-->
+    <!--    <string name="freshchat_input_number_hint">Enter a number</string>-->
+    <string name="title_activity_voucher_redeem_animation">VoucherRedeemAnimationActivity</string>
+
+
+    <string name="you_re_officially_on_the_cheqlist">Congrats, You’re On The Waitlist!</string>
+    <string name="your_position">Your Position</string>
+    <string name="you_ve_earned">You\'ve earned</string>
+    <string name="cheq_chips"> %d CheQ Chips</string>
+    <string name="ref_cheq_chips">CheQ Chips</string>
+    <string name="cheq_chip">CheQ Chip</string>
+    <string name="use_cheq_chips_for">Use cheq chips to get</string>
+    <string name="vouchers_title">Cash Vouchers</string>
+    <string name="get_vouchers_title">Get Vouchers</string>
+    <string name="convert_to_cash_title">Cash</string>
+    <string name="refer_a_friend">Refer a friend</string>
+    <string name="your_friend_can_earn_you_50_chips">Your friend can earn you %d chips</string>
+    <string name="refer_a_friend_and_get_50_chips_on_each_referral">Refer a friend and get %d chips on each referral</string>
+    <string name="total_refer">%d/%d</string>
+    <string name="total_chip">%d</string>
+    <string name="you_have_referred">You have referred</string>
+    <string name="total_chips_earned">Total Chips Earned</string>
+    <string name="total_in_line">Total in Line</string>
+    <string name="can_t_add_to_you_waitlist_as_we_are_not_able_to_find_your_details">Can’t add to you waitlist as we are not able to find your details</string>
+    <string name="you_can_access_cheq_once_we_open_to_all">You can access CheQ once we open to all.</string>
+    <string name="waitlist_conversion_text"><b>1</b> CheQ Chip = ₹<b>1</b></string>
+    <string name="wait_list_referral_own_reward">Refer a friend and earn %d Chips</string>
+    <string name="wait_list_referral_other_reward">Refer a friend and get %d chips on each referral</string>
+    <string name="make_card_payments_friction_free">Make card payments friction free</string>
+    <string name="card_details_held_securely_with_your_bank">Card details held securely with your bank</string>
+    <string name="earn_1_cheq_chips_on_full_bill_payments">Earn 1% CheQ chips on full bill payments</string>
+    <string name="install_the_app">To begin with, please install the app</string>
+    <string name="install_whatsapp">Firstly install WhatsApp</string>
+    <string name="delete_my_acnt">Delete my account</string>
+    <string name="are_you_sure_delete">Are you sure you want to delete your account?</string>
+    <string name="delete_entire_record">This can\’t be undone. We will delete all your records on CheQ, along with any personal data</string>
+    <string name="do_not_Delete">Do not delete</string>
+    <string name="paid">Paid</string>
+    <string name="amount_paid">Amount Paid</string>
+    <string name="manage_communications">Manage Communications</string>
+    <string name="manage_how_communicate">Manage how we communicate with you</string>
+    <string name="whatsapp_alert">WhatsApp Alerts</string>
+    <string name="email_for_comm">E-mail For Communications</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="receive_notification">Receive notification from CheQ</string>
+    <string name="whtsapp_comm_disabled">WhatsApp communication has been disabled</string>
+    <string name="active_product_disabled_txt">This shows all of your active credit lines as per the bureau report</string>
+    <string name="enter_new_email">Enter New Email-ID</string>
+    <string name="change_email_id">Change e-mail id</string>
+    <string name="confirm_new_email">Confirm New E-mail</string>
+    <string name="security_our_responsibility">Your security is our responsibility :)</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="about_cheq">About CheQ</string>
+    <string name="loan_faq">loans-faq.html</string>
+    <string name="pay_together_faq">pay-together-faq.html</string>
+    <string name="secure_card">secure-card.html</string>
+    <string name="referral_faq">refrels-faq.html</string>
+    <string name="information_onbehalf_cheq">The following information is collected by or on behalf of CheQ.</string>
+    <string name="activated_on">Activated on</string>
+
+    <string name="on_boarding_screen_1">Access your <font color="#00C197">free credit report</font> on a personalised dashboard and improve your credit health!</string>
+    <string name="on_boarding_screen_2"><font color="#00C197">Pay all your bills in one click</font> &amp; simplify your credit life with CheQ</string>
+    <string name="on_boarding_screen_3">India\'s most rewarding program, earn CheQ Chips &amp; convert them to <font color="#00C197">cash or vouchers</font></string>
+    <string name="otp_not_receive">If you did not receive the OTP for +91 %s</string>
+    <string name="otp_send_failed">Unable to send OTP. Please verify the mobile number or wait to resend the OTP</string>
+    <string name="make_credit_card_bill">Pay your credit bills &amp; <font color="#00C197">earn 1% CheQ Chips!</font></string>
+    <string name="congrats_message">Woohoo! you’re Top <font color="#00C197">12% In your area</font></string>
+    <string name="fetching_otp">Fetching the OTP</string>
+    <string name="resend_otp_text">RESEND</string>
+    <string name="please_confirm_your_details">Please confirm your details</string>
+    <string name="let_s_get_started">Let’s Get Started!</string>
+    <string name="tell_us_about_yourself">Tell Us About Yourself</string>
+    <string name="just_one_more_step">Just One More Step!</string>
+    <string name="please_allow_access">Please Allow Access</string>
+    <string name="just_enter_the_mobile_number_linked_to_your_credit_products">Just enter the mobile number linked to your credit products.</string>
+    <string name="permission_subtitle">To enhance your experience on CheQ</string>
+    <string name="to_send_you_timely_payment_reminders">To send you timely payment reminders</string>
+    <string name="_100_data_security">100% DATA SECURITY</string>
+    <string name="allow_access">Allow Access</string>
+    <string name="failed_to_send_otp_message"><![CDATA[Check the mobile number & try again]]></string>
+    <string name="too_many_attempts_message">Too many attempts, please verify &amp; try again</string>
+    <string name="we_found_products">WE FOUND %d PRODUCTS</string>
+    <string name="your_credit_score">YOUR CREDIT SCORE</string>
+    <string name="experian">EXPERIAN</string>
+    <string name="welcome_to_cheq">Welcome to CheQ</string>
+    <string name="explore_cheq">EXPLORE CHEQ</string>
+    <string name="make_payment">PAY NOW</string>
+    <string name="add_product">ADD NEW PRODUCT</string>
+    <string name="landing_add_product_subtitle">Pay Bills / EMIs of over 200 Credit Institutions</string>
+    <string name="add_credit_cards_loans">Add Credit Cards, Loans</string>
+
+    <string name="landing_card_title">%s + %d</string>
+    <string name="landing_welcome">Welcome to CheQ</string>
+    <string name="cheq_chip_faq">cheq-chips-faq.html</string>
+    <string name="rbi_guideline_txt">As per the new RBI guideline effective from 1st October 2022, merchants and payment gateways cannot store your credit or debit card details. Card(s) will be tokenised by the card networks or issuing banks and your one time consent through the check box is required. By providing this consent, CheQ will get your card securely tokenised with card networks or issuing banks and in return get the token which will be used for all future payments or payout to your card</string>
+    <string name="check_out_rbi_guidelines">Check out RBI Guidelines</string>
+    <string name="select_your_loan_provider">Select Your Loan Provider</string>
+    <string name="enter_your_loan_details">Enter Your Loan Details</string>
+    <string name="this_will_help_us_identify_the_loan">This will help us identify the loan</string>
+    <string name="this_will_help_us_identify_the_card">This will help us identify the card</string>
+    <string name="this_will_be_asked_once">This will be asked <font color="#00C197">only once</font></string>
+    <string name="try_again">try again</string>
+    <string name="pay_now_amp_earn_upto_1_of_the_bill_amount_in_cheq_chips"><![CDATA[Pay now & earn upto %s of the bill amount in CheQ Chips!]]></string>
+    <string name="failed">Failed</string>
+    <string name="refunded">Refunded</string>
+    <string name="pending">Pending</string>
+    <string name="paid_together">Paid Together</string>
+    <string name="otp_time_out_try_again">TRY AGAIN</string>
+    <string name="request_to_delete_acnt">Request to delete my CheQ account</string>
+    <string name="support_cheq_email">support@cheq.one</string>
+    <string name="wait_list_uh_oh">Uh oh!</string>
+    <string name="wait_list_refer_now">REFER NOW</string>
+    <string name="wait_list_your_position">Your Position:</string>
+    <string name="wait_list_your_position_with_total_position">%s / %d</string>
+    <string name="wait_list_earn_chips_for_each_referral">&amp; Earn{cheq_coin}%d / Referral</string>
+    <string name="wait_list_earned_cheq_chips">Earned CheQ Chips</string>
+    <string name="wait_list_chips_equal_rs">%d = ₹%d</string>
+    <string name="wait_list_referrals">Referrals</string>
+    <string name="wait_list_total_referral">%d<font color="#B3B3B3">/%d</font></string>
+    <string name="wait_list_test_text">But all is not lost! You can use CheQ when we open access to all.</string>
+    <string name="wait_list_test_text_2">We couldn’t find your Credit Information</string>
+    <string name="wailt_list_faq">waitlist.html</string>
+    <string name="non_waitlist_faq">non-waitlist.html</string>
+    <string name="landing_footer_title">Pay Your Credit Card &amp; Loan Bills</string>
+    <string name="landing_footer_subtitle">Pay Bills / EMIs of over 200 Credit Institutions</string>
+    <string name="str_at_the_rate">\@</string>
+    <string name="txt_desc">If you dont satisfy these conditions, CheQ still rewards you <font color='#00C197'>0.5% Chips </font>for all your payments</string>
+    <string name="convenience_fee_zero">Customer Convenience Fee of \u20B90</string>
+    <string name="bbps_transaction_id">BBPS Transaction ID</string>
+
+    <string name="wait_list_failure_title">Uh oh! You are not on the Waitlist</string>
+    <string name="wait_list_earned_cheq_chip">You\'ve earned CheQ Chips</string>
+    <string name="convert_to_cash_now">CONVERT TO CASH NOW</string>
+    <string name="how_to_activate_pay_together">HOW TO ACTIVATE PAY TOGETHER?</string>
+    <string name="one">1</string>
+    <string name="str_pay_together_info_one">Make the first payment for at least two credit products individually</string>
+    <string name="two">2</string>
+    <string name="str_pay_together_info_two">Turn on the <font color='#00C197'>Pay Together</font> toggle </string>
+    <string name="three">3</string>
+    <string name="str_pay_together_info_three">You can now make a single payment for all such credit products!</string>
+    <string name="_1_lakh">₹1 Lakh</string>
+    <string name="pay_together_all_your_bills_with_a_single_payment_on_cheq"><font color='#00C197'>Pay Together:</font> Make a single payment for all your credit bills</string>
+    <string name="permission_permit_to_ease_credit">Please Allow Access</string>
+    <string name="permission_just_enter_the_mobile_number_linked_to_your_credit_products">To enhance your experience on CheQ</string>
+    <string name="permission_to_know_when_credit_payments_are_due">To detect bills due for your products</string>
+    <string name="permission_error_message">Please allow this access to proceed</string>
+    <string name="landing_add_manually">ADD MANUALLY</string>
+    <string name="reward_convert_to_cash">CONVERT TO CASH</string>
+    <string name="reward_get_cash_in_your_bank">Get Cash In Your Bank</string>
+    <string name="home_earn_your_pending_cheq_chips">Earn your pending CheQ Chips</string>
+    <string name="dashboard_pending_chip_timeline_title">Unlock Your Pending CheQ Chips</string>
+    <string name="select_your_bank">Select Your Bank</string>
+    <string name="pay_100_or_more_and_earn_1_of_the_bill_amount_as_cheq_chips">Pay ₹100 or more and earn <font color='#00C197'>%s%s</font> of the amount as <font color='#00C197'>CheQ Chips</font></string>
+    <string name="use_cheq_chips_to_get">Use cheq chips to get</string>
+    <string name="cash_vouchers">Vouchers</string>
+    <string name="the_offer_terms_may_change_in_future">The offer terms are subject to change</string>
+    <string name="products_select_product">Select Product</string>
+    <string name="waitlist_unlocked_after_first_payment_of_more_than_100">Unlocks after 1st ₹100+ bill payment by friend</string>
+    <string name="need_help">Need Help</string>
+    <string name="estimated_credited_time">Estimated credit time of</string>
+    <string name="transferred_to_bank_acnt">Transferred to Bank within</string>
+    <string name="money_debited_will_be_refunded">If your money was debited, it will be refunded back in 5-7 working days.</string>
+    <string name="money_debited_has_been_refunded">Money debited from your account has been refunded back to source</string>
+    <string name="attempting_to_get_latest_status">We are attempting to get the latest status for your payment. We will update you soon.</string>
+    <string name="pending_confirm_desc">We haven’t received the money yet. Please allow us 30 minutes to update the payment status.</string>
+    <string name="report_an_error">REPORT AN ERROR</string>
+    <string name="to_do">To Do</string>
+    <string name="action_recommended">Action Recommended</string>
+    <string name="manage">Manage</string>
+    <string name="we_will_soon_be_able_to_identify_any_bills_that_have_already_been_paid">We will soon be able to identify any bills that have already been paid</string>
+    <string name="make_the_most_of_every_bill">Make the most of every bill!</string>
+    <string name="you_can_earn_4000_cheq_chips_every_month">You can earn 4000 CheQ Chips every month!</string>
+    <string name="failed_wait_list_title">Uh oh, we couldn\'t add you\nto the waitlist</string>
+    <string name="failed_wait_list_sub_title">We couldn\'t find any of your credit products that can be repaid on CheQ at this time.</string>
+
+    <string name="failed_wait_list_title2">You\'re almost on the waitlist!</string>
+    <string name="failed_wait_list_sub_title2">We need a little more time to locate your credit products. Once we do, you will be added to the waitlist immediately.</string>
+
+    <string name="str_pay_total_bill">Pay total bill and earn <b>1%</b> CheQ Chips<b>!</b></string>
+    <string name="str_pay_total_bill_together">Pay together &amp; earn upto <b>1%</b> CheQ Chips<b>!</b></string>
+    <string name="str_you_will_earn">You will earn 0 CheQ Chips</string>
+    <string name="str_you_will_earn_reward_user">You will earn %d CheQ Chips</string>
+    <string name="str_pay_together_now">PAY TOGETHER NOW</string>
+    <string name="str_pay_maximum">You can pay a maximum of ₹10 lakhs together</string>
+    <string name="str_select_one_product">Please select at least one product to continue</string>
+    <string name="str_rs_symbol">₹%s</string>
+    <string name="str_minimum_amount">Minimum amount allowed is ₹10</string>
+    <string name="str_minimum_amount_one">Minimum amount should be 1</string>
+    <string name="str_enter_amount">Enter Amount</string>
+    <string name="str_you_will_incur">You will incur an interest on the balance amount after the due date</string>
+    <string name="str_enter_100">Enter at least ₹100 to earn CheQ Chips </string>
+    <string name="str_enter_amount_is_more">Entered amount is more than total due</string>
+    <string name="str_amount_less_1000000">Amount should be less than ₹1000000</string>
+    <string name="str_amount_less_500000">Amount should be less than 500000</string>
+    <string name="str_amount_greater_10">Amount should be greater  than 10</string>
+    <string name="str_amount_less_total_due">Entered amount is less than total due</string>
+    <string name="str_manage_your_credit">Manage Your Credit</string>
+    <string name="str_zero">0</string>
+    <string name="str_great_move">Great move, you will not incur any penalties!</string>
+    <string name="str_card_back_warning">Don’t go back or close the app until the card is successfully added</string>
+    <string name="str_adding_card">Adding Your Card…</string>
+    <string name="str_you_will_earn_chips">You will earn CheQ Chips</string>
+    <string name="str_card_net_not_found">Card network not found</string>
+    <string name="str_card_identified">Card Identified!</string>
+    <string name="str_enter_remaining_details">Please enter the remaining details</string>
+    <string name="str_check_the_expiry">Check the expiry date &amp; try again</string>
+    <string name="str_identified_different_bank">Uh oh! We identified a different bank. Please enter a valid credit card number.</string>
+    <string name="str_debit_card_not_supported">Debit cards are not supported</string>
+    <string name="str_wrong_card">Wrong Card</string>
+    <string name="str_already_added">This card is already added</string>
+    <string name="str_finding_your_loan">Finding Your Loan…</string>
+    <string name="str_this_may_take_a_moment">This may take a moment</string>
+    <string name="str_unable_to_find_a_loan">We were unable to find a loan for the above details. Please verify and try again.</string>
+    <string name="str_1_chips">Earn 1% CheQ Chips</string>
+    <string name="str_earn_i">Earn 1%</string>
+    <string name="str_due_today">Due Today</string>
+    <string name="str_over_due_by_one">Overdue by 1 Day</string>
+    <string name="str_due_in_one_day">Due in 1 Day</string>
+    <string name="str_due_in_days">Due in %d Days</string>
+    <string name="please_check_card_detail">Please check card details &amp; try again. Make sure you have online transactions enabled for your card.</string>
+    <string name="unable_to_verify_card">Unable to verify card</string>
+    <string name="invite">invite</string>
+    <string name="af_og_title">Cheq: Pay all your Credit Bills</string>
+    <string name="af_og_description">Earn Cash &amp; Vouchers from Amazon, Myntra, Swiggy &amp; 30+ other Brands by paying all your credit bills</string>
+    <string name="payment_received_on">Payment Received On&#160;</string>
+    <string name="may_take_upto">It may take upto 2 business days to reflect in your bank account</string>
+    <string name="thirty_minutes">30 Minutes</string>
+    <string name="str_congrats_you_earned">Congrats, you\'ve earned <b>%d</b> CheQ Chips<b>!</b></string>
+    <string name="str_2_minutes">2 Minutes</string>
+    <string name="str_bank_will_take">"The bank will take %sas your date of payment. It may take upto 48hr to reflect on your statement."</string>
+    <string name="waitlist_unlocks_after_your_1st_100_bill_payment">Unlocks after your 1st ₹100+ bill payment</string>
+    <string name="waitlist_the_app_will_be_available_to_you_soon">The app will be available to you soon!</string>
+    <string name="waitlist_hang_tight">Hang tight, we\'ll keep you posted!</string>
+    <string name="check_card_detail">Please check card details &amp; try again. Note that online transactions must be enabled for your card.</string>
+    <string name="adhoc">ADHOC</string>
+    <string name="exact_and_below">EXACT_AND_BELOW</string>
+    <string name="exact_and_above">EXACT_AND_ABOVE</string>
+    <string name="exact">EXACT</string>
+    <string name="custom">custom</string>
+    <string name="str_no_transactions_yet">No transactions yet?</string>
+    <string name="str_no_txn_details"><![CDATA[Start managing your bills & earn 1% CheQ Chips on every payment!]]></string>
+    <string name="failed_desc"><![CDATA[Please verify your details & try again. If money was debited from your account, it will be refunded automatically in 5-7 days.]]></string>
+    <string name="payment_failed">Payment Failed</string>
+
+    <string name="str_rupee_symbol">₹</string>
+    <string name="close_the_app">close the app</string>
+    <string name="sub_title_for_downtime">Sub TItle</string>
+    <string name="title_for_down_time">Title</string>
+    <string name="offers_for_you">OFFERS FOR YOU</string>
+
+    <string name="make_axis_card_payment">MAKE AXIS CARD PAYMENT</string>
+    <string name="add_axis_credit_card">Add axis CREDIT Card</string>
+    <string name="str_cash_in_two_min">Get Cash in 2 Mins</string>
+    <string name="str_balance">Balance  </string>
+    <string name="str_learn_more">Learn More</string>
+    <string name="tap_here_swipe_card">Tap here or swipe the card left to remove this product</string>
+    <string name="ok_got_it">OK, GOT IT</string>
+    <string name="do_you_wish_to_continue">Do you wish to continue?</string>
+    <string name="cannot_be_linked_another_acnt">This card cannot be linked to another account on CheQ</string>
+    <string name="yes_remove">"Yes, Remove "</string>
+    <string name="no_cancel">No, cancel</string>
+    <string name="removing">Removing...</string>
+    <string name="your_product_removed">Your product has been removed</string>
+    <string name="your_product_not_removed">Your product has not been removed. Try later</string>
+    <string name="home">Home</string>
+    <string name="fully_paid">Fully Paid</string>
+    <string name="no_bill_found">No bill found</string>
+    <string name="no_due_date_found">No due date found</string>
+    <string name="loan">Loan</string>
+    <string name="no_amount_due">No Amount Due</string>
+    <string name="paid_exrta">Paid Extra</string>
+    <string name="please_allow_the_sms_permissions">Please allow sms permission to proceed</string>
+    <string name="please_allow_the_notification_permissions">Please allow notification permission to proceed</string>
+    <string name="please_allow_sms_permission">Please allow sms receive permission to proceed</string>
+    <string name="cheq_safe_dialog_enable_cheq_safe_amp_get_bill_reminders_on_time"><![CDATA[Enable CheQ Safe & get bill reminders on time]]></string>
+    <string name="link_your_email_registered_with_bill_providers">Link your email registered with bill providers</string>
+    <string name="our_privacy_policy_is_in_line_with_google_api_services_user_data_policy">Our <font color="#1A73E8">Privacy Policy </font>is in line with Google <font color="#1A73E8">API Services User Data Policy</font></string>
+    <string name="login_with_google">Login With Google</string>
+    <string name="successfully_linked_title">The linking of your email address has been initiated</string>
+    <string name="successfully_linked_subtitle">We will update the bills in the pay section once we have found your bill statements.</string>
+    <string name="linking">Linking...</string>
+    <string name="cheq_safe_email_linking_failed">CheQ Safe email linking failed</string>
+    <string name="sorry_we_could_not_link_your_email_address_please_try_again">Sorry, We could not link your email address. Please try again.</string>
+
+    <string name="do_more_on_cheq">Do more on cheq</string>
+    <string name="_1_3">1/3</string>
+    <string name="your_credit_comparison">your credit comparison</string>
+    <string name="you_re_among_top_5_in_india">You’re among top 5% in India</string>
+    <string name="you_are_in_top_15_of_people_in_your_area">You are in Top 15% of people in your area</string>
+    <string name="you_re_among_67_in_people_like_you">You’re among 67% in people like you</string>
+    <string name="your_credit_is_855">Your credit is 855</string>
+    <string name="str_bill_info_nt_found">Bill information not found</string>
+    <string name="str_check_bill">CHECK BILL</string>
+    <string name="convert_more">Convert More</string>
+    <string name="total_redeemed">Total Redeemed</string>
+    <string name="credited_to_upi">Credited to UPI</string>
+    <string name="top">TOP</string>
+    <string name="in_your_area">in your area</string>
+    <string name="woohoo_you_re">Woohoo! you’re</string>
+    <string name="in_your_area_">in your area</string>
+    <string name="woohoo_you_re_">Woohoo! you’re</string>
+    <string name="very_good">Very Good</string>
+
+    <string name="why_do_we_ask_for_cvv_and_card_expiry">Why do we ask for CVV and card expiry?</string>
+    <string name="str_earn_cheq_chips">Earn CheQ Chips at %s</string>
+    <string name="not_available_for_amount_above_1_lakh">Not available for amount above ₹1 Lakh</string>
+    <string name="cheq_user_id_not_found">CheQ User Id not found</string>
+    <string name="view_details">View Details</string>
+    <string name="no_i_dont_want_to_earn">NO, I DONT WANT TO EARN</string>
+    <string name="voucher_code">VOUCHER CODE</string>
+    <string name="coupon_cod_copied">Coupon code successfully copied</string>
+    <string name="pin_copied">Pin successfully copied</string>
+    <string name="go_to_website">Go to Website</string>
+    <string name="use_code_directly_here">Use voucher directly here</string>
+    <string name="please_allow_sms_permission_to_proceed">Please allow sms permission to proceed</string>
+    <string name="please_allow_sms_receive_permission">Please allow sms receive permission to proceed</string>
+    <string name="some_thing_went_wrong">Something went wrong</string>
+
+    <string name="success">Success</string>
+    <string name="overdue_by_one_day">Overdue by 1 Day</string>
+    <string name="due_today">Due Today</string>
+    <string name="due_in_one_day">Due In 1 Day</string>
+    <string name="due_in_days">Due In %s Days</string>
+    <string name="fully_paid_">Fully Paid</string>
+    <string name="overdue_by_days">Overdue by %s Days</string>
+    <string name="bill_not_found">Bill not found</string>
+    <string name="loan_add_success">Congratulations! Loan Added Successfully</string>
+    <string name="please_try_linking_your_email_id_again">Please try linking your email id again.</string>
+    <string name="check_icon_email_linking">Check Icon for email linking success</string>
+    <string name="hang_in_will_be_credited">Hang in there! ₹%s Will Be\nCredited To Your Account Shortly</string>
+    <string name="congrates_was_successfully">Congrats! ₹%s Was Successfully\nCredited To Your Account</string>
+
+    <string name="c2c_error">Oops! Unable to convert to cash. Please try again later.</string>
+
+    <string name="expired">EXPIRED</string>
+    <string name="expires_in_days">EXPIRES IN %s DAYS</string>
+    <string name="expires_in_day">EXPIRES IN %s DAY</string>
+    <string name="no_record_found">no record found</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="connect_to_internet">CONNECT TO INTERNET</string>
+    <string name="go_back">GO BACK</string>
+    <string name="str_upi_error">UPI is not applicable for amount more than ₹1,00,000. Please select different payment method or adjust the bill amount.</string>
+    <string name="continue_to_make_payment">Continue to make payment</string>
+    <string name="str_cancel_payment">Cancel Payment</string>
+    <string name="str_dont_want_to_earn">I don’t want to earn</string>
+    <string name="str_cancel_the_payment">Are you sure you want to cancel the payment?</string>
+    <string name="str_bill_summary">Bill Summary</string>
+    <string name="bill_amount">Bill Amount</string>
+    <string name="service_fees">Service Fees</string>
+    <string name="using_cheq_chips_to_pay">Using CheQ Chips to Pay</string>
+    <string name="payable_amount">Payable amount</string>
+    <string name="str_srvice_fees_details">The fee helps us operate and\ndeliver a seamless app\nexperience to you</string>
+    <string name="potential_earning">Potential earning</string>
+    <string name="you_have_already_earned_4000_cheq_chips_this_month">You have already earned 4000 CheQ Chips this month</string>
+    <string name="str_you_have_already_earned_4000">You have already earned %d CheQ Chips this month</string>
+    <string name="paying_via">PAYING VIA</string>
+    <string name="plus_sign">+₹%d</string>
+    <string name="minus_sign">-₹%d</string>
+    <string name="str_rs_sym">₹%d</string>
+    <string name="str_chips_earn_at">Chips Earn @%.0f%s</string>
+    <string name="str_pay_rs">PAY ₹%s</string>
+    <string name="str_percentage_sign">%</string>
+    <string name="you_will_earn_1_amount">You will earn upto 1% of payable amount</string>
+    <string name="str_pay_together_count"><![CDATA["%s <font color = '#858989'>%s</font>]]></string>
+    <string name="str_already_earned_this_month">%d/%d already earned this month</string>
+    <string name="str_cheq_chips_earn_at">CheQ Chips earned @ %.0f%</string>
+    <string name="str_wait_payment_processing">Please wait while your payment is being processed</string>
+    <string name="str_completing_payment">Completing your payment...</string>
+    <string name="str_payment_awaiting">Payment of ₹%s is Awaiting Confirmation!</string>
+    <string name="str_chips_earned_this_month">%d/%d chips have been earned this month!</string>
+    <string name="you_can_earn_upto"><![CDATA["You can earn assured <font color = '#00C197'>%s</font> on payment. %s]]>
+</string>
+    <string name="platform_fee">Platform Fee</string>
+    <string name="processing_fees">Processing Fees</string>
+    <string name="max_credit_limit">/900</string>
+    <string name="font_weight_700">700</string>
+    <string name="font_weight_600">600</string>
+    <string name="poor">Poor</string>
+    <string name="fair">Fair</string>
+    <string name="good">Good</string>
+    <string name="excellent">Excellent</string>
+
+    <string name="rrn">RRN</string>
+    <string name="utr">UTR</string>
+
+    <string name="str_amount_to_pay">AMOUNT TO PAY</string>
+    <string name="get_cash_instantly">Get cash instantly!</string>
+    <string name="cash_balance">Cash balance</string>
+    <string name="learn_more">Learn More</string>
+    <string name="one_rs">₹1.00</string>
+    <string name="str_convert_to_cash_value">1 = ₹%.2f</string>
+    <string name="welcome">Welcome</string>
+
+
+    <!--
+        <![CDATA[<font color="#131414">%s</font> <font color="#858989">%s</font>]]>
+    -->
+
+    <!--In-App Experience rating-->
+    <string name="label_inapp_positive_title">Loving your experience on CheQ so far?</string>
+    <string name="label_inapp_negative_title">What can we improve on?</string>
+    <string name="label_inapp_rate_us_title">Rate CheQ on Play Store</string>
+    <string name="hint_feedback">Write your feedback here...</string>
+    <string name="btn_label_yes">YES</string>
+    <string name="btn_label_no">NO</string>
+    <string name="btn_label_help">GET HELP</string>
+    <string name="btn_label_submit">SUBMIT</string>
+    <string name="btn_label_rate_us">RATE US</string>
+    <string name="message_feedback_thanks">Thanks for sharing your feedback!</string>
+
+</resources>

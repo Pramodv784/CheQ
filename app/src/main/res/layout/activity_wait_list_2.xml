@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/mainContentFragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/failureReferAndShareContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@drawable/waitlist_failure_refer_background"
+                    app:layout_constraintTop_toBottomOf="@id/mainContentFragmentContainer">
+
+                    <include layout="@layout/include_wait_list_refer_share" />
+
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/chipConversionBackgroundView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:background="@drawable/wait_list_conversion_background"
+                    app:layout_constraintBottom_toBottomOf="@id/chipConversionTV"
+                    app:layout_constraintTop_toTopOf="@id/chipConversionTV" />
+
+                <TextView
+                    android:id="@+id/chipConversionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="@string/waitlist_conversion_text"
+                    android:textColor="@color/colorTextTitle"
+                    app:drawableStartCompat="@drawable/wait_list_cheq_coin"
+                    android:drawablePadding="4dp"
+                    app:fontFamily="@font/basiercircle_medium"
+                    app:layout_constraintEnd_toEndOf="@id/chipConversionBackgroundView"
+                    app:layout_constraintStart_toStartOf="@id/chipConversionBackgroundView"
+                    app:layout_constraintTop_toBottomOf="@id/failureReferAndShareContainer" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/conversionViewGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="chipConversionBackgroundView,chipConversionTV" />
+
+                <TextView
+                    android:id="@+id/titleTV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="@string/use_cheq_chips_for"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gery_dark"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chipConversionTV" />
+
+                <View
+                    android:id="@+id/chipsUsageBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="25dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/wait_list_chip_usage_background"
+                    app:layout_constraintBottom_toTopOf="@id/chipsUsageBottomBarrierView"
+                    app:layout_constraintTop_toBottomOf="@id/titleTV2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/productIV"
+                    android:layout_width="119dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    android:src="@drawable/waitlist_voucher_icon"
+                    app:layout_constraintStart_toStartOf="@id/chipsUsageBackground"
+                    app:layout_constraintTop_toBottomOf="@id/titleTV2" />
+
+                <TextView
+                    android:id="@+id/voucherTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:gravity="center"
+                    android:text="@string/vouchers_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/productIV"
+                    app:layout_constraintStart_toStartOf="@id/productIV"
+                    app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+                <ImageView
+                    android:id="@+id/backIV"
+                    android:layout_width="7dp"
+                    android:layout_height="11dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/ic_right_arrow"
+                    app:layout_constraintBottom_toBottomOf="@id/chipsUsageBackground"
+                    app:layout_constraintEnd_toEndOf="@id/chipsUsageBackground"
+                    app:layout_constraintTop_toTopOf="@id/chipsUsageBackground" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chipConverterIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="45dp"
+                    android:src="@drawable/ic_wait_list_cash"
+                    app:layout_constraintEnd_toEndOf="@id/backIV"
+                    app:layout_constraintTop_toBottomOf="@id/titleTV2"
+                    app:layout_constraintTop_toTopOf="@id/productIV" />
+
+                <TextView
+                    android:id="@+id/convertTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:gravity="center"
+                    android:text="@string/convert_to_cash_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/chipConverterIV"
+                    app:layout_constraintStart_toStartOf="@id/chipConverterIV"
+                    app:layout_constraintTop_toBottomOf="@id/chipConverterIV" />
+
+                <TextView
+                    android:id="@+id/termsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@color/help_color"
+                    android:textSize="10sp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chipsUsageBackground" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/chipsUsageBottomBarrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:barrierMargin="15dp"
+                    app:constraint_referenced_ids="voucherTV, convertTV" />
+
+                <View
+                    android:id="@+id/chipsUsageBottomBarrierView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="#FF0000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chipsUsageBottomBarrier" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chipsUsageBottomBarrierView" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/centerGuide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+-->
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/mainContentFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/coinGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/coinAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/coinGuide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/wait_list_coin_animation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.emandate.EnableProductActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:orientation="vertical"
+        tools:context=".ui.emandate.EnableProductActivity">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_gravity="start"
+            android:gravity="end"
+            android:onClick="@{()-> activity.closeScreen()}"
+            android:scaleType="centerCrop"
+            android:src="@drawable/close_2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/FontBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="Enable Autopay for products"
+            android:textColor="@color/colornaturals"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileDesc"
+            style="@style/FontMedium14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:text="You will have to do a 2-min verification through"
+            android:textColor="@color/colorTextLight"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvLetStart"
+            app:layout_constraintTop_toBottomOf="@id/tvLetStart" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+<!--        <include layout="@layout/anable_auto_pay_for_products_item_layout" />-->
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

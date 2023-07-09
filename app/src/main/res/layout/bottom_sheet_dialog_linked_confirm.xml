@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.cheq.retail.base.FirebaseRemoteConfigUtils" />
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_sheet_new"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:contentDescription="@string/cancel"
+            app:srcCompat="@drawable/ic_close" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:text="@{FirebaseRemoteConfigUtils.INSTANCE.cheqSafeTitleText}"
+        android:textColor="@color/colornaturals"
+        android:fontFamily="@font/basiercircle_medium"
+        android:textFontWeight="600"
+        android:textSize="@dimen/_17sdp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_32sdp"
+            android:src="@drawable/icon_linked_card_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@{FirebaseRemoteConfigUtils.INSTANCE.cheqSafeSubTitleText}"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/_11sdp" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/_25sdp"
+        android:gravity="center_vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDeny"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_36sdp"
+            android:background="@drawable/button_color_green_outlined"
+            android:fontFamily="@font/basiercircle_medium"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:text="@{FirebaseRemoteConfigUtils.INSTANCE.cheqSafeSecondaryCtaText}"
+            android:stateListAnimator="@null"
+            android:textAllCaps="true"
+            android:textColor="@color/color_green"
+            android:textSize="@dimen/_11sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAllow"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:background="@drawable/button_color_green_solid"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="@{FirebaseRemoteConfigUtils.INSTANCE.cheqSafePrimaryCtaText}"
+            android:stateListAnimator="@null"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

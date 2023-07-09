@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toast_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/toast_bg_refer"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/_12sdp"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/_14sdp">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_iv"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@id/message_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/message_tv"
+        app:srcCompat="@drawable/ic_check_circle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/message_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:paddingTop="@dimen/_1sdp"
+        android:text="error"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        app:fontFamily="@font/basiercircle_regular"
+        app:layout_constraintEnd_toStartOf="@+id/cancel_iv"
+        app:layout_constraintStart_toEndOf="@id/icon_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/cancel_iv"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:backgroundTint="@color/white"
+        android:tint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/message_tv"
+        app:srcCompat="@drawable/ic_close" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dismiss_button"
+        style="@style/CheqOutlinedButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toStartOf="@+id/accept_button"
+        android:visibility="gone"
+        app:fontFamily="@font/basiercircle_medium"
+        app:layout_constraintStart_toStartOf="@+id/message_tv"
+        app:layout_constraintTop_toBottomOf="@+id/message_tv" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/accept_button"
+        style="@style/CheqFilledButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/accept"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/dismiss_button"
+        app:fontFamily="@font/basiercircle_medium"
+        app:layout_constraintTop_toBottomOf="@+id/message_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

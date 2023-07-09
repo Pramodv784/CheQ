@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.emandate.AccountDetailsActivity" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical"
+        tools:context=".ui.emandate.AccountDetailsActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="match_parent"
+                android:onClick="@{()-> activity.onBackPressed()}"
+                android:padding="@dimen/_12sdp"
+                android:src="@drawable/backarrow" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_15sdp">
+
+                <TextView
+                    style="@style/FontExtraGreyNatural20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Account Details" />
+
+                <TextView
+                    style="@style/FontMediumGrey14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:text="Your details will be verified once entered"
+                    android:textColor="@color/grey_naturals" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfileDesc"
+                    app:layout_constraintVertical_bias="0.13">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontMediumBlack14"
+                        android:layout_width="wrap_content"
+                        android:textAllCaps="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:text="Account Holder Name"
+                        android:textColor="@color/colorCaption"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            style="@style/FontBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/textview_round_grey"
+                            android:backgroundTint="@color/colorUnFocused"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center|start"
+                            android:hint="@string/first_name"
+                            android:inputType="textCapWords"
+                            android:paddingHorizontal="@dimen/_14sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colornaturals"
+                            android:textColorHint="@color/colorTextGrey"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:textSize="@dimen/_13sdp"
+                            app:addTextChangedListener="@{activity.onName()}" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_8sdp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/et_btm_bg_un_focused" />
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontMediumBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:textAllCaps="true"
+                        android:text="Bank Account Number"
+                        android:textColor="@color/colorCaption"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textview_round_grey"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_bank_logo"
+                                android:layout_width="@dimen/_17sdp"
+                                android:layout_height="@dimen/_17sdp"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:src="@drawable/bank_logo_placeholder" />
+
+                            <EditText
+                                android:id="@+id/et_account_no"
+                                style="@style/FontBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginHorizontal="@dimen/_10sdp"
+                                android:background="@drawable/textview_round_grey"
+                                android:backgroundTint="@color/colorUnFocused"
+                                android:digits="1234567890"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center|start"
+                                android:hint="123456789"
+                                android:inputType="number"
+                                android:maxLength="18"
+                                android:singleLine="true"
+                                android:textColor="@color/colornaturals"
+                                android:textColorHint="@color/colorTextGrey"
+                                android:textCursorDrawable="@drawable/custom_cursor"
+                                android:textSize="@dimen/_13sdp"
+                                app:addTextChangedListener="@{activity.onAccountNumber()}" />
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llAccountNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_8sdp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/et_btm_bg_un_focused" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:drawableStart="@drawable/ic_alert_new"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:text="Please enter valid bank account number"
+                        android:textColor="#F46E6E"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontMediumBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:text="IFSC Code"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorCaption"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textview_round_grey">
+
+                            <TextView
+                                style="@style/FontBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_14sdp"
+                                android:text="@{activity.bankIfsc}"
+                                android:textColor="@color/colornaturals"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <EditText
+                                android:id="@+id/et_ifsc"
+                                style="@style/FontBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_40sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:background="@color/mint_green"
+                                android:backgroundTint="@color/colorUnFocused"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:gravity="center|start"
+                                android:hint="1234567"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="7"
+                                android:singleLine="true"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colornaturals"
+                                android:textColorHint="@color/colorTextGrey"
+                                android:textCursorDrawable="@drawable/custom_cursor"
+                                android:textSize="@dimen/_13sdp"
+                                app:addTextChangedListener="@{activity.onIfsc()}" />
+
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/ll_ifsc"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_8sdp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/et_btm_bg_un_focused" />
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:gravity="center">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/FontMediumBlack14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Account type"
+                            android:textColor="@color/colorCaption"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOptional"
+                            style="@style/FontMediumBlack14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:background="@drawable/textview_bg"
+                            android:backgroundTint="@color/colorGrey"
+                            android:paddingHorizontal="@dimen/_8sdp"
+                            android:paddingVertical="@dimen/_2sdp"
+                            android:text="SAVINGS"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorGreyBlack"
+                            android:textSize="@dimen/_11sdp"
+                            android:textStyle="bold"
+                            android:visibility="visible"
+                            app:layout_constraintStart_toStartOf="@id/ivWhatsApp"
+                            app:layout_constraintTop_toBottomOf="@id/tvDescOne" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            style="@style/GlobalButtonStyle"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:background="@{activity.detailsValidated ? @drawable/button_color_primary :  @drawable/button_color_primary_disabled}"
+            android:enabled="@{activity.detailsValidated ?  true: false }"
+            android:onClick="@{()-> activity.confirmDetails()}"
+            android:text="@string/next"
+
+            android:textColor="@{activity.detailsValidated ?  @color/white: @color/white }"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

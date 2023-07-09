@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet_google_signin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/CustomizedBottomDialogStyle">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:elevation="15dp"
+        android:layout_margin="@dimen/_17sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp">
+
+    <LinearLayout
+        android:layout_margin="@dimen/_17sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/_17sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_marginVertical="@dimen/_17sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/close" />
+
+        <TextView
+            style="@style/FontExtraBoldDarkBlue24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/enter_bank_account_details"
+            android:textColorHint="@color/colorAccent" />
+
+        <EditText
+            android:layout_marginTop="@dimen/_18sdp"
+            android:id="@+id/tv_first_name"
+            style="@style/FontExtraBold16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:background="@drawable/textview_round_grey"
+            android:gravity="center|start"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName|textCapWords"
+            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:singleLine="true"
+            android:textColorHint="@color/colorAccent" />
+        <EditText
+            android:layout_marginVertical="@dimen/_18sdp"
+            style="@style/FontExtraBold16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:background="@drawable/textview_round_grey"
+            android:gravity="center|start"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName|textCapWords"
+            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:singleLine="true"
+            android:textColorHint="@color/colorAccent" />
+        <EditText
+            android:layout_marginBottom="@dimen/_18sdp"
+            style="@style/FontExtraBold16"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_48sdp"
+            android:background="@drawable/textview_round_grey"
+            android:gravity="center|start"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName|textCapWords"
+            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:singleLine="true"
+            android:textColorHint="@color/colorAccent" />
+
+        <RelativeLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/iv_check_box"
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:background="@drawable/custom_checkbox"
+                android:button="@color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_toEndOf="@+id/iv_check_box"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_7sdp"
+                style="@style/FontLightBlack14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:maxLines="3"
+                android:text="@string/automatic_bill_payment_will_be_setup_from_this_bank_account_for_your_future_bill" />
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_marginVertical="@dimen/_18sdp"
+            style="@style/GlobalButtonStyle"
+            android:backgroundTint="@color/grey"
+            android:text="@string/next" />
+
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

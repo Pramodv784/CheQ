@@ -1,0 +1,16 @@
+{
+  "client_id" : "f690b153-d707-4a9a-bee2-8923bd3cbc72",
+  "authorization_user_agent" : "DEFAULT",
+  "redirect_uri" : "msauth://com.cheq.retail/frZYzAjIhc9yRZUzA%2BicpH8wKaU%3D",
+  "account_mode" : "SINGLE",
+  "broker_redirect_uri_registered": true,
+  "authorities" : [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADandPersonalMicrosoftAccount",
+        "tenant_id": "common"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:background="@drawable/ic_grey_rectangle_border"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_5sdp">
+
+        <include
+            android:id="@+id/llCreditCard"
+            layout="@layout/layout_credit_card_common_extended" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_autopay_status"
+                style="@style/FontBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Autopay off"
+                android:textColor="@color/colornaturals" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_autopay"
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_gravity="center_vertical"
+                android:checked="false"
+                android:thumb="@drawable/thum_selector"
+                app:track="@drawable/track_selector"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/tvCaption"
+            app:layout_constraintEnd_toEndOf="@id/llCreditCard"
+            app:layout_constraintStart_toStartOf="@id/llCreditCard"
+            app:layout_constraintTop_toBottomOf="@id/llCreditCard"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ch_total"
+                style="@style/Chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/total_due" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/ch_minimum"
+                style="@style/Chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minimum_due" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomsheet_google_signin"
+    style="@style/CustomizedBottomDialogStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_17sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:elevation="15dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_17sdp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_gravity="end"
+                android:layout_marginVertical="@dimen/_17sdp"
+                android:gravity="end"
+                android:scaleType="centerCrop"
+                android:src="@drawable/close" />
+
+            <TextView
+                style="@style/FontExtraBoldDarkBlue24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/please_activate_your_ncredit_card"
+                android:textColorHint="@color/colorAccent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_17sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_bank_name"
+                    style="@style/FontExtraBoldBlue14"
+                    android:layout_width="0dp"
+                    android:layout_height="28dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="@string/hdfc_millennia" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_group_59" />
+
+                <TextView
+                    android:id="@+id/tv_card_number"
+                    style="@style/FontSemiBoldBlack16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center|start"
+                    android:text="@string/_5318" />
+
+                <ImageView
+                    android:id="@+id/iv_card_type"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/FontExtraBoldBlue12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:text="@string/please_enter_your_card_number" />
+
+            <EditText
+                android:id="@+id/etCard"
+                style="@style/FontBold16"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@drawable/textview_round_grey"
+                android:digits="0123456789"
+                android:gravity="center|start"
+                android:hint="4458  0000  0000  1234"
+                android:inputType="number"
+                android:maxLength="16"
+                android:paddingHorizontal="@dimen/_20sdp"
+                android:singleLine="true"
+                android:textColorHint="@color/text_grey" />
+
+            <Button
+                android:id="@+id/next_button"
+                style="@style/GlobalButtonStyle"
+                android:layout_marginVertical="@dimen/_18sdp"
+                android:backgroundTint="@color/grey"
+                android:enabled="false"
+                android:text="@string/next"
+                android:visibility="visible" />
+
+
+<!--            <br.com.simplepass.loadingbutton.customViews.CircularProgressButton-->
+<!--                android:id="@+id/btn_id"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/circular_border_shape"-->
+<!--                android:text="@string/next"-->
+<!--                android:visibility="gone" />-->
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

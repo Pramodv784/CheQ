@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCardType"
+            style="@style/FontMediumBlack12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Cards"
+            android:textColor="@color/grey_naturals"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_210sdp"
+            android:layout_marginHorizontal="@dimen/_2sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:background="@drawable/background_1"
+                android:elevation="3dp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_background"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_165sdp"
+                android:layout_marginHorizontal="@dimen/_17sdp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/ic_stroke_btm_bg"
+                android:elevation="3dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llCardBackGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/back_ground_solid"
+                    android:orientation="vertical"
+                    android:paddingVertical="@dimen/_12sdp"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingEnd="@dimen/_12sdp">
+
+                    <LinearLayout
+                        android:id="@+id/ivMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvBankName"
+                            style="@style/FontBold"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:gravity="center|start"
+                            android:text="HDFC Regalia"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_10sdp"
+                            tools:ignore="HardcodedText" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_bank_image"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_gravity="center"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/bank_icon" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:scaleType="fitEnd"
+                            android:layout_marginStart="@dimen/_7sdp"
+                            android:textColor="@color/colorTextGrey"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_vertical_menu" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_chip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:contentDescription="@string/blank"
+                        android:src="@drawable/ic_chip" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCardNumber"
+                            style="@style/FontMediumBlackBold16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:letterSpacing="0.20"
+                            android:text="XXXX 2373"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivCardType"
+                            android:layout_width="@dimen/_28sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            tools:src="@drawable/visa_grey" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCardHolderName"
+                        style="@style/FontRegular10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.3"
+                        android:text="ASHUTOSH PALIWAL"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/_9sdp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/background_3"
+                android:elevation="3dp"
+                android:gravity="bottom"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_14sdp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--                    <LinearLayout-->
+                    <!--                        android:id="@+id/llActivate"-->
+                    <!--                        android:layout_width="@dimen/_180sdp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_alignParentStart="true"-->
+                    <!--                        android:layout_centerInParent="true"-->
+                    <!--                        android:layout_gravity="bottom"-->
+                    <!--                        android:layout_weight="1"-->
+                    <!--                        android:orientation="horizontal"-->
+                    <!--                        android:visibility="gone">-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:layout_width="@dimen/_29sdp"-->
+                    <!--                            android:layout_height="@dimen/_29sdp"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:layout_marginStart="@dimen/_5sdp"-->
+                    <!--                            android:src="@drawable/cash_back_icon" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            style="@style/FontBold"-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:layout_marginHorizontal="@dimen/_10sdp"-->
+                    <!--                            android:maxLines="2"-->
+                    <!--                            android:text="Pay your bill now"-->
+                    <!--                            android:textColor="@color/colornaturals"-->
+                    <!--                            android:textSize="@dimen/_10sdp" />-->
+
+                    <!--                    </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/llPayNow"
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                      >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_pay_now"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:src="@drawable/ic_pay_now" />
+
+                        <TextView
+                            android:id="@+id/tvCaption"
+                           android:fontFamily="@font/basiercircle_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            android:maxLines="2"
+                            android:text="@string/pay_your_bill_now"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFullyPaid"
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:src="@drawable/ic_paid_thumb" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvLastBillAmt"
+                                style="@style/FontBold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                android:maxLines="2"
+                                android:text="Your last bill ₹ 10,000 "
+                                android:textColor="@color/colornaturals"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                style="@style/FontBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_8sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@drawable/rectangle_grey_round"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:maxLines="2"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="FULLY PAID"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_9sdp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llBillDue"
+                        android:layout_width="@dimen/_180sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:src="@drawable/ic_warning" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvDueAmount"
+                                style="@style/Font800"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginHorizontal="@dimen/_6sdp"
+                                android:maxLines="2"
+                                android:text="₹10,000"
+                                android:textColor="@color/colornaturals"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_due_date"
+                                style="@style/FontBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@drawable/rectangle_grey_round"
+                                android:maxLines="2"
+                                android:paddingHorizontal="@dimen/_5sdp"
+                                android:paddingVertical="@dimen/_2sdp"
+                                android:text="FULLY PAID"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8sdp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btn_common"
+                        style="@style/GlobalButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="bottom"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:background="@drawable/ic_btn_pay_now"
+                        android:gravity="center"
+                        android:text="@string/pay_now" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llDueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/_22sdp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/ic_bill_due" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBillPaidDate"
+                    style="@style/Font500"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:text="You maid minimum bill on XX-YY"
+                    android:textSize="@dimen/_9sdp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</layout>

@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    namespace 'com.cheq.profile'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk minSdkVersion
+        targetSdk targetSdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(':common')
+    implementation project(':proxima')
+    implementation project(':core:cache')
+    implementation project(':core:navigation')
+    implementation project(':core:config')
+    implementation project(':core:network')
+
+    implementation androidX.appCompat
+    implementation androidX.core
+    implementation materialDependencies.material
+    implementation androidX.constraint
+    implementation navigationDependencies.fragment
+    implementation navigationDependencies.ui
+
+    //Hilt
+    implementation hiltDependencies.hiltAndroid
+    kapt hiltDependencies.compiler
+
+    // lottie
+    implementation lottieDependencies.lottie
+
+    //Facebook shimmer
+    implementation shimmerDependencies.shimmer
+
+    //Network
+    implementation(networkDependencies.retrofit2)
+    implementation(networkDependencies.retrofit2Converter)
+    implementation(networkDependencies.okhttp3)
+    implementation(networkDependencies.okhttp3Logging)
+
+    // testing
+    testImplementation(testingDependencies.junit)
+    testImplementation(testingDependencies.androidxJunit)
+    testImplementation(testingDependencies.espresso)
+    testImplementation(testingDependencies.mockito)
+    testImplementation(testingDependencies.core)
+    testImplementation(testingDependencies.coroutinesTest)
+    testImplementation(testingDependencies.mockitoInline)
+
+
+    // appsflyer
+    implementation(appsFlyerDependencies.appsFlyer)
+
+    // google
+    implementation(googleDependencies.auth)
+
+    // moengage
+    implementation moengageDependencies.core
+}

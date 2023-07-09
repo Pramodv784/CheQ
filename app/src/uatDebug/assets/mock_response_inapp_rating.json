@@ -1,0 +1,108 @@
+{
+  "inAppRatingDiscovery": {
+    "showInAppRatingOption": true,
+    "action": {
+      "ratingUtilsService": {
+
+      },
+      "type": "POPUP",
+      "title": "Loving your experience on CheQ so far?",
+      "titleIcon": "https://content.cheq.one/in-app-icons/thumbsup_titleicon.png",
+      "actions": [
+        {
+          "ratingUtilsService": {
+
+          },
+          "type": "BUTTON",
+          "title": "YES",
+          "style": "Secondary",
+          "action": {
+            "ratingUtilsService": {
+
+            },
+            "type": "POPUP",
+            "title": "Show your love for CheQ",
+            "titleIcon": "https://content.cheq.one/in-app-icons/thumbsup_titleicon.png",
+            "actions": [
+              {
+                "ratingUtilsService": {
+
+                },
+                "type": "BUTTON",
+                "title": "RATE THE APP",
+                "titleIcon": "https://content.cheq.one/in-app-icons/PlayStoreIcon_White.png",
+                "style": "Primary",
+                "action": {
+                  "ratingUtilsService": {
+
+                  },
+                  "type": "INTENT",
+                  "url": "https://play.google.com/store/apps/details?id=com.cheq.retail"
+                }
+              }
+            ],
+            "lottieFile": "smiley_face.json"
+          }
+        },
+        {
+          "ratingUtilsService": {
+
+          },
+          "type": "BUTTON",
+          "title": "NO",
+          "style": "Secondary",
+          "action": {
+            "ratingUtilsService": {
+
+            },
+            "type": "FORM",
+            "title": "What can we improve on?",
+            "titleIcon": "https://content.cheq.one/in-app-icons/worriedface_titleicon.png",
+            "options": [
+              "Identifying bills",
+              "Payments",
+              "Rewards",
+              "App experience",
+              "Other"
+            ],
+            "showCustomFeedbackOption": true,
+            "actions": [
+              {
+                "ratingUtilsService": {
+
+                },
+                "type": "BUTTON",
+                "title": "Submit",
+                "style": "Primary",
+                "action": {
+                  "type": "S2S",
+                  "postUrl": "https://uat.cheq.one/apis/user/rating/feedback",
+                  "keys": [
+                    "options",
+                    "detailedFeedbackText",
+                    "page"
+                  ]
+                }
+              },
+              {
+                "ratingUtilsService": {
+
+                },
+                "type": "BUTTON",
+                "title": "Get Help",
+                "style": "Secondary",
+                "action": {
+                  "ratingUtilsService": {
+
+                  },
+                  "type": "SDK",
+                  "url": "FRESHCHAT"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

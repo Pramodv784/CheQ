@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="items"
+            type="com.cheq.retail.ui.billSummary.model.ItemsItem" />
+        <import type="com.cheq.retail.ui.billSummary.model.FontsTypes" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/ic_solid_bg"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@{items.itemName}"
+            android:textColor="@color/white"
+            android:maxWidth="148dp"
+            android:layout_weight="1"
+            font="@{items.isBold() ? FontsTypes.BASIER_CIRCLE_MEDIUM : FontsTypes.BASIER_CIRCLE_REGULAR}"
+            android:textSize="@{items.isBold() ? @dimen/_11sdp : @dimen/_10sdp}"
+            tools:text="Chips Earn @1%" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_rewards_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="end"
+            font="@{items.isBold() ? FontsTypes.BASIER_CIRCLE_MEDIUM : FontsTypes.BASIER_CIRCLE_REGULAR}"
+            android:text="@{items.itemValue}"
+            android:textColor="@color/white"
+            android:textSize="@{items.isBold() ? @dimen/_11sdp : @dimen/_10sdp}"
+            tools:text="+₹100" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

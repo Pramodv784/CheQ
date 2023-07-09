@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <!--        <variable-->
+        <!--            name="loanFormItem"-->
+        <!--            type="com.cheq.retail.ui.loans.adapter.LoanFormAdapter" />-->
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/LoanFieldtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="test"
+            android:textAllCaps="true"
+            android:textColor="#49505A"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_11sdp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/FontBold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/textview_round_grey"
+                android:backgroundTint="@color/colorUnFocused"
+                android:focusable="true"
+
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/basiercircle_medium"
+                android:gravity="center|start"
+                android:hint=""
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:singleLine="true"
+                android:textColor="@color/colornaturals"
+                android:textColorHint="@color/colorTextGrey"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/_13sdp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llBtm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_7sdp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/et_btm_bg_un_focused" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_Date"
+            style="@style/FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/textview_round_grey"
+            android:backgroundTint="@color/colorUnFocused"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="center|start"
+            android:hint="Select Date"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:singleLine="true"
+            android:textColor="@color/colornaturals"
+            android:textColorHint="@color/colorTextGrey"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@drawable/textview_round_grey"
+            android:backgroundTint="@color/colorUnFocused">
+
+            <!--<Spinner
+                android:id="@+id/loanOptionSpinner"
+                style="@style/FontBold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center|start"
+                android:hint="Select Date"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:singleLine="true"
+                android:textColor="@color/colornaturals"
+                android:textColorHint="@color/colorTextGrey"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone" />-->
+
+            <TextView
+                android:id="@+id/tv_loan_option"
+                style="@style/FontBold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/textview_round_grey"
+                android:backgroundTint="@color/colorUnFocused"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:fontFamily="@font/basiercircle_medium"
+                android:gravity="center|start"
+                android:hint="Enter your product group"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:singleLine="true"
+                android:textColor="@color/colornaturals"
+                android:textColorHint="@color/colorTextGrey"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

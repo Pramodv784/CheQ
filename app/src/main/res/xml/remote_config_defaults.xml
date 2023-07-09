@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>user_net_earning_text</key>
+        <value>Your net earning is </value>
+    </entry>
+    <entry>
+        <key>net_earnings_primary_cta</key>
+        <value>CONTINUE TO MAKE PAYMENT</value>
+    </entry>
+    <entry>
+        <key>non_net_earnings_primary_cta</key>
+        <value>CONTINUE TO MAKE PAYMENT</value>
+    </entry>
+    <entry>
+        <key>non_net_earnings_secondary_cta</key>
+        <value>CANCEL PAYMENT</value>
+    </entry>
+    <entry>
+        <key>net_earnings_secondary_cta</key>
+        <value>I DON'T WANT TO EARN</value>
+    </entry>
+    <entry>
+        <key>net_earnings_title</key>
+        <value>Confirm cancellation?</value>
+    </entry>
+    <entry>
+        <key>net_earnings_subtitle</key>
+        <value>99% payments are settled within 2 minutes on CheQ</value>
+    </entry>
+
+    <entry>
+        <key>non_net_earnings_title</key>
+        <value>Are you sure you want to cancel the payment?</value>
+    </entry>
+    <entry>
+        <key>non_net_earnings_subtitle</key>
+        <value>99% payments are settled within 2 minutes on CheQ</value>
+    </entry>
+    <entry>
+        <key>limit_breach_first_text</key>
+        <value>is not applicable for payable amount more than</value>
+    </entry>
+    <entry>
+        <key>limit_breach_last_text</key>
+        <value>. Please select an alternate payment method or modify the bill amount.</value>
+    </entry>
+    <entry>
+        <key>pay_together_earnings_text</key>
+        <value>You will earn upto 1.0% of payable amount</value>
+    </entry>
+    <entry>
+        <key>additional_fees_text</key>
+        <value>Processing Fee</value>
+    </entry>
+    <entry>
+        <key>earnings_text</key>
+        <value>Net earning</value>
+    </entry>
+    <entry>
+        <key>upi_limit_exceed_nudge</key>
+        <value>Not available for amount above ₹1 Lakh</value>
+    </entry>
+    <entry>
+        <key>upi_amount_limit</key>
+        <value>100000</value>
+    </entry>
+    <entry>
+        <key>cheq_safe_primary_cta</key>
+        <value>Enable Now</value>
+    </entry>
+    <entry>
+        <key>cheq_safe_secondary_cta</key>
+        <value>Enable Later</value>
+    </entry>
+    <entry>
+        <key>cheq_safe_title</key>
+        <value>Leaving without enabling CheQ Safe?</value>
+    </entry>
+    <entry>
+        <key>cheq_safe_subtitle</key>
+        <value>We will not be able to identify or send you reminders for any upcoming bills.</value>
+    </entry>
+    <entry>
+        <key>splash_retry_count</key>
+        <value>3</value>
+    </entry>
+    <entry>
+        <key>splash_exhaust_message</key>
+        <value>Please try again later</value>
+    </entry>
+    <entry>
+        <key>enable_new_arch</key>
+        <value>false</value>
+    </entry>
+</defaultsMap>

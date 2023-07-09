@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.loans.SetLoansProviderActivity" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical"
+        tools:context=".ui.loans.SetLoansProviderActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:onClick="onBackPress"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:id="@+id/btnBack"
+                android:src="@drawable/backarrow" />
+            <ImageView
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_toRightOf="@+id/btnBack"
+                android:layout_centerVertical="true"
+                android:onClick="onBackPress"
+android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/bbps_logo" />
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_centerVertical="true"
+
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_toLeftOf="@+id/selectLoanProviderHelpButton"
+                android:src="@drawable/ic_bharat_billpay" />
+
+            <TextView
+                android:id="@+id/selectLoanProviderHelpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/help"
+
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:text="@string/select_your_loan_provider"
+                    android:textColor="@color/colorTextTitle"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_16sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="Find and add your loan from 200+ lenders"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_11sdp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llCaption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    app:srcCompat="@drawable/ic_icon__stroke_warning" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/FontMediumBlack14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:text="Please select your salary account to reduce auto-debit failures"
+                    android:textColor="@color/colornaturals"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    style="@style/Font700"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/textview_round_grey"
+                    android:backgroundTint="#F2F2F2"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_icon__stroke_"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center|start"
+                    android:hint="Search..."
+                    android:inputType="textPersonName|textCapWords"
+                    android:paddingHorizontal="@dimen/_15sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colornaturals"
+                    android:textColorHint="@color/colorText"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:textSize="@dimen/_13sdp"
+                    app:addTextChangedListener="@{activity.search()}" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/et_btm_bg_un_focused" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWarning"
+                style="@style/FontMediumBlack14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:drawableStart="@drawable/ic_icon__stroke_warning"
+                android:drawablePadding="@dimen/_4sdp"
+
+                android:text="Please ensure that your account has enough funds"
+                android:textColor="@color/colornaturals"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_bank_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:padding="@dimen/_2sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

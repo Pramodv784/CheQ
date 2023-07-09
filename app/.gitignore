@@ -1,0 +1,37 @@
+*.apk
+*.aar
+*.ap_
+*.aab
+# Files for the ART/Dalvik VM
+*.dex
+# Java class files
+*.class
+# Generated files
+bin/
+gen/
+out/
+.gradle/
+build/
+local.properties
+*.log
+*.iml
+.idea/
+.idea/libraries
+.idea/caches
+.idea/modules.xml
+*.jks
+*.keystore
+.externalNativeBuild
+.cxx/
+google-services.json
+# Version control
+vcs.xml
+# lint
+lint/intermediates/
+lint/generated/
+lint/outputs/
+lint/tmp/
+.DS_Store
+# App Specific cases
+app/release/output.json
+.idea/codeStyles/

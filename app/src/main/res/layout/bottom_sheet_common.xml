@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_bottomsheet"
+    android:minHeight="@dimen/_350sdp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_8sdp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/bs_iv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:contentDescription="@string/cancel"
+        app:srcCompat="@drawable/ic_close" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llCreditCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorPrimaryGreen"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCancel" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@color/colorGradientGreen"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCancel">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/securing_card_process" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationFailed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/securing_card_failed" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationProcessingLoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/finding_loan" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationProcessing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/card_payment_process_anim" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bs_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/basiercircle_semibold"
+
+        android:text="Card Activation failed"
+        android:textColor="@color/colorTextTitle"
+        android:textSize="@dimen/_17sdp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bs_tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/basiercircle_regular"
+        tools:text="Please wait while your payment is being processed"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/_12sdp"
+         />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/doNotPressClose"
+        style="@style/FontMedium14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_90sdp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="Please do not press back or close the app"
+        android:textColor="@color/colorTextLight"
+        android:textSize="@dimen/_8sdp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bs_btn_retry"
+        style="@style/GlobalButtonStyle"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:visibility="visible"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/retry"
+         />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

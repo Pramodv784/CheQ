@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/loan_cl"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_78dp"
+        android:background="@drawable/loan_rounded_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/dimen_12dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardElevation="@dimen/dimen_0dp"
+            android:elevation="@dimen/dimen_0dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/flSolidColor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_3dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/loan_bottom_shap"
+                android:backgroundTint="@color/greyscale_p9" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:translationZ="@dimen/dimen_2dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/dimen_6dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bank_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    app:fontFamily="@font/basiercircle_medium"
+                    android:gravity="center|start"
+                    android:text=""
+                    android:textColor="@color/greyscale_p8"
+                    android:textSize="@dimen/dimen_13sp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/card_type_iv"
+                        android:layout_width="@dimen/dimen_14dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_1dp"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_mastercard" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/card_number_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5dp"
+                        android:textColor="@color/greyscale_p7"
+                        android:textSize="@dimen/dimen_12sp"
+                        app:fontFamily="@font/basiercircle_medium"
+                        tools:text="" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bank_image_iv"
+                android:layout_width="@dimen/dimen_104dp"
+                android:layout_height="@dimen/dimen_25dp"
+                android:layout_gravity="center"
+                android:scaleType="fitEnd"
+                android:layout_marginEnd="@dimen/dimen_8dp"
+                android:src="@drawable/bank_icon" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dimen_8dp"
+                    android:layout_height="@dimen/dimen_8dp"
+                    android:layout_marginVertical="2dp"
+                    android:src="@drawable/circle" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/cheqLogoIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:src="@drawable/ic_cheq_logo_wait_list"
+            app:layout_constraintBottom_toTopOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/helpTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="@string/help"
+            android:textColor="@color/help_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="@id/bottomSpaceView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/topSpaceView" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/waitlist_card_outline"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="@id/cardView"
+            app:layout_constraintStart_toStartOf="@id/cardView"
+            app:layout_constraintTop_toTopOf="@id/cardView" />
+
+        <View
+            android:id="@+id/topSpaceView"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toTopOf="@id/lottieAnimation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimation"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginVertical="20dp"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toTopOf="@id/titleTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topSpaceView"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/wait_list_failed" />
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="63dp"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:text="@string/failed_wait_list_title"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="20sp"
+            app:fontFamily="@font/basiercircle_semibold"
+            app:layout_constraintBottom_toTopOf="@id/subTitleTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lottieAnimation" />
+
+        <TextView
+            android:id="@+id/subTitleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="14dp"
+            android:elevation="2dp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="center"
+            android:text="@string/failed_wait_list_sub_title"
+            android:textColor="@color/ref_grey_light"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/horizontalSeparatorIV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+        <ImageView
+            android:id="@+id/horizontalSeparatorIV"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="12dp"
+            android:elevation="2dp"
+            android:src="#E6EAE9"
+
+            app:layout_constraintBottom_toTopOf="@id/subTitle2TV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subTitleTV" />
+
+        <TextView
+            android:id="@+id/subTitle2TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="12dp"
+            android:elevation="2dp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="center"
+
+            android:text="@string/waitlist_the_app_will_be_available_to_you_soon"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/bottomSpaceView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/horizontalSeparatorIV" />
+
+        <View
+            android:id="@+id/bottomSpaceView"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subTitle2TV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

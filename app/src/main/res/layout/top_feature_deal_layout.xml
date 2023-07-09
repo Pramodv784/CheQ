@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_content"
+
+       >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTopFeatured"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_22sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:gravity="center_vertical"
+            android:text="@string/top_featured_deal"
+            android:textAllCaps="true"
+            android:textFontWeight="600"
+            android:textColor="@color/convert_to_cash_color"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/ruppes_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/ruppes_bg"
+            android:background="@drawable/rupees_coin_bg"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_8sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCheqRewardCoin"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+
+                android:paddingVertical="@dimen/_1sdp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvCoinCount"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:srcCompat="@drawable/cheq_reward_coin" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCoinCount"
+            style="@style/Font500"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="1 = ₹1.00"
+            android:visibility="visible"
+            android:textColor="@color/colorCaption"
+            android:textSize="@dimen/_10sdp"
+            android:textFontWeight="400"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCheqRewardCoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivCheqRewardCoin"
+            tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vpTopFeaturedDeal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_218sdp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_20sdp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTopFeatured" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vpTopFeaturedDeal" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

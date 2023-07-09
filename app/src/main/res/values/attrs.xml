@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PrefixLayout">
+        <attr name="hint" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="MaskedEditText">
+        <attr name="mask" format="string" />
+        <attr name="allowed_chars" format="string" />
+        <attr name="enable_ime_action" format="boolean" />
+        <attr name="denied_chars" format="string" />
+        <attr name="char_representation" format="string" />
+        <attr name="keep_hint" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="LineChart">
+        <attr name="chart_padding_top" format="dimension"/>
+        <attr name="chart_padding_right" format="dimension"/>
+        <attr name="chart_padding_bottom" format="dimension"/>
+        <attr name="chart_padding_left" format="dimension"/>
+        <attr name="chart_bg_color" format="color"/>
+        <attr name="chart_bg_color2" format="color"/>
+        <attr name="chart_line_color" format="color"/>
+        <attr name="chart_line_size" format="dimension"/>
+
+    </declare-styleable>
+    <attr name="indicatorColor" format="color"/>
+    <attr name="indicatorSelectedColor" format="color"/>
+    <attr name="indicatorGap" format="dimension"/>
+    <attr name="indicatorItemCount" format="integer"/>
+    <attr name="indicatorCornerRadius" format="dimension"/>
+
+    <declare-styleable name="CircleIndicator">
+        <attr name="indicatorColor"/>
+        <attr name="indicatorSelectedColor"/>
+        <attr name="indicatorGap"/>
+        <attr name="indicatorRadius" format="dimension"/>
+        <attr name="indicatorItemCount"/>
+    </declare-styleable>
+
+    <declare-styleable name="SliderIndicator">
+        <attr name="selectedIndicatorColor" format="color" />
+        <attr name="unselectedIndicatorColor" format="color" />
+        <attr name="selectedWidthDimension" format="dimension" />
+        <attr name="unselectedWidthDimension" format="dimension" />
+        <attr name="diaDimension" format="dimension" />
+        <attr name="spaceDimension" format="dimension" />
+        <attr name="shadowRadiusDimension" format="dimension" />
+        <attr name="isAnimation" format="boolean" />
+        <attr name="shadowColor" format="color" />
+        <attr name="isShadow" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeLayout">
+        <attr name="drag_edge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+        <attr name="leftEdgeSwipeOffset" format="dimension" />
+        <attr name="rightEdgeSwipeOffset" format="dimension" />
+        <attr name="topEdgeSwipeOffset" format="dimension" />
+        <attr name="bottomEdgeSwipeOffset" format="dimension" />
+        <attr name="show_mode" format="enum">
+            <enum name="lay_down" value="0" />
+            <enum name="pull_out" value="1" />
+        </attr>
+        <attr name="clickToClose" format="boolean" />
+    </declare-styleable>
+</resources>

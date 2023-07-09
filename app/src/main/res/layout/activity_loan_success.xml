@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.loans.LoanSuccessActivity" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_product_bg"
+            android:orientation="vertical"
+            tools:context=".ui.activateCard.PaymentSuccessfulActivity">
+
+            <ScrollView
+                android:id="@+id/svMainContent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_13sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_toStartOf="@+id/selectLoanProviderHelpButton"
+                        android:src="@drawable/ic_bharat_billpay" />
+
+                    <View
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:background="@drawable/circle_bg"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:visibility="gone" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:padding="@dimen/_15sdp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        android:visibility="visible"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/loan_success_tick"
+                        tools:ignore="MissingConstraints" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTotalProductType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_24sdp"
+                        android:layout_marginBottom="30dp"
+                        android:text="@string/loan_add_success"
+                        android:textColor="@color/colorPrimaryGreen"
+                        android:textSize="@dimen/_16sdp"
+                        app:fontFamily="@font/basiercircle_semibold"
+                        tools:ignore="HardcodedText" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/llBillGenerated"
+                            layout="@layout/layout_loan_extended" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_52sdp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="@dimen/_18sdp"
+                            android:layout_marginEnd="@dimen/_17sdp"
+                            android:background="@drawable/loan_bg_bottom_curve"
+
+                            android:visibility="visible">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_8sdp"
+
+                                >
+
+
+                                <LinearLayout
+                                    android:id="@+id/llPayNow"
+                                    android:layout_width="@dimen/_180sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="bottom"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_29sdp"
+                                        android:layout_height="@dimen/_29sdp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:src="@drawable/ic_pay_now" />
+
+                                    <TextView
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginHorizontal="@dimen/_10sdp"
+                                        android:maxLines="2"
+                                        android:text="@string/pay_your_bill_now"
+                                        android:textColor="@color/colornaturals"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llFullyPaid"
+                                    android:layout_width="@dimen/_180sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginStart="@dimen/_2sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_12sdp"
+                                        android:layout_height="@dimen/_12sdp"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:src="@drawable/ic_paid_thumb"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tvLastBillAmt"
+                                            style="@style/FontBold"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginHorizontal="@dimen/_8sdp"
+                                            android:maxLines="2"
+                                            android:textColor="@color/colornaturals"
+                                            android:textSize="@dimen/_10sdp"
+                                            tools:text="Your last bill ₹ 10,000 " />
+
+                                        <TextView
+                                            style="@style/FontBold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginHorizontal="@dimen/_8sdp"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:maxLines="2"
+
+                                            android:paddingVertical="@dimen/_2sdp"
+                                            android:text="@string/fully_paid"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textSize="@dimen/_9sdp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llBillDue"
+                                    android:layout_width="@dimen/_180sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginStart="@dimen/_2sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_12sdp"
+                                        android:layout_height="@dimen/_12sdp"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:src="@drawable/ic_warning"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/tvDueAmount"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginHorizontal="@dimen/_6sdp"
+                                            android:fontFamily="@font/basiercircle_medium"
+                                            android:maxLines="2"
+                                            android:text="@string/_0"
+                                            android:textColor="@color/colornaturals"
+                                            android:textSize="@dimen/_17sdp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_due_date"
+                                            style="@style/FontBold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginHorizontal="@dimen/_6sdp"
+                                            android:maxLines="2"
+
+                                            android:paddingVertical="@dimen/_2sdp"
+                                            android:textColor="#F5466A"
+                                            android:textSize="@dimen/_8sdp"
+                                            tools:text="OVERDUE BY 4 DAYS" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/btn_common"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:background="@drawable/ic_pay_now_btn"
+                                    android:gravity="center"
+                                    android:onClick="@{()-> activity.loanPaymentDialog()}"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/basiercircle_medium"
+
+                                        android:text="@string/pay_now"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                    <androidx.appcompat.widget.LinearLayoutCompat
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:visibility="visible">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="@dimen/_8sdp"
+                                            android:layout_height="@dimen/_8sdp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginEnd="@dimen/_4sdp"
+                                            app:srcCompat="@drawable/cheq_reward_coin" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:fontFamily="@font/basiercircle_regular"
+                                            android:text="@string/str_earn_i"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_8sdp" />
+
+                                    </androidx.appcompat.widget.LinearLayoutCompat>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_22sdp"
+                                android:padding="@dimen/_8sdp"
+                                android:visibility="gone">
+
+
+                                <LinearLayout
+                                    android:id="@+id/llBillnotFound"
+                                    android:layout_width="@dimen/_180sdp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginStart="@dimen/_15sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/_12sdp"
+                                        android:layout_height="@dimen/_12sdp"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:src="@drawable/ic_warning"
+                                        android:visibility="gone" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <TextView
+
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginHorizontal="@dimen/_6sdp"
+                                            android:fontFamily="@font/basiercircle_regular"
+                                            android:maxLines="2"
+                                            android:text="@string/str_bill_info_nt_found"
+                                            android:textColor="@color/colornaturals"
+                                            android:textSize="@dimen/_9sdp" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/btn_checkBill"
+                                    style="@style/GlobalButtonStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:background="@drawable/ic_btn_pay_now"
+                                    android:gravity="center"
+                                    android:onClick="@{()-> activity.onButtonClick()}"
+                                    android:text="@string/str_check_bill" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/cheq_reward_coin" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:text="@string/you_earn_200_coins"
+                            android:textColor="#202948"
+                            android:textSize="@dimen/_11sdp"
+                            app:fontFamily="@font/basiercircle_medium" />
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvActionRecommended"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:letterSpacing=".1"
+                        android:text="@string/action_recommended"
+                        android:textAllCaps="true"
+                        android:textColor="#6E7170"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        tools:text="Action Recommended" />
+
+                    <include
+                        android:id="@+id/cheqSafeLayout"
+                        layout="@layout/cheq_safe_widget_item_layout" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_22sdp"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:letterSpacing=".1"
+                        android:text="@string/do_more_on_cheq"
+                        android:textAllCaps="true"
+                        android:textColor="#6E7170"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_8sdp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_refer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:scaleType="fitXY"
+                        android:visibility="visible" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_voucher"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:scaleType="fitXY" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </ScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOk"
+                style="@style/GlobalButtonStyleNew"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/ic_btn_outlined"
+                android:onClick="@{()-> activity.onButtonClick()}"
+                android:text="@string/done"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/cheqSafeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</layout>

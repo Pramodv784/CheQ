@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginVertical="@dimen/_10sdp">
+
+
+            <LinearLayout
+                    android:id="@+id/ll_order_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:src="@drawable/paytm_img" />
+
+
+                    <TextView
+                        android:layout_marginStart="@dimen/_2sdp"
+                        style="@style/FontSemiBoldBlack16"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center|start"
+                        android:text="@string/paytm"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/FontRegular12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:gravity="center|start"
+                        android:text="@string/remove" />
+
+                </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+</layout>

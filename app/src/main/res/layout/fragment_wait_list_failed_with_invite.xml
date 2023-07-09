@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/headerBackgroundView"
+                android:layout_width="wrap_content"
+                android:layout_height="390dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:background="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cheqLogoIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:src="@drawable/ic_cheq_logo_wait_list"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/helpTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/help"
+                android:textColor="@color/help_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_15sdp"
+                android:fontFamily="@font/basiercircle_semibold"
+                android:text="@string/wait_list_failure_title"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cheqLogoIV" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/lottieTopBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="titleTV, cheqLogoIV" />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimation"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="20dp"
+                app:layout_constraintBottom_toTopOf="@id/mainContentBackgroundIV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/lottieTopBarrier"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/wait_list_failed" />
+
+            <View
+                android:id="@+id/mainContentBackgroundIV"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/rounded_box_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_min="75dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/headerBackgroundView" />
+
+            <TextView
+                android:id="@+id/earnedChipTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="13dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/wait_list_earned_cheq_chips"
+                android:textColor="@color/gery_dark"
+                android:textSize="12sp"
+                app:fontFamily="@font/basiercircle_medium"
+                app:layout_constraintStart_toStartOf="@id/mainContentBackgroundIV"
+                app:layout_constraintTop_toTopOf="@id/mainContentBackgroundIV"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/chipTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="6dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/wait_list_chips_equal_rs"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/wait_list_cheq_coin"
+                app:fontFamily="@font/basiercircle_semibold"
+                app:layout_constraintStart_toStartOf="@id/mainContentBackgroundIV"
+                app:layout_constraintTop_toBottomOf="@id/earnedChipTV" />
+
+            <TextView
+                android:id="@+id/referTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/wait_list_referrals"
+                android:textColor="@color/gery_dark"
+                android:textSize="12sp"
+                app:fontFamily="@font/basiercircle_medium"
+                app:layout_constraintEnd_toStartOf="@id/arrowIV"
+                app:layout_constraintStart_toStartOf="@id/referCountTV"
+                app:layout_constraintTop_toTopOf="@id/mainContentBackgroundIV" />
+
+            <TextView
+                android:id="@+id/referCountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="6dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="@string/wait_list_total_referral"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_refer_and_earn"
+                app:fontFamily="@font/basiercircle_semibold"
+                app:layout_constraintEnd_toStartOf="@id/arrowIV"
+                app:layout_constraintTop_toBottomOf="@id/referTV" />
+
+            <ImageView
+                android:id="@+id/arrowIV"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginHorizontal="6dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/referCountTV"
+                app:layout_constraintEnd_toEndOf="@id/mainContentBackgroundIV"
+                app:layout_constraintTop_toTopOf="@id/referTV" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="15dp"
+                app:layout_constraintTop_toBottomOf="@id/mainContentBackgroundIV" />
+
+            <View
+                android:id="@+id/referralView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                app:layout_constraintTop_toTopOf="@id/positionLayout"
+                app:layout_constraintBottom_toBottomOf="@id/unlockedTV"
+                android:background="@drawable/waitlist_failure_refer_background"/>
+
+            <LinearLayout
+                android:id="@+id/positionLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/referralView"
+                app:layout_constraintStart_toStartOf="@id/referralView"
+                app:layout_constraintTop_toBottomOf="@id/divider">
+
+                <TextView
+                    android:id="@+id/positionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/wait_list_your_position"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/positionCountTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="14sp"
+                    tools:text="15" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerV"
+                android:layout_width="0dp"
+                android:layout_height="0.7dp"
+                android:layout_margin="15dp"
+                android:background="#E6EAE9"
+                app:layout_constraintEnd_toEndOf="@id/referralView"
+                app:layout_constraintStart_toStartOf="@id/referralView"
+                app:layout_constraintTop_toBottomOf="@id/positionLayout" />
+
+            <TextView
+                android:id="@+id/referTitleTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/basiercircle_semibold"
+                android:gravity="center"
+                android:text="You are moments away from getting Early Access"
+                android:textColor="@color/colorTextTitle"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@id/referralView"
+                app:layout_constraintStart_toStartOf="@id/referralView"
+                app:layout_constraintTop_toBottomOf="@id/dividerV" />
+
+            <View
+                android:id="@+id/referView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="14dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_color_primary"
+                android:text="@string/refer_a_friend"
+                app:layout_constraintBottom_toBottomOf="@id/btnSubText"
+                app:layout_constraintEnd_toEndOf="@id/referralView"
+                app:layout_constraintStart_toStartOf="@id/referralView"
+                app:layout_constraintTop_toBottomOf="@id/referTitleTV" />
+
+            <TextView
+                android:id="@+id/btnText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basiercircle_medium"
+                android:paddingTop="7dp"
+                android:text="@string/wait_list_refer_now"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/referralView"
+                app:layout_constraintStart_toStartOf="@id/referralView"
+                app:layout_constraintTop_toTopOf="@id/referView" />
+
+            <TextView
+                android:id="@+id/btnSubText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/basiercircle_regular"
+                android:gravity="center"
+                android:paddingBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/referralView"
+                app:layout_constraintStart_toStartOf="@id/referralView"
+                app:layout_constraintTop_toBottomOf="@id/btnText"
+                tools:text="@string/wait_list_earn_chips_for_each_referral" />
+
+            <TextView
+                android:id="@+id/unlockedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="@string/waitlist_unlocked_after_first_payment_of_more_than_100"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:paddingBottom="10dp"
+                app:drawableStartCompat="@drawable/wait_list_cheq_coin"
+                app:fontFamily="@font/basiercircle_regular"
+                app:layout_constraintEnd_toEndOf="@id/referralView"
+                app:layout_constraintStart_toStartOf="@id/referralView"
+                app:layout_constraintTop_toBottomOf="@id/referView" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/buttonGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="referView,btnText,btnSubText" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/referralGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="dividerV,referView,referTitleTV,unlockedTV,btnText,btnSubText"/>
+
+            <View
+                android:id="@+id/chipConversionBackgroundView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="25dp"
+                android:background="@drawable/wait_list_conversion_background"
+                app:layout_constraintBottom_toBottomOf="@id/chipConversionTV"
+                app:layout_constraintTop_toBottomOf="@id/chipConversionTV" />
+
+            <TextView
+                android:id="@+id/chipConversionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:text="@string/waitlist_conversion_text"
+                android:textColor="@color/colorTextTitle"
+                app:drawableStartCompat="@drawable/wait_list_cheq_coin"
+                app:fontFamily="@font/basiercircle_medium"
+                app:layout_constraintEnd_toEndOf="@id/chipConversionBackgroundView"
+                app:layout_constraintStart_toStartOf="@id/chipConversionBackgroundView"
+                app:layout_constraintTop_toBottomOf="@id/unlockedTV" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/conversionViewGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="chipConversionBackgroundView,chipConversionTV" />
+
+            <TextView
+                android:id="@+id/titleTV2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="@dimen/_15sdp"
+                android:fontFamily="@font/basiercircle_semibold"
+                android:text="@string/use_cheq_chips_for"
+                android:textAllCaps="true"
+                android:textColor="@color/gery_dark"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chipConversionTV" />
+
+            <View
+                android:id="@+id/chipsUsageBackground"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/wait_list_chip_usage_background"
+                app:layout_constraintBottom_toTopOf="@id/chipsUsageBottomBarrierView"
+                app:layout_constraintTop_toBottomOf="@id/titleTV2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/productIV"
+                android:layout_width="119dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/waitlist_voucher_icon"
+                app:layout_constraintStart_toStartOf="@id/chipsUsageBackground"
+                app:layout_constraintTop_toBottomOf="@id/titleTV2" />
+
+            <TextView
+                android:id="@+id/voucherTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:gravity="center"
+                android:text="@string/vouchers_title"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/productIV"
+                app:layout_constraintStart_toStartOf="@id/productIV"
+                app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+            <ImageView
+                android:id="@+id/backIV"
+                android:layout_width="7dp"
+                android:layout_height="11dp"
+                android:layout_marginEnd="18dp"
+                android:background="@drawable/ic_right_arrow"
+                app:layout_constraintBottom_toBottomOf="@id/chipsUsageBackground"
+                app:layout_constraintEnd_toEndOf="@id/chipsUsageBackground"
+                app:layout_constraintTop_toTopOf="@id/chipsUsageBackground" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/chipConverterIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="45dp"
+                android:src="@drawable/ic_wait_list_cash"
+                app:layout_constraintEnd_toEndOf="@id/backIV"
+                app:layout_constraintTop_toBottomOf="@id/titleTV2"
+                app:layout_constraintTop_toTopOf="@id/productIV" />
+
+            <TextView
+                android:id="@+id/convertTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:gravity="center"
+                android:text="@string/convert_to_cash_title"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/chipConverterIV"
+                app:layout_constraintStart_toStartOf="@id/chipConverterIV"
+                app:layout_constraintTop_toBottomOf="@id/chipConverterIV" />
+
+            <TextView
+                android:id="@+id/termsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_700"
+                android:paddingBottom="15dp"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/help_color"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chipsUsageBackground" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/chipsUsageBottomBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:barrierMargin="15dp"
+                app:constraint_referenced_ids="voucherTV, convertTV" />
+
+            <View
+                android:id="@+id/chipsUsageBottomBarrierView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#FF0000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chipsUsageBottomBarrier" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chipsUsageBottomBarrierView" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/centerGuide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="templateFormVM"
+            type="com.cheq.retail.inappratings.viewmodels.TemplateFormViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_sheet_new"
+        android:paddingTop="14dp"
+        android:paddingBottom="50dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:contentDescription="@string/cancel"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_title_drawable"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_inapp_negative" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/label_form_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="54dp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:paddingTop="2dp"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_cancel"
+            app:layout_constraintStart_toEndOf="@+id/img_title_drawable"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/label_inapp_negative_title" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_form_title" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_feedback"
+            style="@style/ProximaInputFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="118dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="22dp"
+            android:hint="@string/hint_feedback"
+            android:maxLength="480"
+            app:layout_constraintTop_toBottomOf="@+id/chip_group_options" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_secondary"
+            style="@style/ProximaSecondaryButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginVertical="28dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="10dp"
+            tools:text="@string/btn_label_help"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/guideline_middle"
+            app:layout_constraintTop_toBottomOf="@+id/edt_feedback" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_primary"
+            style="@style/ProximaPrimaryButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginVertical="28dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="24dp"
+            tools:text="bvgv"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/guideline_middle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edt_feedback" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

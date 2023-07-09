@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils"/>
+
+        <variable
+            name="referral"
+            type="com.cheq.retail.ui.main.model.ReferredEarnedResponse" />
+
+        <variable
+            name="referralStatic"
+            type="com.cheq.retail.ui.main.model.ReferralStaticData" />
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.referral.ReferralActivity" />
+    </data>
+    <!-- <View
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/_205sdp"
+         android:background=""/>-->
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.loans.SetLoansProviderActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:background="@color/ref_earned_bg">
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:onClick="onBackPress"
+                android:padding="@dimen/_12sdp"
+                android:src="@drawable/ic_back_refer" />
+
+
+            <TextView
+                android:id="@+id/selectLoanProviderHelpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/help"
+                android:onClick="@{ () -> activity.help()}"
+                android:textColor="@color/color_green"
+                android:textSize="@dimen/_9sdp" />
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:background="@drawable/refe_n_earn_header_bg"
+                    android:orientation="vertical"
+                    android:paddingTop="-40dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_160sdp"
+                        android:paddingLeft="@dimen/_24sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtCheqCoins"
+                            style="@style/Font700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/basiercircle_semibold"
+                            android:lineSpacingExtra="@dimen/_1sdp"
+                            android:text='@{referralStatic.offerValid ? @string/refer_n_earn+"\n"+referralStatic.youGetValue+" "+@string/ref_cheq_chips : @string/refer_your_friends}'
+                            android:textColor="@color/color_green"
+                            android:textSize="@dimen/_16sdp" />
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/linearDaysLeft"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_below="@+id/txtCheqCoins"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@drawable/textview_bg_ne"
+                            android:backgroundTint="@color/white"
+                            android:orientation="horizontal"
+                            android:visibility="@{TextUtils.isEmpty(referralStatic.daysLeft) ? View.GONE : View.VISIBLE}">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivDaysLeft"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:paddingVertical="@dimen/_5sdp"
+                                android:tint="@color/color_green"
+                                app:srcCompat="@drawable/ic_pay_time" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtDaysLeft"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_medium"
+                                android:maxLines="1"
+                                android:text="@{referralStatic.daysLeft}"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <!-- <androidx.appcompat.widget.AppCompatTextView
+                             android:id="@+id/txtCheqCoins"
+                             style="@style/Font700"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="@dimen/_18sdp"
+                             android:ellipsize="end"
+                             android:fontFamily="@font/basiercircle_medium"
+                             android:lineSpacingExtra="@dimen/_1sdp"
+                             android:text='@{@string/refer_n_earn+"\n"+referralStatic.youGetValue+" "+@string/cheq_chips}'
+                             android:textColor="@color/ref_txt_color"
+                             android:textSize="@dimen/_16sdp" />-->
+
+
+                    </RelativeLayout>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ref_earned_bg"
+                    android:orientation="vertical"
+                    android:visibility="@{referral.show ? View.VISIBLE : View.GONE}">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/divider_line_color" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltvRewardsEarned"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="showReferredHistory"
+                        android:paddingHorizontal="@dimen/_24sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblRewardsEarned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:text="@string/rewards_earned"
+                            android:textColor="@color/ref_grey_light"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lblRewardsEarned"
+                            android:layout_marginTop="@dimen/_5sdp">
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivRewardsEarned"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            app:srcCompat="@drawable/ic_chip_gold" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Font700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/ivRewardsEarned"
+                            android:ellipsize="end"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:text="@{Long.toString(referral.totalRewardsEarned)}"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_16sdp"
+                            />
+                        </RelativeLayout>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/lblFrndReferred"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/_36sdp"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:text="@string/frnds_referred"
+                            android:textColor="@color/ref_grey_light"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/linearRefer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lblFrndReferred"
+                            android:layout_alignStart="@+id/lblFrndReferred"
+                            android:layout_marginTop="@dimen/_5sdp">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtFrndInvited"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:text="@{String.valueOf(referral.totalFriendsInvited)}"
+                            android:textColor="@color/colornaturals"
+                            android:textSize="@dimen/_16sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtRefLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:visibility="@{referral.totalReferralLimit>0?View.VISIBLE:View.GONE}"
+                            android:text="@{'/'+String.valueOf(referral.totalReferralLimit)}"
+                            android:textColor="@color/ref_limit"
+                            android:textSize="@dimen/_16sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_5sdp"
+                            android:layout_height="@dimen/_5sdp"
+                            android:layout_below="@+id/lblFrndReferred"
+                            android:layout_alignBottom="@+id/linearRefer"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:layout_toRightOf="@+id/linearRefer"
+                            android:tint="@color/ref_arrow"
+                            app:srcCompat="@drawable/ic_arrow_" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/_24sdp"
+                    android:visibility="@{referralStatic.offerValid ? View.GONE : View.VISIBLE}">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:background="@drawable/refer_top_bg"
+                        android:backgroundTint="@color/default_box_bg"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:gravity="center"
+                        android:textColor="@color/color_green"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:gravity="left"
+                        android:text="@{referralStatic.defaultMessage}"
+                        android:textColor="@color/ref_txt_color"
+                        android:textSize="@dimen/_14sdp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:letterSpacing="0.04"
+                    android:text="@string/how_it_works"
+                    android:textAllCaps="true"
+                    android:textColor="@color/ref_grey_light"
+                    android:textSize="@dimen/_8sdp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@drawable/refer_rect_border"
+                    android:paddingHorizontal="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearInviteLbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:backgroundTint="@color/color_green"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:background="@drawable/ic_circle_green_border"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/color_green"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:gravity="left"
+                            android:text="@string/invite_your_friends"
+                            android:textColor="@color/ref_txt_color"
+                            android:textSize="@dimen/_12sdp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linearRefLbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/linearInviteLbl"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:background="@drawable/textview_bg_ne"
+                        android:backgroundTint="@color/share_link_bg"
+                        android:onClick="onClickCopy"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtRefLink"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:maxLines="1"
+                            android:textColor="@color/ref_txt_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivCopy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_copy_clipboard" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_below="@+id/linearRefLbl"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/textview_bg_ne"
+                        android:backgroundTint="@color/color_green"
+                        android:onClick="onWhatsAppclick"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:gravity="center"
+                            android:text="@string/invite_your_friend"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivWhatsApp"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            app:srcCompat="@drawable/ic_whatsapp_icon" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_45sdp"
+                    android:background="@color/vert_line_color"
+                    android:gravity="center"
+                    android:visibility="@{referralStatic.offerValid ? View.VISIBLE : View.GONE}" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24sdp"
+                    android:background="@drawable/refer_rect_border"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:visibility="@{referralStatic.offerValid ? View.VISIBLE : View.GONE}">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/linear_2_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:backgroundTint="@color/color_green"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_circle_green_border"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:gravity="center"
+                            android:text="2"
+                            android:textColor="@color/color_green"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:background="@color/grey_light"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_circle_green_border"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            android:background="@color/grey_light"
+                            android:gravity="center" />
+
+                        <View
+                            android:layout_width="@dimen/_10sdp"
+                            android:layout_height="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_circle_green_border"
+                            android:gravity="center" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_toRightOf="@+id/linear_2_left"
+                        android:backgroundTint="@color/color_green"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:text='@{referralStatic.youGetMessage??"@string/you_get"}'
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    app:srcCompat="@drawable/ic_chip_gold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtYouGet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_2sdp"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:text='@{Integer.toString(referralStatic.youGetValue)}'
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14sdp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    android:text='@string/ref_cheq_chips'
+                                    android:visibility="@{referralStatic.type.equalsIgnoreCase(`ONE_SIDED`)?View.VISIBLE:View.GONE}"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_12sdp"
+                                android:layout_marginEnd="@dimen/_12sdp"
+                                android:background="@color/share_link_bg"
+                                android:gravity="center"
+                                android:visibility="@{referralStatic.type.equalsIgnoreCase(`TWO_SIDED`)? View.VISIBLE : View.GONE}" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center_vertical"
+                                android:orientation="horizontal"
+                                android:visibility="@{referralStatic.type.equals(`TWO_SIDED`)? View.VISIBLE : View.GONE}">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:text='@{referralStatic.friendsGetMessage??"@string/friend_gets"}'
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    app:srcCompat="@drawable/ic_chip_gold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtFriendGet"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_2sdp"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:text='@{Integer.toString(referralStatic.friendsGetValue)??"100"}'
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_14sdp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="@dimen/_24sdp"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:text='@{referralStatic.steps.get(0)??"@string/download_register"}'
+                            android:textColor="@color/ref_grey_light"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:text='@{referralStatic.steps.get(1)??"@string/frnd_complete_first_pay"}'
+                            android:textColor="@color/ref_grey_light"
+                            android:textSize="@dimen/_10sdp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTerms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:textSize="@dimen/_9sdp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

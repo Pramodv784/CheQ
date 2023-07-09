@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (7.2.2)" variant="fatal" version="7.2.2">
+
+    <issue
+        id="NullSafeMutableLiveData"
+        message="Cannot set non-nullable LiveData value to `null`"
+        errorLine1="                        productObserver.postValue(null)"
+        errorLine2="                                                  ~~~~">
+        <location
+            file="src/main/java/com/cheq/retail/ui/emandate/viewModel/EmandateViewModel.kt"
+            line="69"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="NullSafeMutableLiveData"
+        message="Cannot set non-nullable LiveData value to `null`"
+        errorLine1="                        dashboardObserver.postValue(null)"
+        errorLine2="                                                    ~~~~">
+        <location
+            file="src/main/java/com/cheq/retail/ui/activateCard/viewModel/ProductActivationViewModel.kt"
+            line="94"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="NullSafeMutableLiveData"
+        message="Cannot set non-nullable LiveData value to `null`"
+        errorLine1="                        dashboardObserver.postValue(null)"
+        errorLine2="                                                    ~~~~">
+        <location
+            file="src/main/java/com/cheq/retail/ui/main/viewModel/ProductViewModel.kt"
+            line="94"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="NullSafeMutableLiveData"
+        message="Cannot set non-nullable LiveData value to `null`"
+        errorLine1="                    crawlingValueObserver.postValue(null)"
+        errorLine2="                                                    ~~~~">
+        <location
+            file="src/main/java/com/cheq/retail/ui/socialLogin/viewModel/SocialLoginViewModel.kt"
+            line="64"
+            column="53"/>
+    </issue>
+
+</issues>

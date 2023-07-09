@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.permission.PermissionActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.permission.PermissionActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_41sdp"
+            android:gravity="start"
+            android:text="@string/permission_permit_to_ease_credit"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="24sp"
+            app:fontFamily="@font/basiercircle_semibold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDataSecured"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/permission_just_enter_the_mobile_number_linked_to_your_credit_products"
+            android:textColor="@color/colorText"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dataSecuredTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:text="@string/_100_data_security"
+            android:textColor="@color/grey_text"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivPermissionImage"
+            app:layout_constraintEnd_toStartOf="@id/ivPermissionImage"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivPermissionImage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPermissionImage"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@id/btn_request_permission"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dataSecuredTV"
+            app:srcCompat="@drawable/ic_permisson_image" />
+
+        <FrameLayout
+            android:id="@+id/flChat"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_54sdp"
+            android:elevation="@dimen/_4sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/tvSMSPermission"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDataSecured">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/chat"
+                app:srcCompat="@drawable/ic_sms_permission" />
+        </FrameLayout>
+
+
+
+        <View
+            android:id="@+id/permissionView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/corner_box_bg"
+            app:layout_constraintBottom_toTopOf="@id/centerContainerBottomView"
+            app:layout_constraintEnd_toEndOf="@id/tvDataSecured"
+            app:layout_constraintStart_toStartOf="@id/tvDataSecured"
+            app:layout_constraintTop_toBottomOf="@id/tvDataSecured" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/permissionView"
+            android:text="@string/mandatory"
+            app:layout_constraintEnd_toEndOf="@+id/permissionView"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="-13dp"
+            android:background="@drawable/rectangle_black_round"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/basiercircle_regular"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingVertical="@dimen/_3sdp"
+            />
+
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/messageIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="21dp"
+            android:contentDescription="@string/chat"
+            app:layout_constraintBottom_toBottomOf="@id/tvSMSDesc"
+            app:layout_constraintStart_toStartOf="@id/permissionView"
+            app:layout_constraintTop_toTopOf="@id/permissionView"
+            app:srcCompat="@drawable/ic_sms_permission" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSMSPermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="13dp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="start"
+            android:text="@string/sms_permission"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@id/tvSMSDesc"
+            app:layout_constraintEnd_toEndOf="@id/permissionView"
+            app:layout_constraintStart_toEndOf="@id/messageIV"
+            app:layout_constraintTop_toTopOf="@id/messageIV"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSMSDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/permission_to_know_when_credit_payments_are_due"
+            android:textColor="@color/colorTextLight"
+            android:textSize="12sp"
+            app:fontFamily="@font/basiercircle_regular"
+            app:layout_constraintBottom_toBottomOf="@id/messageIV"
+            app:layout_constraintEnd_toEndOf="@id/tvSMSPermission"
+            app:layout_constraintStart_toStartOf="@id/tvSMSPermission"
+            app:layout_constraintTop_toBottomOf="@id/tvSMSPermission" />
+
+        <View
+            android:id="@+id/centerContainerBottomView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/messageIV" />
+
+
+        <FrameLayout
+            android:id="@+id/flPhone"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:elevation="@dimen/_4sdp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/tvPhonePermission"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSMSDesc">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:contentDescription="@string/phone"
+                app:srcCompat="@drawable/ic_phone_state_permission" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhonePermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:gravity="start"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/phone_state_permission"
+            android:textColor="@color/colornaturals"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/flPhone"
+            app:layout_constraintTop_toBottomOf="@id/flPhone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneDesc"
+            style="@style/FontMedium14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/text_phone_permission_desc"
+            android:textColor="@color/colorTextLight"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvPhonePermission"
+            app:layout_constraintTop_toBottomOf="@id/tvPhonePermission" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/btn_request_permission"
+            app:layout_constraintStart_toStartOf="@id/btn_request_permission"
+            app:layout_constraintTop_toBottomOf="@id/permissionView">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_error_message" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvErrorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:drawablePadding="@dimen/_4sdp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:text="@string/please_allow_the_permissions_to_proceed"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_11sdp"
+
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_request_permission"
+            style="@style/GlobalButtonStyle"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:onClick="@{()-> activity.checkPermission()}"
+            android:text="@string/allow_access"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:textAllCaps="true"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

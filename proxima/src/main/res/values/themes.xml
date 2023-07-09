@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CheqFilledButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:fontFamily">@font/basiercircle_medium</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/cheq_button_drawable</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CheqOutlinedButtonStyle" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:fontFamily">@font/basiercircle_medium</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_color_green_outlined</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/primary_p5</item>
+    </style>
+</resources>

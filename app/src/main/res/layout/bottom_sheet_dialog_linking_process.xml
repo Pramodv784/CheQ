@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_bottom_sheet_new"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:contentDescription="@string/cancel"
+        app:srcCompat="@drawable/ic_close" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/processingAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        android:layout_marginTop="45dp"
+        app:lottie_repeatMode="reverse"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/link_process" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/Font800"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_19sdp"
+        android:text="@string/linking_in_process"
+        android:textColor="@color/colornaturals"
+        android:textSize="@dimen/_17sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/Font500"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_130sdp"
+        android:text="@string/please_wait_until_payment_is_processing"
+        android:textColor="@color/colorTextLight"
+        android:textSize="@dimen/_11sdp" />
+    <androidx.appcompat.widget.AppCompatTextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:text="Please don’t go back or close the app"
+        android:textColor="#6E7170"
+
+        android:fontFamily="@font/basiercircle_regular"
+        android:textSize="@dimen/_8sdp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="36dp">
+
+        <View
+            android:id="@+id/addCreditView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginVertical="50dp"
+            android:background="@drawable/add_product_box"
+            app:layout_constraintTop_toBottomOf="@id/img_background" />
+
+        <TextView
+            android:id="@+id/addTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:text="@string/add_credit_cards_loans"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/addCreditView"
+            app:layout_constraintTop_toTopOf="@id/addCreditView" />
+
+        <TextView
+            android:id="@+id/infoTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/landing_add_product_subtitle"
+            android:textColor="@color/gery_dark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@id/addTitleTV"
+            app:layout_constraintEnd_toEndOf="@+id/addCreditView"
+            app:layout_constraintTop_toBottomOf="@id/addTitleTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bankLogoCV1"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/ic_circle"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="@id/infoTV"
+            app:layout_constraintTop_toBottomOf="@id/infoTV">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_landing_bank_logo_1" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bankLogoCV2"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_circle"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toEndOf="@id/bankLogoCV1"
+            app:layout_constraintTop_toBottomOf="@id/infoTV">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_landing_bank_logo_2" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bankLogoCV3"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_circle"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toEndOf="@id/bankLogoCV2"
+            app:layout_constraintTop_toBottomOf="@id/infoTV">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_sbi_logo" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bankLogoCV4"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/ic_circle"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toEndOf="@id/bankLogoCV3"
+            app:layout_constraintTop_toBottomOf="@id/infoTV">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/ic_icici_logo" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addProductBtn"
+            style="@style/GlobalButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="@string/landing_add_manually"
+            app:layout_constraintBottom_toBottomOf="@id/addCreditView"
+            app:layout_constraintEnd_toEndOf="@id/addCreditView"
+            app:layout_constraintStart_toStartOf="@id/addCreditView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_loan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+
+       >
+
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+        android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="@font/basiercircle_regular"
+            android:gravity="start"
+            android:singleLine="true"
+            android:text="SBI Banking"
+            android:textColor="@color/colornaturals"
+            android:textSize="@dimen/_13sdp" />
+      <FrameLayout
+          android:layout_width="@dimen/_30sdp"
+          android:layout_height="@dimen/_20sdp"
+          >
+        <RadioButton
+            android:id="@+id/radio_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_icon_forward_arrow" />
+
+      </FrameLayout>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

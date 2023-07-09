@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_sheet_new"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:contentDescription="@string/cancel"
+            app:srcCompat="@drawable/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:src="@drawable/ic_cheq_safe_email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:text="@string/successfully_linked_title"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp"
+            app:fontFamily="@font/basiercircle_semibold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subtitleTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_11sdp"
+            android:text="@string/successfully_linked_subtitle"
+            android:textColor="@color/gery_dark"
+            android:textSize="14sp"
+            app:fontFamily="@font/basiercircle_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:background="@drawable/grey_border"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/tvLinkedEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="18dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:textColor="@color/gery_dark"
+                android:textSize="14sp"
+                app:drawableStartCompat="@drawable/ic_gmail"
+                tools:text="rajesh@gmail.com" />
+
+
+            <TextView
+                android:id="@+id/linkingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/_10dp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:gravity="end"
+                android:text="@string/linking"
+                android:textColor="@color/golden_color"
+                android:textSize="12sp" />
+
+            <!-- <TextView
+                 android:id="@+id/successTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginEnd="12dp"
+                 android:layout_gravity="center"
+                 android:gravity="end"
+                 android:fontFamily="@font/basiercircle_medium"
+                 android:textSize="12sp"
+                 android:drawablePadding="6dp"
+                 android:visibility="gone"
+                 android:textColor="@color/colorPrimary"
+                 android:text="@string/success"
+                 app:drawableStartCompat="@drawable/ic_success_checq_safe" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:src="@drawable/cash_back_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/Font500"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:maxLines="2"
+                android:text="@string/you_earn_200_coins"
+                android:textColor="@color/colornaturals"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLetRoll"
+            style="@style/GlobalButtonStyle"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:background="@drawable/button_color_primary"
+            android:text="@string/back_to_home"
+            android:visibility="visible"
+            app:textAllCaps="true" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

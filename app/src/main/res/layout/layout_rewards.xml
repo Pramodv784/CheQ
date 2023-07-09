@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:elevation="@dimen/_175sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRewards"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:background="@color/white"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/tabMargin"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:fontFamily="@font/basiercircle_semibold"
+                android:lineHeight="@dimen/_22sdp"
+                android:text="@string/voucher_and_cash"
+                android:textColor="@color/colornaturals"
+                android:textSize="@dimen/_17sdp"
+                app:layout_constraintEnd_toStartOf="@+id/tvHelp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="p" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/tvHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:srcCompat="@drawable/ic_help_new"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clChipBalance"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:background="@drawable/bg_rewards_header_bg"
+                app:layout_constraintEnd_toStartOf="@id/clYourVouchers"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCoinBalanceTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="@string/coin_balance"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCheqRewardCoin"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvCoinBalanceTitle"
+                    app:layout_constraintTop_toBottomOf="@id/tvCoinBalanceTitle"
+                    app:srcCompat="@drawable/cheq_reward_coin" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCheqRewardCoinTwo"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCheqRewardCoin"
+                    app:layout_constraintStart_toStartOf="@id/ivCheqRewardCoin"
+                    app:layout_constraintTop_toTopOf="@id/ivCheqRewardCoin"
+                    app:srcCompat="@drawable/cheq_reward_coin" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCoinBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:maxLines="1"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:textColor="@color/colornaturals"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCheqRewardCoin"
+                    app:layout_constraintStart_toEndOf="@id/ivCheqRewardCoin"
+                    app:layout_constraintTop_toTopOf="@id/ivCheqRewardCoin"
+                    tools:text="2323" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/waitingCoinBalanceTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:drawableStart="@drawable/ic_c2c_waiting"
+                    android:drawablePadding="2dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/grey_text"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvCoinBalance"
+                    app:layout_constraintStart_toEndOf="@+id/tvCoinBalance"
+                    tools:text="2323" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/waitingCoinGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="waitingCoinBalanceTV" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clYourVouchers"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/bg_rewards_header_bg"
+                app:layout_constraintBottom_toBottomOf="@id/clChipBalance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/clChipBalance"
+                app:layout_constraintTop_toTopOf="@id/clChipBalance">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMyVouchers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_13sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="@string/my_vouchers"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMyVoucher"
+                    android:layout_width="74dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="@dimen/_38sdp"
+                    android:scaleType="fitEnd"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvMyVouchers"
+                    app:layout_constraintTop_toBottomOf="@id/tvMyVouchers"
+                    app:srcCompat="@drawable/my_vouchers" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRewardsWorks"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clRewards"
+            app:srcCompat="@drawable/ic_how_rewards_work" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

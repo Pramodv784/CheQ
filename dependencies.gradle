@@ -1,0 +1,176 @@
+ext {
+    // Kotlin
+    minSdkVersion = 24
+    targetSdk = 33
+
+    buildGradleVer = '7.2.2'
+    kotlinVer = '1.7.10'
+    kotlinDependencies = [
+            buildGradle       : "com.android.tools.build:gradle:${buildGradleVer}",
+            kotlinGradlePlugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVer}",
+            kotlinStdlib      : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVer}"
+    ]
+
+    //AndroidX Core
+    androidXCoreVer = '1.7.0'
+    appCompatVer = '1.4.2'
+    constraintVer = "2.1.4"
+    androidX = [
+            core        : "androidx.core:core-ktx:${androidXCoreVer}",
+            appCompat   : "androidx.appcompat:appcompat:${appCompatVer}",
+            constraint  : "androidx.constraintlayout:constraintlayout:$constraintVer",
+    ]
+
+    // material
+    materialVer = "1.5.0"
+    materialDependencies = [
+            material    : "com.google.android.material:material:$materialVer"
+    ]
+
+    //Navigation
+    navigationVer = "2.5.0"
+    navigationDependencies = [
+            fragment : "androidx.navigation:navigation-fragment-ktx:$navigationVer",
+            ui : "androidx.navigation:navigation-ui-ktx:$navigationVer",
+    ]
+
+    //Hilt
+    hiltVersion = '2.44'
+    hiltDependencies = [
+            hiltAndroid     : "com.google.dagger:hilt-android:${hiltVersion}",
+            compiler        : "com.google.dagger:hilt-android-compiler:${hiltVersion}",
+            hiltGradlePlugin: "com.google.dagger:hilt-android-gradle-plugin:${hiltVersion}"
+    ]
+
+    //Coroutines
+    coroutinesVersion = '1.6.4'
+    coroutinesDependencies = [
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}",
+            coroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}"
+    ]
+
+    // google
+    authVer = "20.5.0"
+    googleDependencies = [
+            auth : "com.google.android.gms:play-services-auth:$authVer"
+    ]
+
+    // firebase
+    bomVer = "32.0.0"
+    firebaseDependencies = [
+            bom         : "com.google.firebase:firebase-bom:$bomVer",
+            config      : "com.google.firebase:firebase-config-ktx",
+            database    : "com.google.firebase:firebase-database-ktx",
+            crashlytics : 'com.google.firebase:firebase-crashlytics-ktx'
+    ]
+
+    //Network
+    retrofitVer = '2.9.0'
+    okhttp3Ver = '4.10.0'
+    mockWebServerVer = "4.11.0"
+    okhttp3LoggingVer = '4.10.0'
+    chuckerVer = '3.5.2'
+    networkDependencies = [
+            retrofit2         : "com.squareup.retrofit2:retrofit:${retrofitVer}",
+            retrofit2Converter: "com.squareup.retrofit2:converter-gson:${retrofitVer}",
+            okhttp3           : "com.squareup.okhttp3:okhttp:${okhttp3Ver}",
+            okhttp3Logging    : "com.squareup.okhttp3:logging-interceptor:$okhttp3LoggingVer",
+            mockWebServer     : "com.squareup.okhttp3:mockwebserver:$mockWebServerVer"
+    ]
+    chuckerDependencies = [
+            chucker       : "com.github.chuckerteam.chucker:library:${chuckerVer}",
+            chuckerRelease: "com.github.chuckerteam.chucker:library-no-op:${chuckerVer}"
+    ]
+
+    //Preferences DataStore
+    preferenceStoreVer = '1.0.0'
+    datastoreDependencies = [
+            preferences: "androidx.datastore:datastore-preferences:${preferenceStoreVer}"
+    ]
+
+    //Tests
+    junitVer = '4.13.2'
+    androidxJunitVer = '1.1.5'
+    androidxEspressoVer = '3.5.1'
+    coreVer = '1.1.0'
+    mockitoVer = '2.19.0'
+    mockitoInlineVer = '3.11.2'
+    coroutinesTestVer = '1.4.2'
+    testingDependencies = [
+            junit         : "junit:junit:${junitVer}",
+            androidxJunit : "androidx.test.ext:junit:${androidxJunitVer}",
+            espresso      : "androidx.test.espresso:espresso-core:${androidxEspressoVer}",
+            core          : "android.arch.core:core-testing:$coreVer",
+            mockito       : "org.mockito:mockito-core:$mockitoVer",
+            mockitoInline : "org.mockito:mockito-inline:$mockitoInlineVer",
+            coroutinesTest: "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVer"
+    ]
+
+    //Lottie
+    lottieVer = '6.0.0'
+    lottieDependencies = [
+            lottie: "com.airbnb.android:lottie:$lottieVer"
+    ]
+
+    //sdp library
+    intuitVer = '1.1.0'
+    intuitDependencies = [
+            sdp: "com.intuit.sdp:sdp-android:$intuitVer",
+            ssp: "com.intuit.ssp:ssp-android:$intuitVer"
+    ]
+
+    // coil
+    coilVer = '2.3.0'
+    coilDependencies = [
+            coil: "io.coil-kt:coil:$coilVer",
+            svg : "io.coil-kt:coil-svg:$coilVer"
+    ]
+
+    // appsflyer
+    appsFlyerVer = '6.9.0'
+    appsFlyerDependencies = [
+            appsFlyer : "com.appsflyer:af-android-sdk:$appsFlyerVer"
+    ]
+
+    //Facebook shimmer
+    shimmerVer = '0.5.0'
+    shimmerDependencies = [
+            shimmer: "com.facebook.shimmer:shimmer:$shimmerVer"
+    ]
+
+    //SafeArgs
+    safeArgsVer = '2.5.3'
+    safeArgsDependencies = [
+            safeargs: "androidx.navigation:navigation-safe-args-gradle-plugin:${safeArgsVer}"
+    ]
+
+    // Fresh chat
+    freshChatVer = "5.4.0"
+    freshChatDependencies = [
+            freshchat:  "com.github.freshworks:freshchat-android:$freshChatVer"
+    ]
+
+    // Moengage
+    moengageVer = "12.5.01"
+    moengageDependencies = [
+            core     : "com.moengage:moe-android-sdk:$moengageVer",
+            security : "com.moengage:security:$moengageVer"
+    ]
+
+    // Hyperion
+    hyperionVer = "12.5.01"
+    hyperionDependencies = [
+            core          : 'com.willowtreeapps.hyperion:hyperion-core:0.9.34',
+            attr          : 'com.willowtreeapps.hyperion:hyperion-attr:0.9.34',
+            config        : 'com.willowtreeapps.hyperion:hyperion-build-config:0.9.34',
+            crash         : 'com.willowtreeapps.hyperion:hyperion-crash:0.9.34',
+            disk          : 'com.willowtreeapps.hyperion:hyperion-disk:0.9.34',
+            geiger        : 'com.willowtreeapps.hyperion:hyperion-geiger-counter:0.9.34',
+            measurement   : 'com.willowtreeapps.hyperion:hyperion-measurement:0.9.34',
+            pheonix       : 'com.willowtreeapps.hyperion:hyperion-phoenix:0.9.34',
+            recorder      : 'com.willowtreeapps.hyperion:hyperion-recorder:0.9.34',
+            prefs         : 'com.willowtreeapps.hyperion:hyperion-shared-preferences:0.9.34',
+            timber        : 'com.willowtreeapps.hyperion:hyperion-timber:0.9.34',
+            simpleItem    : 'com.github.takahirom:Hyperion-Simple-Item:0.5.0',
+    ]
+}

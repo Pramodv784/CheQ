@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_bottomsheet"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/FontBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="How do CheQ Rewards Work?"
+        android:textColor="@color/colornaturals"
+        android:textSize="@dimen/_16sdp"
+        tools:ignore="HardcodedText" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:paddingHorizontal="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/ivRewardImage"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/coin_earn" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rewardHeading"
+            style="@style/FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/ivRewardImage"
+            android:text="Pay &amp; earn 500 CheQ rewards"
+            android:textColor="@color/colornaturals"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rewardHeading"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/ivRewardImage"
+            android:text="Pay &amp; earn 500 CheQ rewards"
+            android:textColor="#6A7381"
+            android:textSize="@dimen/_10sdp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/ivRewardImage2"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/coin_earn" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rewardHeading2"
+            style="@style/FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/ivRewardImage2"
+            android:text="Pay &amp; earn 500 CheQ rewards"
+            android:textColor="@color/colornaturals"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rewardHeading2"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/ivRewardImage2"
+            android:text="Pay &amp; earn 500 CheQ rewards"
+            android:textColor="#6A7381"
+            android:textSize="@dimen/_10sdp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:paddingHorizontal="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/ivRewardImage3"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:src="@drawable/coin_earn" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rewardHeading3"
+            style="@style/FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/ivRewardImage3"
+            android:text="Pay &amp; earn 500 CheQ rewards"
+            android:textColor="@color/colornaturals"
+            android:textSize="@dimen/_12sdp"
+            tools:ignore="HardcodedText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/FontBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rewardHeading3"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_toRightOf="@+id/ivRewardImage3"
+            android:text="Pay &amp; earn 500 CheQ rewards"
+            android:textColor="#6A7381"
+            android:textSize="@dimen/_10sdp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRetry"
+        style="@style/GlobalButtonStyle"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/ok_"
+        android:visibility="visible" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

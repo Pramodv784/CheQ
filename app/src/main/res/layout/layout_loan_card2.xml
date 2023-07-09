@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/llCreditCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_67sdp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/loan_back_small" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_weight=".3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvBankName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight=".9"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:gravity="center|start"
+                        android:text="HDFC Regalia"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="@dimen/_10sdp"
+                        tools:ignore="HardcodedText" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCardNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_weight=".9"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:gravity="center|start"
+                        android:text="··· 5425"
+                        android:textColor="#6E7170"
+                        android:textSize="@dimen/_9sdp"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight=".7"
+
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/iv_bank_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/bank_icon"
+                        android:text="@string/str_amount_to_pay"
+                        android:textColor="@color/colorText"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_8sdp" />
+
+
+                    <TextView
+                        android:id="@+id/tvLoanAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:scaleType="fitEnd"
+                        android:src="@drawable/bank_icon"
+                        tools:text="₹10,000"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ImageView
+                android:id="@+id/flSolidColor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="3dp"
+                android:backgroundTint="@color/black"
+                tools:background="@drawable/loan_bottom_shap" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_above="@+id/flSolidColor"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginBottom="-8dp"
+                android:background="@color/white" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</layout>

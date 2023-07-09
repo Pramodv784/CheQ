@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/history_btm_sheet_bg"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:tint="@color/ref_txt_color"
+                app:srcCompat="@drawable/ic_close" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="-7dp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/transaction_history"
+                android:textColor="@color/ref_txt_color"
+                android:textSize="@dimen/_17sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_bbps_logo"
+                android:layout_width="@dimen/_44sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_bbps" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/txn_history_border_line"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_25sdp">
+
+
+                <FrameLayout
+                    android:id="@+id/frameLoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_5sdp"
+                    android:visibility="gone">
+
+                    <include layout="@layout/layout_loan_card" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layoutCreditCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_64sdp"
+                    android:background="@drawable/new_card"
+
+                    >
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_57sdp">
+
+                        <FrameLayout
+                            android:id="@+id/flStroke"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/combine_bill_payment_stroke_bg"
+                            android:visibility="visible" />
+
+                        <FrameLayout
+                            android:id="@+id/flShadow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_1sdp"
+                            android:background="@drawable/ic_shadow"
+                            android:visibility="visible" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llCardSolidBackGround"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginVertical="@dimen/_1sdp"
+                            android:layout_marginStart="@dimen/_1sdp"
+                            android:background="@drawable/combine_bill_payment_gradient_bg"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llCardBackGround"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingHorizontal="@dimen/_15sdp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_12sdp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txtBankName"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/basiercircle_medium"
+                                        android:gravity="center|start"
+                                        android:text="HDFC Regalia"
+                                        android:textColor="@color/colorTextBlack"
+                                        android:textSize="@dimen/_10sdp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/iv_bank_image_cardview"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="fitEnd"
+                                        android:src="@drawable/bank_icon" />
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_4sdp"
+                                    android:layout_marginBottom="@dimen/_6sdp"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivCardTypeCard"
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_12sdp"
+                                        android:layout_marginTop="@dimen/_1sdp"
+                                        app:srcCompat="@drawable/ic_mastercard" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/txtCardNumber"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_4sdp"
+                                        android:fontFamily="@font/basiercircle_medium"
+                                        android:textColor="@color/colorTextGreyNew"
+                                        android:textSize="@dimen/_9sdp"
+                                        tools:text="··· 5425" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltvStroke"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_68sdp"
+                    android:layout_marginHorizontal="@dimen/_1sdp"
+                    android:background="@drawable/bank_card_border"
+                    android:visibility="gone">
+
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_12sdp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtBillAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:text="@string/rupee_symbol_test"
+                            android:textColor="@color/ref_txt_color"
+                            android:textSize="@dimen/_17sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtBillStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_toRightOf="@+id/txtBillAmount"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:text="@string/paid"
+                            android:textColor="@color/ref_arrow"
+                            android:textSize="@dimen/_17sdp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivShare"
+                            android:layout_width="@dimen/_16sdp"
+                            android:layout_height="@dimen/_16sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:tint="@color/color_green"
+                            app:srcCompat="@drawable/ic_share_rewards" />
+
+                        <RelativeLayout
+                            android:id="@+id/rltv_paid_success"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtBillAmount"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCompleted"
+                                android:layout_width="@dimen/_14sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                app:srcCompat="@drawable/ic_check_right" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtCompletedOnLbl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ivCompleted"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:lines="1"
+                                android:text="@string/payment_received_on"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtCompletedOn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/txtCompletedOnLbl"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_semibold"
+                                android:lines="1"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <View
+                                android:id="@+id/viewVertical"
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_below="@+id/ivCompleted"
+                                android:layout_marginStart="@dimen/_6sdp"
+                                android:background="@drawable/ic_vertical_line"
+                                android:backgroundTint="@color/color_green" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCredited"
+                                android:layout_width="@dimen/_14sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_below="@+id/viewVertical"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                app:srcCompat="@drawable/ic_pay_time_green" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtCreditedInLbl"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/viewVertical"
+                                android:layout_toEndOf="@+id/ivCredited"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:lines="1"
+                                android:text="@string/transferred_to_bank_acnt"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtCreditedIn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/viewVertical"
+                                android:layout_toEndOf="@+id/txtCreditedInLbl"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_semibold"
+                                android:lines="1"
+                                android:text="@string/thirty_minutes"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtMayTake"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivCredited"
+                                android:layout_marginTop="2dp"
+                                android:layout_toEndOf="@+id/ivCredited"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:text="@string/may_take_upto"
+                                android:textColor="@color/ref_arrow"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivEarned"
+                                android:layout_width="@dimen/_14sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_below="@+id/txtMayTake"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                app:srcCompat="@drawable/ic_chip_gold" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtEarned"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtMayTake"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:layout_toEndOf="@+id/ivCredited"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_medium"
+                                android:lines="1"
+                                android:text="You earned 0 CheQ Chips"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rltv_paid_failed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtBillAmount"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivFailed"
+                                android:layout_width="@dimen/_14sdp"
+                                android:layout_height="@dimen/_14sdp"
+                                android:layout_marginEnd="@dimen/_6sdp"
+                                app:srcCompat="@drawable/ic_payment_failed" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtFailedReason"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/ivFailed"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:text="@string/money_debited_will_be_refunded"
+                                android:textColor="@color/amount_red"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlAmountBifurcation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp">
+
+                        <LinearLayout
+                            android:id="@+id/linearAmountPaid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivCredited"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:lines="1"
+                                android:text="@string/amount_paid"
+                                android:textColor="@color/ref_arrow"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtBillChipAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivCredited"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_toEndOf="@+id/ivCredited"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_medium"
+                                android:lines="1"
+                                android:text="@string/rupee_symbol_test"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtBillCashAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivCredited"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_toEndOf="@+id/ivCredited"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_medium"
+                                android:lines="1"
+                                android:text="@string/rupee_symbol_test"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_11sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_70sdp"
+                            android:layout_toRightOf="@+id/linearAmountPaid"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivCredited"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:lines="1"
+                                android:text="@string/payment_method"
+                                android:textColor="@color/ref_arrow"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/linear_cheq_chips"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="@dimen/_14sdp"
+                                    android:layout_height="@dimen/_14sdp"
+                                    app:srcCompat="@drawable/ic_chip_gold" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtCheqChips"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:text="@string/ref_cheq_chips"
+                                    android:textColor="@color/ref_txt_color"
+                                    android:textSize="@dimen/_9sdp" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/linear_bank_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/ivPaymentTypeLogo"
+                                    android:layout_width="@dimen/_16sdp"
+                                    android:layout_height="@dimen/_16sdp"
+                                    app:srcCompat="@drawable/ic_generic_logo" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtBillPayMethod"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    android:fontFamily="@font/basiercircle_medium"
+                                    android:text="Axis Bank Card"
+                                    android:textColor="@color/ref_txt_color"
+                                    android:textSize="@dimen/_9sdp" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtProcessingFees"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlAmountBifurcation"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:lines="1"
+                        android:textColor="@color/loan_due_date"
+                        android:textSize="10sp"
+                        tools:text="No Processing Fee added" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltvAdjusted"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:visibility="visible"
+                        android:background="@drawable/button_color_green_outlined"
+                        android:backgroundTint="@color/ref_earned_bg"
+                        android:padding="@dimen/_10sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivInfo"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            app:srcCompat="@drawable/ic_info_primary_color" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtAdjusted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/ivInfo"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:lines="1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_8sdp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@color/trans_history_border"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llCC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTransactionIdLbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivCredited"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:lines="1"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:text="@string/transactional_id"
+                            android:textColor="@color/ref_arrow"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTransactionId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivCredited"
+                            android:layout_toEndOf="@+id/ivCredited"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:lines="1"
+                            android:textColor="@color/ref_txt_color"
+                            android:textSize="@dimen/_10sdp"
+                            tools:text="33552232254555" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivCopyTxnId"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            app:srcCompat="@drawable/ic_copy_clipboard" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llRRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtRRNLbl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivCredited"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:lines="1"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:text="@string/rrn"
+                            android:textColor="@color/ref_arrow"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtRRNId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivCredited"
+                            android:layout_toEndOf="@+id/ivCredited"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:lines="1"
+                            android:textColor="@color/ref_txt_color"
+                            android:textSize="@dimen/_10sdp"
+                            tools:text="33552232254555" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivCopyRRNId"
+                            android:layout_width="@dimen/_13sdp"
+                            android:layout_height="@dimen/_13sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            app:srcCompat="@drawable/ic_copy_clipboard" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llBBPS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivCredited"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:lines="1"
+                            android:text="@string/bbps_transaction_id"
+                            android:textColor="@color/ref_arrow"
+                            android:textSize="@dimen/_9sdp" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtBBPSTransactionId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivCredited"
+                                android:layout_toEndOf="@+id/ivCredited"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/basiercircle_medium"
+                                android:lines="1"
+                                android:textColor="@color/ref_txt_color"
+                                android:textSize="@dimen/_10sdp"
+                                tools:text="33552232254555" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivCopyBBPSId"
+                                android:layout_width="@dimen/_13sdp"
+                                android:layout_height="@dimen/_13sdp"
+                                android:layout_marginStart="@dimen/_4sdp"
+                                app:srcCompat="@drawable/ic_copy_clipboard" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+</layout>

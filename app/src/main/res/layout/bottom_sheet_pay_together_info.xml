@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_sheet"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="@dimen/_3sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:contentDescription="@string/cancel"
+            android:padding="@dimen/_5sdp"
+            android:cropToPadding="true"
+            app:srcCompat="@drawable/ic_close" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:text="@string/pay_together_all_your_bills_with_a_single_payment_on_cheq"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="@dimen/_16sdp"
+            app:fontFamily="@font/basiercircle_semibold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_27sdp"
+            android:text="@string/how_to_activate_pay_together"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/_10sdp"
+            app:fontFamily="@font/basiercircle_medium" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_12sdp">
+
+            <View
+                android:id="@+id/viewOne"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:background="@drawable/circle_bg_stroke"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/one"
+                android:textColor="@color/colorTextTitleBlack"
+                android:textSize="@dimen/_11sdp"
+                app:fontFamily="@font/basiercircle_medium"
+                app:layout_constraintBottom_toBottomOf="@id/viewOne"
+                app:layout_constraintEnd_toEndOf="@id/viewOne"
+                app:layout_constraintStart_toStartOf="@id/viewOne"
+                app:layout_constraintTop_toTopOf="@id/viewOne" />
+
+            <View
+                android:id="@+id/viewVertical1"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:background="#E6EAE9"
+                app:layout_constraintBottom_toTopOf="@id/viewTwo"
+                app:layout_constraintEnd_toEndOf="@id/viewOne"
+                app:layout_constraintStart_toStartOf="@id/viewOne"
+                app:layout_constraintTop_toBottomOf="@id/viewOne" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:text="@string/str_pay_together_info_one"
+                android:textColor="@color/colorTextBlack"
+                app:fontFamily="@font/basiercircle_regular"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/viewOne"
+                app:layout_constraintTop_toTopOf="@id/viewOne" />
+
+
+            <View
+                android:id="@+id/viewTwo"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:background="@drawable/circle_bg_stroke"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewVertical1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/two"
+                android:textColor="@color/colorTextTitleBlack"
+                android:textSize="@dimen/_11sdp"
+                app:fontFamily="@font/basiercircle_medium"
+                app:layout_constraintBottom_toBottomOf="@id/viewTwo"
+                app:layout_constraintEnd_toEndOf="@id/viewTwo"
+                app:layout_constraintStart_toStartOf="@id/viewTwo"
+                app:layout_constraintTop_toTopOf="@id/viewTwo" />
+
+            <View
+                android:id="@+id/viewVertical2"
+                android:layout_width="1dp"
+                android:layout_height="25dp"
+                android:background="#E6EAE9"
+                app:layout_constraintEnd_toEndOf="@id/viewTwo"
+                app:layout_constraintStart_toStartOf="@id/viewTwo"
+                app:layout_constraintTop_toBottomOf="@id/viewTwo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:text="@string/str_pay_together_info_two"
+                android:textColor="@color/colorTextBlack"
+                app:fontFamily="@font/basiercircle_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@id/viewTwo"
+                app:layout_constraintTop_toTopOf="@id/viewTwo" />
+
+
+            <View
+                android:id="@+id/viewThree"
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_21sdp"
+                android:background="@drawable/circle_bg_stroke"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewVertical2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/three"
+                android:textColor="@color/colorTextTitleBlack"
+                android:textSize="@dimen/_11sdp"
+                app:fontFamily="@font/basiercircle_medium"
+                app:layout_constraintBottom_toBottomOf="@id/viewThree"
+                app:layout_constraintEnd_toEndOf="@id/viewThree"
+                app:layout_constraintStart_toStartOf="@id/viewThree"
+                app:layout_constraintTop_toTopOf="@id/viewThree" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_11sdp"
+                android:text="@string/str_pay_together_info_three"
+                android:textColor="@color/colorTextBlack"
+                app:fontFamily="@font/basiercircle_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toEndOf="@id/viewThree"
+                app:layout_constraintTop_toTopOf="@id/viewThree" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llPayTogether"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_84sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/pay_together_bg_new"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="Total Due"
+                    android:textAllCaps="true"
+                    android:alpha=".3"
+                    android:textColor="@color/colorText"
+                    android:textSize="@dimen/_9sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDueAmountTopTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="₹1,00,000"
+                    android:alpha=".3"
+                    android:textColor="@color/colorTextTitle"
+                    android:textSize="@dimen/_17sdp"
+
+                    />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:text="@string/pay_together"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_9sdp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchPayTogether"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:thumb="@drawable/thum_selector"
+                        app:thumbTint="@color/white"
+                        app:track="@drawable/custom_switch_selector" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:alpha=".3"
+                        app:srcCompat="@drawable/cheq_reward_coin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:text="Earn upto 1%"
+                        android:alpha=".3"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="@dimen/_10sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

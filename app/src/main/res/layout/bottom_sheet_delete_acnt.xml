@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_bottom_sheet_new"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_20sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/basiercircle_medium"
+        android:text="@string/are_you_sure_delete"
+        android:textColor="@color/ref_txt_color"
+        android:textSize="@dimen/_17sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/basiercircle_medium"
+        android:text="@string/delete_entire_record"
+        android:textColor="@color/ref_arrow"
+        android:textSize="@dimen/_11sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDelete"
+        style="@style/SettingButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_38sdp"
+        android:background="@drawable/button_color_green_outlined"
+        android:text="@string/delete_my_acnt"
+        android:textColor="@color/color_green" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDontDelete"
+        style="@style/SettingButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/button_color_green_solid"
+        android:text="@string/do_not_Delete"
+        android:textColor="@color/white" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_pay_fragment">
+
+    <fragment
+        android:id="@+id/nav_rewards_fragment"
+        android:name="com.cheq.retail.ui.rewards.view.RewardsFragment"
+        tools:layout="@layout/fragment_rewards" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_pay_fragment"
+        android:name="com.cheq.retail.ui.dashboard.view.fragment.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_products_fragment"
+        android:name="com.cheq.retail.ui.main.fragment.ProductFragment"
+        tools:layout="@layout/fragment_products" >
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_menu_fragment"
+        android:name="com.cheq.retail.ui.main.fragment.AppMenuActivity"
+        tools:layout="@layout/fragment_app_menu" >
+    </fragment>
+</navigation>

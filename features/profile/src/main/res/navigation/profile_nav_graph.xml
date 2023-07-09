@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/myAccountFragment">
+
+    <fragment
+        android:id="@+id/myAccountFragment"
+        android:name="com.cheq.profile.presentation.fragments.MyAccountFragment"
+        android:label="fragment_my_account"
+        tools:layout="@layout/fragment_my_account">
+        <action
+            android:id="@+id/action_myAccountFragment_to_personalDetailsFragment"
+            app:destination="@id/personalDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="personalDetailsArgs"
+                android:defaultValue="@null"
+                app:argType="com.cheq.profile.domain.entities.PersonalDetails"
+                app:nullable="true" />
+
+        </action>
+        <action
+            android:id="@+id/action_myAccountFragment_to_transactionHistoryFragment"
+            app:destination="@id/transactionHistoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_myAccountFragment_to_referEarnFragment"
+            app:destination="@id/referEarnFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_myAccountFragment_to_termsPoliciesFragment"
+            app:destination="@id/termsPoliciesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/personalDetailsFragment"
+        android:name="com.cheq.profile.presentation.fragments.PersonalDetailsFragment"
+        android:label="PersonalDetailsFragment" />
+    <fragment
+        android:id="@+id/transactionHistoryFragment"
+        android:name="com.cheq.profile.presentation.fragments.TransactionHistoryFragment"
+        android:label="TransactionHistoryFragment" />
+    <fragment
+        android:id="@+id/referEarnFragment"
+        android:name="com.cheq.profile.presentation.fragments.ReferEarnFragment"
+        android:label="ReferEarnFragment" >
+        <action
+            android:id="@+id/action_referEarnFragment_to_referralRewardsFragment"
+            app:destination="@id/referralRewardsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/referralRewardsFragment"
+        android:name="com.cheq.profile.presentation.fragments.ReferralRewardsFragment"
+        android:label="ReferralRewardsFragment" />
+    <fragment
+        android:id="@+id/termsPoliciesFragment"
+        android:name="com.cheq.profile.presentation.fragments.TermsPoliciesFragment"
+        android:label="TermsPoliciesFragment" />
+</navigation>

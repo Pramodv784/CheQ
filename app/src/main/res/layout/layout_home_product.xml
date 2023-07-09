@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/homeProductOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_15sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivKeyYOurProductOne"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:src="@drawable/more_cards"
+                android:background="@drawable/round_ract_background"
+                android:padding="@dimen/_2sdp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivKeyYOurProductOne"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvKeyYOurProductHeadingOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:paddingStart="@dimen/_9sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp"
+                    tools:text="Axis Platinum" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+
+                    android:id="@+id/tvKeyProductOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:textColor="@color/light_grey"
+
+                    android:textSize="@dimen/_8sdp"
+                    tools:text="Credit Card" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/productCardAmountOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/basiercircle_semibold"
+                android:src="@drawable/iv_thumps_back"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+
+
+                tools:text="₹2,00,000.06" />
+
+            <TextView
+                android:id="@+id/productCardAmountOneDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/productCardAmountOne"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:src="@drawable/iv_thumps_back"
+                android:textColor="#F5466A"
+                android:textSize="@dimen/_8sdp"
+                tools:text="Due in 3 Days" />
+        </RelativeLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/errorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:src="@drawable/ic_alert_new" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/errorMessage1"
+                style="@style/Font500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4sdp"
+
+
+                android:text="Your bank might charge you interest @ x% p.a."
+                android:textColor="#F5466A"
+                android:textSize="@dimen/_8sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

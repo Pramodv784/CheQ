@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.accountSettings.PersonalDetailsActivity">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_1sdp"
+            android:contentDescription="@string/back"
+            android:onClick="onBackPress"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_back_refer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="@dimen/zero_dp"
+            android:layout_marginTop="@dimen/minus_ten"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivBack">
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPersonalLbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:text="@string/personal_details"
+                        android:textColor="@color/ref_txt_color"
+                        android:textSize="@dimen/_17sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtPersonalLbl"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:gravity="center"
+                        android:text="@string/view_your_personal_information"
+                        android:textColor="@color/ref_arrow"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameInitials"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/name_initials_bg">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtNameInitials"
+                        style="@style/Font700"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/_1sdp"
+                        android:layout_marginLeft="@dimen/_1sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:lineSpacingExtra="@dimen/_1sdp"
+                        tools:text='SB'
+                        android:textColor="@color/color_green"
+                        android:textSize="@dimen/_19sdp" />
+
+                </FrameLayout>
+            </RelativeLayout>
+
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_32sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:textAllCaps="true"
+                        android:text="@string/full_name"
+
+                        android:textColor="@color/ref_grey_light"
+                        android:textSize="@dimen/_9sdp"
+                        android:textFontWeight="600"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:id="@+id/tvFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/personal_detail_edt_bg"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_11sdp"
+                        android:text="Sagar Barapatre"
+                        android:textSize="@dimen/_13sdp"
+                        android:textColor="@color/ref_grey_light"
+                        android:backgroundTint="@color/history_divider_line"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:textAllCaps="true"
+                        android:text="@string/mobile_number"
+                        android:textColor="@color/ref_grey_light"
+                        android:textSize="@dimen/_9sdp"
+                        android:textFontWeight="600"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:id="@+id/tvMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/personal_detail_edt_bg"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_11sdp"
+                        android:text="+91 9730667590"
+                        android:textSize="@dimen/_13sdp"
+                        android:textColor="@color/ref_grey_light"
+                        android:backgroundTint="@color/history_divider_line"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llEMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:textAllCaps="true"
+                        android:text="@string/e_mail_id"
+                        android:textColor="@color/ref_grey_light"
+                        android:textSize="@dimen/_9sdp"
+                        android:textFontWeight="600" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/personal_detail_edt_bg"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_11sdp"
+                        android:text="sagar_intern@cheq.one"
+                        android:textSize="@dimen/_13sdp"
+                        android:textColor="@color/ref_grey_light"
+                        android:backgroundTint="@color/history_divider_line"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_21sdp"
+                    android:visibility="gone"
+                    android:onClick="deleteAccount"
+                    android:gravity="center_vertical">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivForward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tint="@color/ref_arrow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_document_remove" />
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/delete_my_acnt"
+                        android:textColor="@color/ref_arrow"
+                        android:textSize="@dimen/_11sdp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

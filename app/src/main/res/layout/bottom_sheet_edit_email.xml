@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/round_bottom_sheet_new"
+    android:paddingLeft="@dimen/_20sdp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivClose"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_4sdp"
+        android:layout_gravity="end"
+        android:foregroundGravity="center"
+        android:tint="@color/ref_grey_light"
+        app:srcCompat="@drawable/ic_close_new" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basiercircle_medium"
+        android:text="@string/enter_new_email"
+        android:textColor="@color/ref_txt_color"
+        android:textSize="@dimen/_17sdp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:fontFamily="@font/basiercircle_medium"
+        android:text="@string/change_email_id"
+        android:textAllCaps="true"
+        android:textColor="@color/ref_grey_light"
+        android:textSize="@dimen/_9sdp" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:background="@drawable/edt_grey_bg"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="sagar12patre@gmail.com"
+        android:fontFamily="@font/basiercircle_medium"
+        android:backgroundTint="@color/trans_history_border"
+        android:textSize="@dimen/_13sdp"
+        android:textColor="@color/colornaturals"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/SettingButtonStyle"
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/button_color_green_solid"
+        android:text="@string/confirm_new_email"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:textColor="@color/white"
+        />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

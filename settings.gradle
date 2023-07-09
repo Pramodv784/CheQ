@@ -1,0 +1,26 @@
+/*pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}*/
+rootProject.name = "CheQ"
+include ':app'
+include ':features'
+include ':features:profile'
+include ':common'
+include ':proxima'
+include ':core'
+include ':core:config'
+include ':core:network'
+include ':core:cache'
+include ':core:navigation'
+include ':core:encryption'

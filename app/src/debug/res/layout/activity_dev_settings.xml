@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.DevSettingsActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_26dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="@dimen/dimen_26dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/done_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="Done"
+            android:textColor="@color/ref_txt_color"
+            app:layout_constraintBottom_toBottomOf="@+id/back_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/back_iv" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            android:text="Dev Settings"
+            android:textColor="@color/ref_txt_color"
+            android:textSize="@dimen/_17sdp"
+            app:layout_constraintStart_toStartOf="@id/back_iv"
+            app:layout_constraintTop_toBottomOf="@id/back_iv" />
+
+        <View
+            android:id="@+id/border_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            app:layout_constraintTop_toBottomOf="@id/title_tv"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/trans_history_border" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dev_settings_rv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="@dimen/_10sdp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/edit_text_dev_settings_item"
+            tools:itemCount="2"
+            app:layout_constraintTop_toBottomOf="@id/border_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

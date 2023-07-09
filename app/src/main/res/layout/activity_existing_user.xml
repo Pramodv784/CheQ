@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.login.ExistingUserActivity" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_40sdp"
+        tools:context=".ui.confirmDetails.GetPanCardActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/_19sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLetStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/basiercircle_semibold"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorTextTitle"
+                    android:layout_marginTop="@dimen/_41sdp"
+                    android:text="Welcome back" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/basiercircle_regular"
+                    android:textSize="14sp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:text="@string/please_confirm_your_details"
+                    android:textColor="@color/colorTextGreyNew" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/FontCircleBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_19sdp"
+                    android:text="Full Name"
+                    app:fontFamily="@font/basiercircle_medium"
+                    android:textSize="10sp"
+                    android:textFontWeight="400"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorCaption" />
+
+                <TextView
+                    style="@style/FontBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/textview_round_grey"
+                    android:gravity="center_vertical"
+                    android:inputType="textCapCharacters"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:text="@{activity.fullName}"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="@dimen/_14sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/FontCircleBlack14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_19sdp"
+                    android:text="Mobile Number"
+                    android:textSize="10sp"
+                    app:fontFamily="@font/basiercircle_medium"
+                    android:textFontWeight="400"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorCaption" />
+
+                <TextView
+                    style="@style/FontMedium14"
+                    android:id="@+id/tv_mobile_n"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/textview_round_grey"
+                    android:gravity="center_vertical"
+                    android:text="9753"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="@dimen/_14sdp"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_19sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            style="@style/GlobalButtonStyle"
+
+            android:onClick="@{()-> activity.onContinue()}"
+            android:text="@string/login"
+            android:textAllCaps="true"
+            android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/flLottieIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_btn_bg"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/generi_loader_white" />
+
+            </FrameLayout>
+        </FrameLayout>
+
+
+
+
+
+        <TextView
+            style="@style/FontMediumColorPrimaryBold16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="@{()-> activity.clearUserData()}"
+            android:text="Login as different user"
+            android:textAllCaps="true"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

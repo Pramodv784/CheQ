@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.login.LoginActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginHorizontal="@dimen/_19sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLetStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_41sdp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:text="@string/let_s_get_started"
+            android:textColor="@color/colornaturals"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLoginDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/login_text_desc"
+            android:textColor="#858989"
+            android:textSize="14sp"
+            app:fontFamily="@font/basiercircle_regular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvLetStart"
+            app:layout_constraintTop_toBottomOf="@id/tvLetStart" />
+
+        <FrameLayout
+            android:id="@+id/flEtNumber"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/textview_round_grey"
+            app:layout_constraintEnd_toEndOf="@id/tvLoginDesc"
+            app:layout_constraintStart_toStartOf="@id/tvLoginDesc"
+            app:layout_constraintTop_toBottomOf="@id/tvLoginDesc">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_1sdp">
+
+                <ImageView
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:contentDescription="@string/flag"
+                    android:src="@drawable/ic_indian_flag_selected" />
+
+                <TextView
+                    style="@style/FontBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:gravity="center"
+
+                    android:text="@string/_91"
+                    android:textColor="@color/colornaturals"
+                    android:textSize="@dimen/_15sdp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_mobile_no"
+                    style="@style/FontBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:digits="1234567890"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:gravity="center|start"
+                    android:hint="@string/_9876543210"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/colornaturals"
+                    android:textColorHint="#A8B1BD"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:textSize="@dimen/_15sdp"
+                    app:addTextChangedListener="@{activity.onNumberChanged()}"
+                    tools:ignore="RtlSymmetry" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llBtm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_7sdp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/et_btm_bg_un_focused"
+                android:backgroundTint="@color/colorPrimary" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_error"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/flEtNumber"
+            app:layout_constraintStart_toStartOf="@id/flEtNumber"
+            app:layout_constraintTop_toBottomOf="@id/flEtNumber">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/errorIcon"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:src="@drawable/ic_warning" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvErrorNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:text="Please enter a valid number &amp; try again"
+                android:textColor="@color/amount_red"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/termsCB"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:background="@drawable/custom_checkbox"
+            android:button="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/t_and_c"
+            app:layout_constraintStart_toStartOf="@id/frameLayout"
+            app:layout_constraintTop_toTopOf="@id/tv_tnc2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_tnc2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/t_and_c"
+            android:textColor="@color/colorTextTitle"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@id/tv_tnc1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/termsCB"
+            app:layout_goneMarginStart="@dimen/_8sdp" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/whatsappCB"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:background="@drawable/custom_checkbox"
+            android:button="@color/white"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/t_and_c"
+            app:layout_constraintBottom_toTopOf="@id/frameLayout"
+            app:layout_constraintStart_toStartOf="@id/frameLayout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_tnc1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="Send me bill and payment reminders on WhatsApp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/whatsappCB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/whatsappCB"
+            app:layout_constraintTop_toTopOf="@id/whatsappCB"
+            app:layout_goneMarginStart="@dimen/_8sdp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/frameLayout"
+            app:layout_constraintEnd_toEndOf="@id/frameLayout">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivInfo"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                app:srcCompat="@drawable/ic_info" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_tnc"
+                style="@style/FontMediumBlack14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_22sdp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:text="@string/t_and_c"
+                android:textColor="@color/colornaturals"
+                android:textSize="@dimen/_11sdp"
+                app:layout_goneMarginStart="@dimen/_8sdp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:paddingTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_request_permission"
+                style="@style/GlobalButtonStyle"
+                android:background="@{activity.isPhoneValid() ? @drawable/button_color_primary :  @drawable/button_color_primary_disabled}"
+                android:enabled="@{activity.isPhoneValid ?  true: false }"
+                android:onClick="@{()-> activity.onLogin()}"
+                android:text="@string/get_otp"
+                android:textAllCaps="true"
+                android:textColor="@{activity.isPhoneValid ?  @color/white: @color/white }"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/flLottieIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_btn_bg"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/generi_loader_white" />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

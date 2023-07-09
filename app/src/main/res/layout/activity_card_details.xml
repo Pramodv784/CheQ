@@ -1,0 +1,2180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.activateCard.CardDetailsActivity" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_10sdp">
+
+        <ScrollView
+            android:id="@+id/nested_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="@dimen/_20sdp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/ivClose"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginVertical="@dimen/_12sdp">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:onClick="@{()-> activity.closeScreen()}"
+                        android:src="@drawable/ic_close_new" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLetStart"
+                    style="@style/FontExtraGreyNatural20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_your_card_number"
+                    android:textColor="@color/colornaturals"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/please_enter_your_card_number"
+                    android:textColor="@color/colorTextLight"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvLetStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvLetStart" />
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24sdp">
+
+                    <FrameLayout
+                        android:id="@+id/llCardDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:background="@drawable/card_bg"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
+                            android:layout_marginVertical="@dimen/_3sdp"
+                            android:background="@drawable/solid_card_background"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_bank_name"
+                                    style="@style/FontExtraBold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center|start"
+                                    android:text="Card Name"
+                                    android:textColor="@{activity.isCreditCard() ?  @color/colornaturals: @color/colorTextGrey }" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right|end"
+                                    android:layout_weight="1"
+                                    android:gravity="end|center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_logo"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_18sdp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="fitEnd"
+                                        android:src="@drawable/ic_bank_logo_extended" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivChip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:contentDescription="@string/blank"
+                                android:src="@drawable/ic_chip_in_active" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/_15sdp"
+                                android:visibility="gone">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_weight="1">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_gravity="center_vertical"
+                                        android:baselineAligned="false"
+                                        android:orientation="horizontal">
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            app:hint="er" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv3"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv4"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <View
+                                            android:layout_width="@dimen/_4sdp"
+                                            android:layout_height="wrap_content" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv5"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            app:hint="er" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv6"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv7"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv8"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <View
+                                            android:layout_width="@dimen/_4sdp"
+                                            android:layout_height="wrap_content" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv9"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            app:hint="er" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv10"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv11"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv12"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <View
+                                            android:layout_width="@dimen/_4sdp"
+                                            android:layout_height="wrap_content" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv13"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            app:hint="er" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv14"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv15"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+                                        <com.cheq.retail.utils.CustomCardTextView
+                                            android:id="@+id/tv16"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="" />
+
+
+                                    </LinearLayout>
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@android:color/transparent"
+                                        android:cursorVisible="false"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="number"
+                                        android:maxLength="16"
+                                        android:textColor="@android:color/transparent" />
+                                </RelativeLayout>
+
+
+                                <ImageView
+
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_2sdp"
+                                    android:src="@drawable/card_image" />
+
+                            </LinearLayout>
+
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/ll_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etOne"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxWidth="@dimen/_8sdp"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewOne"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="@color/colorPrimary"
+                                        android:gravity="center" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTwo"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTwo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etThree"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewThree"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFour"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFour"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFive"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFive"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSix"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSix"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSeven"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSeven"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:id="@+id/f_4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etEight"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewEight"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etNine"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewNine"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:id="@+id/f_6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTen"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTen"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etEleven"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewEleven"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTwelve"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTwelve"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etThirteen"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewThirteen"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFourteen"
+                                        style="@style/FontBold"
+                                        android:layout_width="15dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFourteen"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFifteen"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFifteen"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSixteen"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSixteen"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_card_type"
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:src="@drawable/card_image" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/ll_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etOne_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxWidth="@dimen/_8sdp"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewOne_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="@color/colorPrimary" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTwo_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTwo_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etThree_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewThree_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFour_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFour_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFive_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFive_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSix_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSix_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSeven_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSeven_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etEight_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewEight_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etNine_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewNine_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:id="@+id/f14"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTen_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTen_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etEleven_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewEleven_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTwelve_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTwelve_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etThirteen_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewThirteen_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFourteen_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="15dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFourteen_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFifteen_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFifteen_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSixteen_1"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSixteen_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_card_type_1"
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:src="@drawable/card_image" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/ll_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_13sdp"
+                                android:layout_marginTop="@dimen/_19sdp"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etOne_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxWidth="@dimen/_8sdp"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewOne_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="@color/colorPrimary"
+                                        android:gravity="center" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTwo_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTwo_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etThree_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewThree_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFour_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFour_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFive_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFive_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSix_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSix_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSeven_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSeven_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etEight_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewEight_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etNine_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewNine_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_6sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTen_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTen_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etEleven_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewEleven_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etTwelve_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewTwelve_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etThirteen_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewThirteen_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFourteen_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="15dp"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFourteen_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_2sdp"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etFifteen_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewFifteen_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/etSixteen_2"
+                                        style="@style/FontBold"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:gravity="left"
+                                        android:inputType="number"
+                                        android:maxLength="1"
+                                        android:textColor="@color/colornaturals"
+                                        android:textCursorDrawable="@drawable/custom_cursor_activate_card"
+                                        android:textSize="@dimen/_13sdp" />
+
+                                    <View
+                                        android:id="@+id/viewSixteen_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1.8dp"
+                                        android:layout_gravity="bottom"
+                                        android:layout_marginTop="@dimen/_15sdp"
+                                        android:background="#A8B1BD" />
+                                </FrameLayout>
+
+                                <ImageView
+                                    android:id="@+id/iv_card_type_3"
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:src="@drawable/ic_amex" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/llCardBackDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_stroke_btm_bg"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="3dp"
+                            android:layout_marginVertical="3dp"
+                            android:background="@drawable/solid_card_background"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_16sdp"
+
+
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_bank_name2"
+                                    style="@style/FontExtraBold"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center|start"
+                                    android:text="Card Name"
+                                    android:textColor="@color/colornaturals" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="right|end"
+                                    android:layout_weight="1"
+                                    android:gravity="end|center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_logo2"
+                                        android:layout_width="@dimen/_80sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:layout_gravity="center"
+                                        android:scaleType="fitEnd"
+                                        android:src="@drawable/bank_icon" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="@dimen/_23sdp"
+                                android:layout_height="@dimen/_18sdp"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:src="@drawable/ic_chip" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_12sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCardNumberNew"
+                                    style="@style/FontMediumBlackBold16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:letterSpacing="0.20"
+
+                                    android:textColor="@color/colornaturals"
+                                    android:textSize="@dimen/_12sdp"
+                                    tools:text="5384 2357 2477 2373" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/iv_card_type_2"
+                                    android:layout_width="@dimen/_28sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    app:srcCompat="@drawable/ic_mastercard" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_6sdp">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llCarHolderName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvCardHolderName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:letterSpacing="0.18"
+                                        android:lineHeight="@dimen/_20sdp"
+                                        android:lineSpacingExtra="1sp"
+                                        android:maxLines="1"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/colorTextLight"
+                                        android:textFontWeight="500"
+                                        android:textSize="@dimen/_12sdp"
+                                        tools:ignore="HardcodedText"
+                                        tools:text="Nirmal singh " />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/ivEditName"
+                                        android:layout_width="@dimen/_14sdp"
+                                        android:layout_height="@dimen/_14sdp"
+                                        android:layout_marginStart="@dimen/_8sdp"
+                                        android:onClick="@{()->activity.setVisibility()}"
+                                        app:srcCompat="@drawable/ic_pencil_alt" />
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:id="@+id/llCardHolderNameInput"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_6sdp"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/FontMedium14"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:lineHeight="@dimen/_20sdp"
+                                        android:text="@string/cardholader_name"
+                                        android:textColor="@color/colorCaption"
+                                        android:textFontWeight="500"
+                                        android:textSize="@dimen/_12sdp"
+                                        tools:ignore="UnusedAttribute" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:background="@drawable/textview_round_grey"
+                                        app:layout_constraintEnd_toEndOf="@id/tvLoginDesc"
+                                        app:layout_constraintStart_toStartOf="@id/tvLoginDesc"
+                                        app:layout_constraintTop_toBottomOf="@id/tvLoginDesc">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginHorizontal="@dimen/_16sdp"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal">
+
+
+                                            <EditText
+                                                android:id="@+id/etName"
+                                                style="@style/FontBold"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="@dimen/_2sdp"
+                                                android:background="@drawable/textview_round_grey"
+                                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                                android:gravity="center|start"
+                                                android:hint="Jitu Raut"
+
+                                                android:importantForAutofill="no"
+                                                android:inputType="textPersonName|textCapWords"
+                                                android:maxLength="16"
+                                                android:singleLine="true"
+                                                android:textColor="@color/colornaturals"
+                                                android:textColorHint="@color/text_grey"
+                                                android:textSize="@dimen/_14sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_7sdp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@drawable/et_btm_bg_un_focused"
+                                            android:backgroundTint="@{activity.isEditNameFocused() ? @color/colorPrimary : @color/colorTextGrey}" />
+                                    </FrameLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </FrameLayout>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_14sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/FontMedium14"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Card Expiry"
+                                        android:textColor="@color/colorCaption"
+                                        android:textSize="@dimen/_12sdp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:background="@drawable/textview_round_grey"
+                                        app:layout_constraintEnd_toEndOf="@id/tvLoginDesc"
+                                        app:layout_constraintStart_toStartOf="@id/tvLoginDesc"
+                                        app:layout_constraintTop_toBottomOf="@id/tvLoginDesc">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginHorizontal="@dimen/_16sdp"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal">
+
+
+                                            <EditText
+                                                android:id="@+id/etCardExpiry"
+                                                style="@style/FontBold"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="@dimen/_2sdp"
+                                                android:background="@drawable/textview_round_grey"
+                                                android:digits="0123456789/"
+                                                android:focusableInTouchMode="true"
+                                                android:gravity="center|start"
+                                                android:hint="MM/YY"
+                                                android:importantForAutofill="no"
+                                                android:inputType="number"
+                                                android:maxLength="5"
+                                                android:singleLine="true"
+                                                android:textColor="@color/colornaturals"
+                                                android:textColorHint="@color/text_grey"
+                                                android:textSize="@dimen/_13sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <ImageView
+                                            android:id="@+id/llBtmCardDetails"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_7sdp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@drawable/ic_card_expiry"
+                                            android:backgroundTint="@{activity.isCardDetailsFocused() ? @color/colorPrimary : @color/colorTextGrey}" />
+                                    </FrameLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="@dimen/_65sdp"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        style="@style/FontMediumBlack12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="CVV"
+                                        android:textColor="@color/colorCaption"
+                                        android:textSize="@dimen/_12sdp"
+                                        tools:ignore="HardcodedText" />
+
+                                    <FrameLayout
+                                        android:layout_width="@dimen/_64sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:background="@drawable/textview_round_grey"
+                                        app:layout_constraintEnd_toEndOf="@id/tvLoginDesc"
+                                        app:layout_constraintStart_toStartOf="@id/tvLoginDesc"
+                                        app:layout_constraintTop_toBottomOf="@id/tvLoginDesc">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginHorizontal="@dimen/_16sdp"
+                                            android:gravity="center_vertical"
+                                            android:orientation="horizontal">
+
+
+                                            <EditText
+                                                android:id="@+id/etCvv"
+                                                style="@style/FontBold"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginStart="@dimen/_2sdp"
+                                                android:background="@drawable/textview_round_grey"
+                                                android:digits="0123456789"
+                                                android:gravity="center|start"
+                                                android:hint="***"
+                                                android:importantForAutofill="no"
+                                                android:inputType="numberPassword"
+                                                android:maxLength="3"
+                                                android:singleLine="true"
+                                                android:textColor="@color/colornaturals"
+                                                android:textColorHint="@color/text_grey"
+                                                android:textSize="@dimen/_13sdp" />
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                        <ImageView
+                                            android:id="@+id/btnCvv"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_7sdp"
+                                            android:layout_gravity="bottom"
+                                            android:background="@drawable/ic_cvv_btm_un_focused"
+                                            android:backgroundTint="@{activity.isCVVFocused() ? @color/colorPrimary : @color/colorTextGrey}" />
+                                    </FrameLayout>
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </LinearLayout>
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:drawableStart="@drawable/ic_alert_new"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:text="Invalid card number"
+                    android:textColor="#F46E6E"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/llRewards"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/rectangle_2826"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/_23sdp"
+                        android:layout_height="@dimen/_23sdp"
+                        android:layout_gravity="center"
+                        android:layout_marginVertical="@dimen/_1sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+
+                        android:src="@drawable/ic_coin_new" />
+
+                    <TextView
+                        android:id="@+id/tvRewardsNudge"
+                        style="@style/FontBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/_10sdp"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:lineSpacingExtra="1sp"
+                        android:maxLines="2"
+                        android:textColor="@color/colorPrimaryGreen"
+                        android:textSize="@dimen/_11sdp"
+                        tools:text="Flat 200 rewards to secure your card" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                </View>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/next_button"
+                style="@style/GlobalButtonStyle"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:enabled="@{activity.isCardValid() ? true : false}"
+                android:onClick="@{()->activity.checkActionAndExecute()}"
+                android:text="@string/next"
+                android:visibility="visible" />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llSecureButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_100sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@drawable/view_with_shadow"
+                    android:visibility="@{activity.isDetailsFilled() ? View.VISIBLE : View.GONE}" />
+
+                <!-- <androidx.appcompat.widget.LinearLayoutCompat
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginHorizontal="@dimen/_20sdp"
+                     android:layout_marginTop="16dp"
+                     android:orientation="horizontal"
+                     android:visibility="@{activity.isDetailsFilled() ? View.VISIBLE : View.GONE}">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:contentDescription="Shield"
+                         app:srcCompat="@drawable/ic_shield"
+                         tools:ignore="HardcodedText" />
+
+                     <androidx.appcompat.widget.AppCompatTextView
+                         style="@style/FontBold"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginHorizontal="@dimen/_8sdp"
+                         android:text="We will secure your card by debiting ₹2 from your account as per RBI guidelines"
+                         android:textColor="@color/colornaturals" />
+
+                 </androidx.appcompat.widget.LinearLayoutCompat>-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSecureCard"
+                    style="@style/GlobalButtonStyle"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:enabled="@{activity.isDetailsFilled() ? true : false}"
+                    android:onClick="@{()->activity.checkCardProcess()}"
+                    android:text="@string/next"
+                    android:visibility="visible" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,316 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-parcelize'
+    id 'com.google.firebase.firebase-perf'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+
+    signingConfigs {
+        debug {
+            storeFile file(".${File.separator}app_store${File.separator}cheq.jks")
+            storePassword 'CDPLBKIN2022'
+            keyAlias 'cheq_digital'
+            keyPassword 'CDPLBKIN2022'
+        }
+        signed {
+            storeFile file(".${File.separator}app_store${File.separator}cheq.jks")
+            storePassword 'CDPLBKIN2022'
+            keyPassword 'CDPLBKIN2022'
+            keyAlias 'cheq_digital'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+    defaultConfig {
+        applicationId "com.cheq.retail"
+        minSdk 28
+        targetSdk 33
+        compileSdk 33
+        versionCode 41
+        versionName "2.1.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "boolean", "SHOULD_DECRYPT_RESPONSE", "true"
+        signingConfig signingConfigs.signed
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.signed
+            buildConfigField "String", "razorpayBaseUrl", "\"https://api.razorpay.com/\""
+            buildConfigField "String", "moenagageKey", "\"51HO1IWYGNDYKLXJL7LJJP10\""
+            buildConfigField "String", "mParticleApiKey", "\"eu1-eed6112d49e0574ea17de2ed01fa8293\""
+            buildConfigField "String", "mParticleApiSecret", "\"1GGZ_BHkAdpZ5kP93fO3GnrVVycl422KNbmomlWmF8ArfCCLmpc089M-H7FNDXPZ\""
+            buildConfigField "String", "googleRequestIdToken", "\"143139010454-2bm1njnpn4j5gg6235tpsf65g5j2j8r3.apps.googleusercontent.com\""
+            buildConfigField "String", "googleRequestServerAuthCode", "\"143139010454-2bm1njnpn4j5gg6235tpsf65g5j2j8r3.apps.googleusercontent.com\""
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+            ext.enableCrashlytics = true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
+        }
+        debug {
+
+            buildConfigField "String", "razorpayBaseUrl", "\"https://api.razorpay.com/\""
+            buildConfigField "String", "moenagageKey", "\"51HO1IWYGNDYKLXJL7LJJP10\""
+            buildConfigField "String", "mParticleApiKey", "\"eu1-eed6112d49e0574ea17de2ed01fa8293\""
+            buildConfigField "String", "mParticleApiSecret", "\"1GGZ_BHkAdpZ5kP93fO3GnrVVycl422KNbmomlWmF8ArfCCLmpc089M-H7FNDXPZ\""
+            buildConfigField "String", "googleRequestIdToken", "\"143139010454-2bm1njnpn4j5gg6235tpsf65g5j2j8r3.apps.googleusercontent.com\""
+            buildConfigField "String", "googleRequestServerAuthCode", "\"143139010454-2bm1njnpn4j5gg6235tpsf65g5j2j8r3.apps.googleusercontent.com\""
+            signingConfig signingConfigs.signed
+            ext.enableCrashlytics = false
+
+        }
+    }
+    packagingOptions {
+        exclude("META-INF/jersey-module-version")
+    }
+    flavorDimensions 'env'
+    productFlavors {
+        qa {
+            dimension 'env'
+            applicationIdSuffix '.qa'
+            buildConfigField "String", "apiEndPoint", "\"https://qa.cheq.one/\""
+            resValue "string", "freshchat_file_provider_authority", "com.cheq.retail.qa.provider"
+            resValue "string", "app_name", "CheQ QA"
+            buildConfigField "String", "firebaseDataBaseURL", "\"https://cheqmobileappdev-default-rtdb.firebaseio.com/\""
+        }
+        uat {
+            dimension 'env'
+            applicationIdSuffix '.uat'
+            buildConfigField "String", "apiEndPoint", "\"https://uat.cheq.one/\""
+            resValue "string", "freshchat_file_provider_authority", "com.cheq.retail.uat.provider"
+            resValue "string", "app_name", "CheQ UAT"
+            buildConfigField "String", "firebaseDataBaseURL", "\"https://cheqmobileappdev-default-rtdb.firebaseio.com/\""
+        }
+        prod {
+            dimension 'env'
+            applicationId 'com.cheq.retail'
+            resValue "string", "freshchat_file_provider_authority", "com.cheq.retail.provider"
+            resValue "string", "app_name", "CheQ"
+            buildConfigField "String", "apiEndPoint", "\"https://api.cheq.one/\""
+            buildConfigField "String", "firebaseDataBaseURL", "\"https://cheqmobileapp-default-rtdb.asia-southeast1.firebasedatabase.app/\""
+        }
+        beta {
+            dimension 'env'
+            applicationIdSuffix '.debug'
+            buildConfigField "String", "apiEndPoint", "\"https://api.cheq.one/\""
+            buildConfigField "String", "firebaseDataBaseURL", "\"https://cheqmobileapp-default-rtdb.asia-southeast1.firebasedatabase.app/\""
+        }
+    }
+
+    lintOptions {
+        disable 'NullSafeMutableLiveData'
+    }
+
+}
+
+afterEvaluate {
+    android.applicationVariants.all { variant ->
+        preBuild.doLast {
+            setGoogleServicesJson(variant)
+        }
+    }
+    // Only for Jenkins
+    assembleRelease.doFirst {
+        deleteGoogleServicesJson()
+    }
+}
+
+def setGoogleServicesJson(variant) {
+    def originalFileName = "google-services.bak"
+    def newFileName = "google-services.json"
+    def originalFile = "./$originalFileName"
+    def newFile = "./$newFileName"
+    def applicationId = variant.applicationId
+    def regularExpression = "\\\"package_name\\\" : \\\"(\\w(\\.\\w)?)+\\\""
+    def packageName = "\\\"package_name\\\" : \\\"$applicationId\\\""
+
+    copy {
+        from(originalFile)
+        into("./")
+        rename(originalFileName, newFileName)
+    }
+    ant.replaceregexp(
+            file: newFile,
+            match: regularExpression,
+            replace: packageName,
+            byLine: true)
+}
+
+def deleteGoogleServicesJson() {
+    file("./google-services.json").delete()
+}
+
+dependencies {
+    implementation project(':common')
+    implementation project(':features:profile')
+    implementation project(':core:network')
+    implementation project(':core:config')
+    implementation project(':core:navigation')
+    implementation project(':core:cache')
+    implementation project(':core:encryption')
+
+    implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
+    def moengageVersion = "12.5.01"
+    def work_version = "2.7.0"
+      def sdkVersion = "2.2.0"
+
+
+    implementation "com.moengage:moe-android-sdk:$moengageVersion"
+    implementation "com.moengage:security:$sdkVersion"
+
+    implementation "com.moengage:moe-android-sdk:$moengageVersion"
+    implementation files('libs/smsapi-v3.11.aar')
+    implementation("com.segment.analytics.android:analytics:4.10.4")
+    implementation "androidx.work:work-runtime:$work_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+    implementation 'com.google.firebase:firebase-database-ktx'
+    implementation 'com.google.firebase:firebase-perf-ktx'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0'
+    implementation 'com.google.firebase:firebase-messaging:23.0.6'
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.11'
+    implementation 'com.google.firebase:firebase-analytics:21.0.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.0.6'
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
+    implementation 'io.github.ParkSangGwon:tedpermission-normal:3.3.0'
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation("androidx.lifecycle:lifecycle-process:2.4.0")
+    implementation 'androidx.multidex:multidex:2.0.1'
+    // implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    //noinspection GradleDependency
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.10"
+    implementation 'com.appsflyer:af-android-sdk:6.9.0'
+    api 'com.google.guava:guava:28.1-android'
+
+    // google
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+
+    // Dimension
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    //loading animation
+    // implementation 'br.com.simplepass:loading-button-android:2.2.0'
+
+    //biometric
+    implementation 'androidx.biometric:biometric-ktx:1.2.0-alpha04'
+
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.7.2'
+
+    implementation 'com.android.volley:volley:1.2.1'
+
+    //noinspection GradleDynamicVersion
+    implementation 'com.microsoft.identity.client:msal:2.+'
+    //noinspection GradleDynamicVersion
+    implementation 'com.microsoft.graph:microsoft-graph:1.5.+'
+    implementation 'com.razorpay:customui:3.9.12'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    //  implementation 'com.github.shts:StoriesProgressView:3.0.0'
+    implementation 'ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.0'
+    //lottie animation
+    implementation 'com.airbnb.android:lottie:6.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    // Skip this if you don't want to use integration libraries or configure Glide.
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'com.mparticle:android-core:5.42.0'
+
+    // Required for gathering Android Advertising ID (see below)
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+
+    // Recommended to query the Google Play install referrer
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+
+    implementation 'com.github.freshworks:freshchat-android:5.4.0'
+    implementation 'com.google.android.play:core:1.9.0'
+    implementation 'com.scottyab:rootbeer-lib:0.1.0'
+
+    //tampering detection
+    debugImplementation 'com.github.mukeshsolanki.Android-Tamper-Detector:tamperdetector-no-op:1.0.0'
+    releaseImplementation 'com.github.mukeshsolanki.Android-Tamper-Detector:tamperdetector:1.0.0'
+
+    implementation "androidx.security:security-crypto:1.0.0"
+
+    //Load Svg
+    implementation("io.coil-kt:coil:1.2.0")
+    implementation("io.coil-kt:coil-svg:1.2.0")
+
+
+    //insta bug
+    implementation 'com.instabug.library:instabug:11.5.4'
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //To monitor http request/response
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
+    // hyperion
+    debugImplementation hyperionDependencies.core
+    debugImplementation hyperionDependencies.attr
+    debugImplementation hyperionDependencies.config
+    debugImplementation hyperionDependencies.crash
+    debugImplementation hyperionDependencies.disk
+    debugImplementation hyperionDependencies.geiger
+    debugImplementation hyperionDependencies.measurement
+    debugImplementation hyperionDependencies.pheonix
+    debugImplementation hyperionDependencies.recorder
+    debugImplementation hyperionDependencies.prefs
+    debugImplementation hyperionDependencies.timber
+    debugImplementation hyperionDependencies.simpleItem
+
+    //Coroutines
+    implementation coroutinesDependencies.coroutinesAndroid
+
+    //Hilt
+    implementation hiltDependencies.hiltAndroid
+    kapt hiltDependencies.compiler
+}

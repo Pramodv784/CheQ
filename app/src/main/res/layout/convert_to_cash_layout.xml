@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clConvertToCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clInner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:background="@drawable/ic_new_c2c_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCheqRewardCoin"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            app:layout_constraintEnd_toStartOf="@id/tvCoinCount"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cheq_reward_coin" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGetCashInstantly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/basiercircle_medium"
+                android:text="@string/get_cash_instantly"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCoinCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/basiercircle_medium"
+                android:maxLines="1"
+                android:textColor="@color/colorGreyText"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCheqRewardCoin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivCheqRewardCoin"
+                tools:text="1 = ₹0.25" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRewardAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:fontFamily="@font/basiercircle_bold"
+                android:textColor="@color/colornaturals"
+                android:textSize="@dimen/_17sdp"
+                app:layout_constraintStart_toStartOf="@id/tvGetCashInstantly"
+                app:layout_constraintTop_toBottomOf="@id/tvGetCashInstantly"
+                tools:text="₹586" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLearnMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/basiercircle_regular"
+                android:text="@string/learn_more"
+                android:textColor="@color/colorGreyText"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/tvRewardAmount"
+                app:layout_constraintStart_toEndOf="@id/tvRewardAmount"
+                app:layout_constraintTop_toTopOf="@id/tvRewardAmount" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                app:layout_constraintBottom_toBottomOf="@id/tvRewardAmount"
+                app:layout_constraintStart_toEndOf="@id/tvLearnMore"
+                app:layout_constraintTop_toTopOf="@id/tvRewardAmount"
+                app:srcCompat="@drawable/ic_forward_new" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOffersForYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:fontFamily="@font/basiercircle_medium"
+            tools:text="@string/offers_for_you"
+            android:textColor="@color/convert_to_cash_color"
+            android:textFontWeight="600"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/clInner" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOffersForYou"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvOffersForYou" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

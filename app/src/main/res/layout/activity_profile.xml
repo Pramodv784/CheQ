@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.cheq.retail.ui.login.ProfileActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_19sdp"
+        tools:context=".ui.login.ProfileActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_37sdp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLetStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tell_us_about_yourself"
+                    android:textColor="@color/colorTextTitle"
+                    android:textFontWeight="600"
+                    android:textSize="24sp"
+                    app:fontFamily="@font/basiercircle_semibold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="p" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileDesc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/profile_desc"
+                    android:textColor="#828282"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvLetStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvLetStart"
+                    tools:targetApi="p" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfileDesc"
+                    app:layout_constraintVertical_bias="0.13">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontMediumBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:text="@string/first_name_"
+                        android:textColor="@color/gery_dark"
+                        android:textSize="10sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tv_first_name"
+                            style="@style/FontBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:autofillHints="name"
+                            android:background="@drawable/textview_round_grey"
+                            android:backgroundTint="@color/colorUnFocused"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:gravity="center|start"
+                            android:hint="@string/hint_first_name"
+                            android:importantForAutofill="yes"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLength="25"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colornaturals"
+                            android:textColorHint="@color/colorTextGrey"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:textSize="@dimen/_14sdp"
+                            app:addTextChangedListener="@{activity.onFirstName()}" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llFirstName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_7sdp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/et_btm_bg_un_focused" />
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontMediumBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:text="@string/last_name_"
+                        android:textColor="@color/gery_dark"
+                        android:textSize="10sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tv_last_name"
+                            style="@style/FontBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:autofillHints="name"
+                            android:background="@drawable/textview_round_grey"
+                            android:backgroundTint="@color/colorUnFocused"
+                            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:gravity="center|start"
+                            android:hint="@string/hint_last_name"
+                            android:importantForAutofill="no"
+                            android:inputType="textPersonName|textCapWords"
+                            android:maxLength="25"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colornaturals"
+                            android:textColorHint="@color/colorTextGrey"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:textSize="@dimen/_14sdp"
+                            app:addTextChangedListener="@{activity.onLastName()}" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llLastName"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_7sdp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/et_btm_bg_un_focused" />
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/FontMediumBlack14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:fontFamily="@font/basiercircle_semibold"
+                        android:text="EMAIL"
+                        android:textColor="@color/gery_dark"
+                        android:textSize="10sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_6sdp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/tv_email"
+                            style="@style/FontBold"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:autofillHints="emailAddress"
+                            android:background="@drawable/textview_round_grey"
+                            android:backgroundTint="@color/colorUnFocused"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:gravity="center|start"
+                            android:hint="@string/login_email_hint"
+                            android:importantForAutofill="no"
+                            android:inputType="textEmailAddress|textAutoComplete|textAutoCorrect"
+                            android:maxLength="64"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colornaturals"
+                            android:textColorHint="@color/colorTextGrey"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:textSize="@dimen/_14sdp"
+                            app:addTextChangedListener="@{activity.onEmailChanged()}" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_7sdp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/et_btm_bg_un_focused" />
+                    </FrameLayout>
+
+                    <!--                    <Button-->
+                    <!--                        style="@style/GlobalButtonStyle"-->
+                    <!--                        android:layout_marginTop="@dimen/_16sdp"-->
+                    <!--                        android:backgroundTint="@{activity.detailsValidated ?  @color/colorPrimary: @color/enable_bg }"-->
+                    <!--                        android:enabled="@{activity.detailsValidated ?  true: false }"-->
+                    <!--                        android:onClick="@{()-> activity.doUpdateProfile()}"-->
+                    <!--                        android:text="@string/Continue"-->
+                    <!--                        android:textColor="@{activity.detailsValidated ?  @color/colorAccent: @color/white }"-->
+                    <!--                        android:visibility="gone" />-->
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linearLayout7"
+                    app:layout_constraintVertical_bias="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivInfo"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        app:srcCompat="@drawable/ic_info" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_tnc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:fontFamily="@font/basiercircle_regular"
+                        android:text="@string/t_and_c_2"
+                        android:textColor="@color/colorTextTitle"
+                        android:textSize="14sp"
+                        app:layout_goneMarginStart="@dimen/_8sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button"
+                style="@style/GlobalButtonStyle"
+                android:layout_gravity="center"
+                android:background="@{activity.detailsValidated ? @drawable/button_color_primary :  @drawable/button_color_primary_disabled}"
+                android:enabled="@{activity.detailsValidated ?  true: false }"
+                android:onClick="@{()-> activity.redirectToLoading()}"
+                android:text="@string/confirm"
+                android:textAllCaps="false"
+                android:textColor="@{activity.detailsValidated ?  @color/white: @color/white }"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/flLottieIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_btn_bg"
+                android:visibility="gone">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/generi_loader_white" />
+
+            </FrameLayout>
+        </FrameLayout>
+
+
+    </LinearLayout>
+</layout>

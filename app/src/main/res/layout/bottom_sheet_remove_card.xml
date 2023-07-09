@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_sheet"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_20sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtCardLinked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/basiercircle_semibold"
+            android:text="@string/cannot_be_linked_another_acnt"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="@dimen/_17sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtContine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:fontFamily="@font/basiercircle_regular"
+            android:text="@string/do_you_wish_to_continue"
+            android:textColor="@color/grey_text_continue"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRemove"
+            style="@style/SettingButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_38sdp"
+            android:background="@drawable/button_color_green_outlined"
+            android:text="@string/yes_remove"
+            android:textAllCaps="true"
+            android:textColor="@color/color_green" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            style="@style/SettingButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:background="@drawable/button_color_green_outlined"
+            android:text="@string/no_cancel"
+            android:textAllCaps="true"
+            android:textColor="@color/color_green" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".ui.rewards.view.SelectAmountActivity">
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutCompat3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:animateLayoutChanges="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_182sdp"
+                    android:background="#EAFFFA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:contentDescription="@string/back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/backarrow" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:fontFamily="@font/basiercircle_semibold"
+                    android:text="Get Instant\nCash"
+                    android:textColor="@color/colornaturals"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/view"
+                    app:layout_constraintStart_toStartOf="@id/ivBack"
+                    app:layout_constraintTop_toBottomOf="@id/ivBack"
+                    app:lineHeight="@dimen/_25sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvTitle">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        app:srcCompat="@drawable/cheq_reward_coin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvConversionRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:fontFamily="@font/basiercircle_regular"
+                        tools:text="1 = ₹0.25"
+                        android:textColor="@color/colorTextLight"
+                        android:textSize="@dimen/_12sdp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvAvailableCash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="Available Cash"
+                    android:textColor="@color/colorCaption"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCashCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:text="₹3035"
+                    android:textColor="@color/colornaturals"
+                    android:textSize="@dimen/_17sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAvailableCash" />
+
+                <FrameLayout
+                    android:id="@+id/flNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvCashCount">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llNoteTwo">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivNoteFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            app:srcCompat="@drawable/ic_note" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivNoteFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            app:srcCompat="@drawable/ic_note" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivNoteThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_note" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llNoteTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivNoteTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_2sdp"
+                            app:srcCompat="@drawable/ic_note" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivNoteOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_note" />
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/ivSuitCase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_84sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/flNote">
+
+                    <FrameLayout
+                        android:id="@+id/flSuitCaseContent"
+                        android:layout_width="match_parent"
+                        android:visibility="visible"
+                        android:layout_height="wrap_content"
+                        >
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_open_suitcase" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_35sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivNoteOneSC"
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_7sdp"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/ic_note" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivNoteTwoSC"
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/ic_note" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_30sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivNoteFourSC"
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_7sdp"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/ic_note" />
+
+                            <View
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="1dp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivNoteThreeSC"
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/ic_note" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginBottom="@dimen/_40sdp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivNoteFiveSC"
+                                android:layout_width="81dp"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/ic_note" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/basiercircle_regular"
+                            android:text="@string/withdraw_amount"
+                            android:textColor="@color/colorTextGreyNew"
+                            android:textSize="@dimen/_9sdp" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llEnterAmount"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_26sdp"
+                            android:background="@drawable/ll_et_bg"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_15sdp"
+                            android:paddingVertical="@dimen/_3sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:fontFamily="@font/basiercircle_semibold"
+                                android:text="₹"
+                                android:textColor="@color/colornaturals"
+                                android:textSize="@dimen/_20sdp" />
+
+                            <EditText
+                                android:id="@+id/etAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_marginStart="@dimen/_2sdp"
+                                android:background="@null"
+                                android:cursorVisible="true"
+                                android:fontFamily="@font/basiercircle_semibold"
+                                android:inputType="number"
+
+                                android:textColor="@color/colornaturals"
+                                android:textSize="@dimen/_20sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_65sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_gravity="center_vertical"
+                                app:srcCompat="@drawable/ic_cheq_reward_coin_new" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCoinWorth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_4sdp"
+                                android:fontFamily="@font/basiercircle_regular"
+                                android:text="4000 worth"
+                                android:textColor="@color/colorTextLight"
+                                android:textSize="@dimen/_10sdp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivCloseSuitCase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="205dp"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:alpha="0"
+                        app:srcCompat="@drawable/ic_close_suit_case" />
+
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivSuitCase">
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/seekBaar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_4sdp"
+                        android:progressDrawable="@drawable/custom_seekbar"
+                        android:thumb="@drawable/thumb_image"
+                        android:splitTrack="false"
+                        android:thumbOffset="@dimen/_11sdp"
+                        tools:targetApi="o" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:gravity="start"
+                            android:text="₹0"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:gravity="center"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/_10sdp"
+                            app:srcCompat="@drawable/ic_drag" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMax"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/basiercircle_medium"
+                            android:gravity="end"
+                            app:textAllCaps="true"
+                            android:textColor="@color/colorTextLight"
+                            android:textSize="@dimen/_10sdp"
+                            tools:text="₹345" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/ic_btn_bg_rewards"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnC2C"
+                style="@style/GlobalButtonStyle"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:enabled="false"
+                android:text="Convert to cash"
+                app:textAllCaps="true"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

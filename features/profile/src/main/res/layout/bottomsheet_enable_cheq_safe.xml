@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <View
+                    android:id="@+id/view_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:background="@drawable/round_bottom_sheet_new"
+                    android:backgroundTint="#EAFFFA"
+                    app:layout_constraintBottom_toBottomOf="@id/title_tv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cancel_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_close" />
+
+                <ImageView
+                    android:id="@+id/cheq_safe_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cheq_safe_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="45dp"
+                    android:gravity="center"
+                    android:paddingBottom="13dp"
+                    android:text="@string/cheq_safe_dialog_enable_cheq_safe_amp_get_bill_reminders_on_time"
+                    android:textColor="@color/greyscale_p9"
+                    android:textSize="@dimen/_16sdp"
+                    app:fontFamily="@font/basiercircle_semibold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cheq_safe_iv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/benefit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:text="@string/benefits"
+                    android:textColor="@color/greyscale_p6"
+                    android:textSize="@dimen/_10ssp"
+                    android:textAllCaps="true"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_bg" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/benefit_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_never_pay_late_interest"
+                    app:layout_constraintStart_toStartOf="@id/benefit_tv"
+                    app:layout_constraintTop_toBottomOf="@id/benefit_tv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16sp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/we_fetch_payment_due_information_and_tell_you_before_ntime_when_a_bill_is_due"
+                    android:textColor="#131414"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/benefit_iv"
+                    app:layout_constraintTop_toTopOf="@id/benefit_iv" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/benefit2_iv"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/ic_pay_bill_on_time"
+                    app:layout_constraintStart_toStartOf="@id/benefit_tv"
+                    app:layout_constraintTop_toBottomOf="@id/benefit_iv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16sp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/e_generate_insights_on_your_card_statement_transactionse_ngenerate_insights"
+                    android:textColor="#131414"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/benefit2_iv"
+                    app:layout_constraintTop_toTopOf="@id/benefit2_iv" />
+
+                <ImageView
+                    android:id="@+id/bottom_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:src="@drawable/ic_cheq_safe_bottom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/benefit2_iv" />
+
+                <TextView
+                    android:id="@+id/help_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/basiercircle_regular"
+                    android:text="@string/link_your_email_registered_with_bill_providers"
+                    android:textColor="@color/greyscale_p9"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    app:drawableStartCompat="@drawable/ic_information_new"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bottom_iv" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/link_email_cardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:orientation="horizontal"
+                    app:strokeWidth="@dimen/_1sdp"
+                    app:strokeColor="@color/greyscale_p2"
+                    android:shadowColor="@color/white"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:rippleColor="@android:color/transparent"
+                    app:layout_constraintBottom_toTopOf="@id/privacy_tv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/help_tv">
+
+                    <ImageView
+                        android:id="@+id/google_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_google" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/basiercircle_medium"
+                        android:gravity="center"
+                        android:text="@string/login_with_google"
+                        android:textColor="@color/greyscale_p6"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/google_iv" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    android:id="@+id/privacy_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_26sdp"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:text="@string/our_privacy_policy_is_in_line_with_google_api_services_user_data_policy"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

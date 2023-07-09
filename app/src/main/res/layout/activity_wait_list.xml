@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottomCV"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.waitList.WaitListActivity">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:background="@color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/pointTV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/cheqLogoIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:src="@drawable/ic_cheq_logo_wait_list"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/helpTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:fontFamily="@font/basiercircle_medium"
+                    android:text="@string/help"
+                    android:textColor="@color/help_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/titleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/you_re_officially_on_the_cheqlist"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cheqLogoIV" />
+
+                <ImageView
+                    android:id="@+id/bgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_wait_list_banner"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lottieAnimation" />
+
+                <TextView
+                    android:id="@+id/yourPointsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_400"
+                    android:text="@string/your_position"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@id/bgView"
+                    app:layout_constraintStart_toStartOf="@id/bgView"
+                    app:layout_constraintTop_toTopOf="@id/bgView" />
+
+                <TextView
+                    android:id="@+id/pointTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    app:layout_constraintEnd_toEndOf="@id/bgView"
+                    app:layout_constraintStart_toStartOf="@id/bgView"
+                    app:layout_constraintTop_toBottomOf="@id/yourPointsTV"
+                    tools:text="36,123" />
+
+                <View
+                    android:id="@+id/dividerView"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:background="@drawable/ic_divider"
+                    app:layout_constraintEnd_toStartOf="@id/rightRound"
+                    app:layout_constraintStart_toEndOf="@id/leftRound"
+                    app:layout_constraintTop_toBottomOf="@id/pointTV" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/leftRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_group_92764"
+                    app:layout_constraintBottom_toBottomOf="@id/bgView"
+                    app:layout_constraintStart_toStartOf="@id/bgView"
+                    app:layout_constraintTop_toTopOf="@id/bgView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/rightRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:src="@drawable/ic_group_92764"
+                    app:layout_constraintBottom_toBottomOf="@id/bgView"
+                    app:layout_constraintEnd_toEndOf="@id/bgView"
+                    app:layout_constraintTop_toTopOf="@id/bgView" />
+
+                <TextView
+                    android:id="@+id/earnedTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/you_ve_earned"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/chipsTV"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/leftRound"
+                    app:layout_constraintTop_toBottomOf="@id/dividerView" />
+
+                <TextView
+                    android:id="@+id/chipsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:textColor="@color/help_color"
+                    android:textSize="16sp"
+                    app:drawableStartCompat="@drawable/ic_chip"
+                    app:layout_constraintEnd_toStartOf="@id/rightRound"
+                    app:layout_constraintStart_toEndOf="@id/earnedTV"
+                    app:layout_constraintTop_toBottomOf="@id/dividerView"
+                    tools:text="200 chips" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/chipsGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="earnedTV,chipsTV,pointTV,yourPointsTV,dividerView" />
+
+                <TextView
+                    android:id="@+id/totalInLineLabelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@id/bgView"
+                    app:layout_constraintStart_toStartOf="@id/bgView"
+                    app:layout_constraintTop_toTopOf="@id/bgView"
+                    android:text="@string/your_position" />
+
+                <TextView
+                    android:id="@+id/totalInLinePositionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_700"
+                    android:textSize="32sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/bgView"
+                    app:layout_constraintStart_toStartOf="@id/bgView"
+                    app:layout_constraintTop_toBottomOf="@id/totalInLineLabelTV"
+                    tools:text="42" />
+                
+                <ImageView
+                    android:id="@+id/totalInLineDivider"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:background="@drawable/ic_divider"
+                    app:layout_constraintTop_toBottomOf="@id/totalInLinePositionTV"
+                    app:layout_constraintStart_toStartOf="@id/bgView"
+                    app:layout_constraintEnd_toEndOf="@id/bgView" />
+
+                <TextView
+                    android:id="@+id/totalInLineTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_500"
+                    android:text="@string/total_in_line"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+
+
+                    app:layout_constraintStart_toEndOf="@id/leftRound"
+                    app:layout_constraintTop_toBottomOf="@id/totalInLineDivider" />
+
+                <TextView
+                    android:id="@+id/totalInLineTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/totalInLineTitleTV"
+                    app:layout_constraintTop_toTopOf="@id/totalInLineTitleTV"
+                    app:layout_constraintBottom_toBottomOf="@id/totalInLineTitleTV"
+                    tools:text="2,56,467" />
+
+                <TextView
+                    android:id="@+id/infoTitleTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/can_t_add_to_you_waitlist_as_we_are_not_able_to_find_your_details"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintEnd_toEndOf="@id/rightRound"
+                    app:layout_constraintStart_toStartOf="@id/leftRound"
+                    app:layout_constraintTop_toTopOf="@id/bgView" />
+
+                <View
+                    android:id="@+id/infoDividerView"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/ic_divider"
+                    app:layout_constraintEnd_toStartOf="@id/rightRound"
+                    app:layout_constraintStart_toEndOf="@id/leftRound"
+                    app:layout_constraintTop_toBottomOf="@id/infoTitleTV" />
+
+                <TextView
+                    android:id="@+id/infoTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:gravity="center"
+                    android:text="@string/you_can_access_cheq_once_we_open_to_all"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:drawableStartCompat="@drawable/ic_wait_list_info"
+                    app:layout_constraintStart_toEndOf="@id/totalInLineTitleTV"
+                    app:layout_constraintTop_toBottomOf="@id/infoDividerView" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/infoGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="infoTitleTV,infoTV,infoDividerView" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/totalLineGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="totalInLineTitleTV,totalInLineTV, totalInLineDivider, totalInLineLabelTV, totalInLinePositionTV" />
+
+                <View
+                    android:id="@+id/referBGView"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="-15dp"
+                    android:background="@drawable/rounded_box"
+                    app:layout_constraintBottom_toBottomOf="@id/totalReferTitleTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bgView" />
+
+                <View
+                    android:id="@+id/referBGView2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="-15dp"
+                    android:background="@drawable/rounded_box"
+                    app:layout_constraintBottom_toBottomOf="@id/referBTN2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bgView" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shareIV3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:src="@drawable/ic_share_wait_list"
+                    app:layout_constraintBottom_toBottomOf="@id/totalReferTV"
+                    app:layout_constraintStart_toStartOf="@id/referBGView"
+                    app:layout_constraintTop_toTopOf="@id/totalReferTV" />
+
+                <TextView
+                    android:id="@+id/totalReferTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_600"
+                    android:gravity="center"
+                    android:text="@string/total_refer"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@id/shareIV3"
+                    app:layout_constraintTop_toBottomOf="@id/chipBGView" />
+
+                <TextView
+                    android:id="@+id/totalReferTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/you_have_referred"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/totalReferTV"
+                    app:layout_constraintTop_toBottomOf="@id/totalReferTV" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chipIV"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_chip"
+                    app:layout_constraintBottom_toBottomOf="@id/totalChipTV"
+                    app:layout_constraintStart_toStartOf="@id/totalChipTitleTV"
+                    app:layout_constraintTop_toTopOf="@id/totalChipTV" />
+
+                <TextView
+                    android:id="@+id/totalChipTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_600"
+                    android:gravity="center"
+                    android:text="@string/total_chip"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@id/chipIV"
+                    app:layout_constraintTop_toTopOf="@id/totalReferTV" />
+
+                <TextView
+                    android:id="@+id/totalChipTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/total_chips_earned"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/backIV"
+                    app:layout_constraintTop_toBottomOf="@id/totalChipTV" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:src="@drawable/ic_back_arrow"
+                    app:layout_constraintBottom_toBottomOf="@id/totalChipTitleTV"
+                    app:layout_constraintEnd_toEndOf="@id/referBGView"
+                    app:layout_constraintTop_toTopOf="@id/totalChipTV" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/referGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+
+                    app:constraint_referenced_ids="totalReferTV,totalReferTitleTV,totalChipTV,totalChipTitleTV,referBGView,chipIV,shareIV3,backIV" />
+
+
+                <!--<androidx.constraintlayout.widget.Group
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chips_ear_group"
+                    app:constraint_referenced_ids="referBGView,totalReferTitleTV,totalChipTV,chipIV,shareIV3,backIV,totalReferTV"/>-->
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shareIV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:src="@drawable/ic_share_wait_list"
+                    app:layout_constraintStart_toStartOf="@id/referBGView2"
+                    app:layout_constraintTop_toTopOf="@id/referBGView2" />
+
+                <TextView
+                    android:id="@+id/referTitleTV3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/your_friend_can_earn_you_50_chips"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@id/shareIV2"
+                    app:layout_constraintTop_toTopOf="@id/referBGView2" />
+
+                <TextView
+                    android:id="@+id/referTitleTV4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_500"
+                    android:text="@string/refer_a_friend_and_get_50_chips_on_each_referral"
+                    android:textColor="@color/gery_dark"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    tools:text="Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello"
+                    app:layout_constraintStart_toEndOf="@id/shareIV2"
+                    app:layout_constraintEnd_toEndOf="@id/referBGView2"
+                    app:layout_constraintTop_toBottomOf="@id/referTitleTV3" />
+
+                <Button
+                    android:id="@+id/referBTN2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:background="@drawable/button_color_primary"
+                    android:text="@string/refer_a_friend"
+                    android:drawableRight="@drawable/ic_whatsapp_icon"
+                    app:layout_constraintEnd_toEndOf="@id/referBGView2"
+                    app:layout_constraintStart_toStartOf="@id/referBGView2"
+                    app:layout_constraintTop_toBottomOf="@id/shareIV2" />
+
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/shareGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+
+                    app:constraint_referenced_ids="shareIV2,referTitleTV3,referTitleTV4,referBTN2,referBGView2" />
+
+
+                <View
+                    android:id="@+id/chipBGView"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@drawable/ic_rectangle_40061"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/referBGView2" />
+
+                <TextView
+                    android:id="@+id/chipsInfoTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginEnd="2dp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:drawableStartCompat="@drawable/ic_chip"
+                    app:layout_constraintBottom_toBottomOf="@id/chipBGView"
+                    app:layout_constraintEnd_toStartOf="@id/chipTV"
+                    app:layout_constraintTop_toTopOf="@id/chipBGView" />
+
+                <TextView
+                    android:id="@+id/chipTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/cheq_chip"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/chipsInfoTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/chipsInfoTV" />
+
+                <TextView
+                    android:id="@+id/convertedRSTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_marginEnd="2dp"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="= ₹1 "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@id/chipBGView"
+                    app:layout_constraintStart_toEndOf="@id/chipTV"
+                    app:layout_constraintTop_toTopOf="@id/chipBGView" />
+
+                <TextView
+                    android:id="@+id/titleTV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_600"
+                    android:text="@string/use_cheq_chips_for"
+                    android:textColor="@color/gery_dark"
+                    app:layout_constraintStart_toStartOf="@id/chipBGView"
+                    app:layout_constraintTop_toBottomOf="@id/referBGView" />
+
+                <View
+                    android:id="@+id/useForBGView"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/rounded_box"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleTV2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/productIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:src="@drawable/product_icons"
+                    app:layout_constraintStart_toStartOf="@id/useForBGView"
+                    app:layout_constraintTop_toTopOf="@id/useForBGView" />
+
+                <TextView
+                    android:id="@+id/voucherTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_700"
+                    android:gravity="center"
+                    android:text="@string/vouchers_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/productIV"
+                    app:layout_constraintStart_toStartOf="@id/productIV"
+                    app:layout_constraintTop_toBottomOf="@id/productIV" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/chipConverterIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_35sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:src="@drawable/ic_chip_converter"
+                    app:layout_constraintEnd_toEndOf="@id/useForBGView"
+                    app:layout_constraintTop_toTopOf="@id/useForBGView" />
+
+                <TextView
+                    android:id="@+id/convertTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_700"
+                    android:gravity="center"
+                    android:text="@string/convert_to_cash_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/chipConverterIV"
+                    app:layout_constraintStart_toStartOf="@id/chipConverterIV"
+                    app:layout_constraintTop_toBottomOf="@id/chipConverterIV" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_back_arrow"
+                    app:layout_constraintBottom_toBottomOf="@id/voucherTV"
+                    app:layout_constraintStart_toEndOf="@id/voucherTV"
+                    app:layout_constraintTop_toTopOf="@id/voucherTV" />
+
+                <TextView
+                    android:id="@+id/termsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:fontFamily="@font/manrope_700"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@color/help_color"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/useForBGView"
+                    app:layout_constraintStart_toStartOf="@id/useForBGView"
+                    app:layout_constraintTop_toBottomOf="@id/useForBGView" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimation"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_130sdp"
+                    android:src="@drawable/ic_wait_list_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleTV" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottomCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:elevation="@dimen/_25sdp"
+            app:cardElevation="@dimen/_25sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/shareIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:src="@drawable/ic_share_wait_list"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/referTitleTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:fontFamily="@font/manrope_500"
+                    android:text="@string/your_friend_can_earn_you_50_chips"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/shareIV"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/referTitleTV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_500"
+                    android:text="@string/refer_a_friend_and_get_50_chips_on_each_referral"
+                    android:textColor="@color/gery_dark"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@id/shareIV"
+                    app:layout_constraintTop_toBottomOf="@id/referTitleTV" />
+
+                <Button
+                    android:id="@+id/referBTN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:background="@drawable/button_color_primary"
+                    android:text="@string/refer_a_friend"
+                    android:drawableRight="@drawable/ic_whatsapp_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shareIV" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

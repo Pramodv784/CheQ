@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_bottomsheet"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:contentDescription="@string/cancel"
+        app:srcCompat="@drawable/ic_close" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llCreditCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_170sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@color/colorPrimaryGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivCancel" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/FontBold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Unable to find a bill "
+        android:textColor="@color/colornaturals"
+        android:textSize="@dimen/_18sdp"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/FontMedium14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:text="Please check details and retry again"
+        android:textColor="@color/colorTextLight"
+        android:textSize="@dimen/_12sdp"
+        tools:ignore="HardcodedText" />
+
+    <include
+        android:id="@+id/llBllFetchFailed"
+        layout="@layout/layout_bill_payment_detail" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRetry"
+        style="@style/GlobalButtonStyle"
+        android:layout_marginHorizontal="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:text="@string/retry"
+        android:visibility="visible" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

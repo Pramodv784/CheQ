@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/clRewards"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_160sdp"
+    android:background="@drawable/reward_header_bg"
+    android:visibility="visible"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        style="@style/Font500"
+        android:layout_width="0dp"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/basiercircle_medium"
+        android:lineHeight="@dimen/_22sdp"
+        android:text="@string/buy_vouchers_and_nconvert_to_cash"
+        android:textColor="@color/colornaturals"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintEnd_toStartOf="@+id/tvHelp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:targetApi="p" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHelp"
+        style="@style/Font500"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/basiercircle_medium"
+        android:text="@string/help"
+        android:textColor="@color/colorPrimaryGreen"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCoinBalanceTitle"
+        style="@style/Font400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_11sdp"
+        android:fontFamily="@font/basiercircle_regular"
+        android:text="@string/coin_balance"
+        android:textColor="@color/colorCaption"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCheqRewardCoin"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        app:layout_constraintStart_toStartOf="@id/tvCoinBalanceTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvCoinBalanceTitle"
+        app:srcCompat="@drawable/cheq_reward_coin" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCoinBalance"
+        style="@style/Font500"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:fontFamily="@font/basiercircle_medium"
+        android:gravity="bottom"
+        android:maxLines="1"
+        android:text="2323"
+        android:textColor="@color/colornaturals"
+        android:textSize="@dimen/_28sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCheqRewardCoin"
+        app:layout_constraintEnd_toStartOf="@+id/ivMyVoucher"
+        app:layout_constraintStart_toEndOf="@id/ivCheqRewardCoin"
+        app:layout_constraintTop_toBottomOf="@+id/tvCoinBalanceTitle"
+        tools:ignore="HardcodedText" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMyVouchers"
+        style="@style/Font400"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/basiercircle_regular"
+        android:text="@string/my_vouchers"
+        android:textColor="@color/colorCaption"
+        android:textSize="@dimen/_11sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCoinBalanceTitle"
+        app:layout_constraintEnd_toEndOf="@id/tvHelp"
+        app:layout_constraintTop_toTopOf="@id/tvCoinBalanceTitle" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMyVoucher"
+        android:layout_width="@dimen/_95sdp"
+        android:layout_height="@dimen/_27sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:scaleType="fitEnd"
+        app:layout_constraintEnd_toEndOf="@id/tvMyVouchers"
+        app:layout_constraintTop_toBottomOf="@id/tvMyVouchers"
+        app:srcCompat="@drawable/my_vouchers" />
+</androidx.constraintlayout.widget.ConstraintLayout>
